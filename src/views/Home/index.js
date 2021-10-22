@@ -1,9 +1,25 @@
 import React from "react";
 
+import { Container } from '@mui/material';
+
+import HomeBanner from "./components/HomeBanner";
+
 function Home() {
   return (
     <>
-      <h1>This is HomeView</h1>
+      <div style={{ padding: 0, border: 0 }}>
+        <HomeBanner />
+        <Container maxWidth="xl">
+          <h1>Hellop</h1>
+          <h1>Hellop</h1>
+          <h1>Hellop</h1>
+          <h1>Hellop</h1>
+          <h1>Hellop</h1>
+          <h1>Hellop</h1>
+          <h1>Hellop</h1>
+          <h1>Hellop</h1>
+        </Container>
+      </div>
     </>
   );
 }

@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 
 import { Redirect, Route, Switch } from "react-router-dom";
 
+import Header from 'src/components/Header';
 import LoadingScreen from "src/components/LoadingScreen";
 
 function Routes() {
@@ -26,14 +27,16 @@ function Routes() {
         <Route
           path="*"
           render={() => (
-            <Switch>
-              <Route
-                exact
-                path="/"
-                component={lazy(() => import("src/views/Home"))}
-              />
-              <Redirect to="/404" />
-            </Switch>
+            <Header>
+              <Switch>
+                <Route
+                  exact
+                  path="/"
+                  component={lazy(() => import("src/views/Home"))}
+                />
+                <Redirect to="/404" />
+              </Switch>
+            </Header>
           )}
         />
         <Redirect to="/404" />
