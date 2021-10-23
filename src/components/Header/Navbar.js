@@ -15,14 +15,13 @@ import {
   List,
   ListItem,
   Tooltip,
+  useScrollTrigger
 } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
-import CssBaseline from '@mui/material/CssBaseline';
 import { alpha, styled } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { makeStyles } from '@mui/styles';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
@@ -131,11 +130,11 @@ function ElevationScroll(props) {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
-    target: window ? window() : undefined,
+    target: window ? window() : undefined
   });
 
   return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0,
+    elevation: trigger ? 4 : 0
   });
 }
 
@@ -145,7 +144,7 @@ ElevationScroll.propTypes = {
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-  window: PropTypes.func,
+  window: PropTypes.func
 };
 
 function Navbar(props) {
@@ -153,9 +152,8 @@ function Navbar(props) {
 
   return (
     <>
-      <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar>
+        <AppBar position="relative">
           <Toolbar className={classes.toolbar}>
             <Link to="/">
               <img className={classes.logo} src="static/images/logo.png" alt="" />
