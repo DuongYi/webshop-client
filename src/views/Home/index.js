@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { makeStyles } from '@material-ui/core';
 import {
   Box,
   Button,
   Container,
-  Grid, Typography
+  Grid,
+  Tab,
+  Tabs,
+  Typography
 } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 
@@ -26,16 +29,30 @@ const useStyles = makeStyles(() => ({
     color: "#000"
   },
   home_shop_container: {
-    backgroundImage: `url(${'static/images/collections-bg.png'})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    minHeight: '640px',
+    position: 'relative',
+    '&:before': {
+      content: "''",
+      position: 'absolute',
+      top: 27,
+      left: 0,
+      width: '100%',
+      backgroundImage: `url(${'static/images/collections-bg.png'})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      minHeight: '640px',
+      zIndex: -1
+    }
   }
 }));
 
 function Home() {
   const classes = useStyles();
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   const items = [
     {
       link: "https://www.facebook.com/VSsYii",
@@ -99,10 +116,10 @@ function Home() {
           spacing={12}
           className={classes.home_about}
         >
-          <Grid item xs={5.5}>
+          <Grid item xs={5}>
             <img style={{ width: '100%', height: '100%' }} src="static/images/test1.jpg" alt="" />
           </Grid>
-          <Grid item xs={6.5} mt={5}>
+          <Grid item xs={7} mt={5}>
             <Typography
               variant="h2"
               style={{
@@ -188,7 +205,7 @@ function Home() {
           </Grid>
           <CarouselSlick items={productList} />
         </Box>
-        <Box mb={5}>
+        <Box>
           <Grid
             container
             display="flex"
@@ -219,10 +236,111 @@ function Home() {
           </Grid>
         </Box>
       </Container>
-      <Container maxWidth className={classes.home_shop_container}>
-        <Box>
-          <h1>Tabs</h1>
-        </Box>
+      <Container maxWidth="" className={classes.home_shop_container}>
+        <Container maxWidth="lg" style={{ zIndex: 1 }}>
+          <Tabs
+            style={{
+              background: "#fff",
+              borderBottomLeftRadius: '10px',
+              borderBottomRightRadius: '10px',
+              paddingBottom: '15px',
+              paddingLeft: '20px',
+              paddingRight: '20px'
+            }}
+            sx={{
+
+            }}
+            value={value}
+            onChange={handleChange}
+            variant="fullWidth"
+            TabIndicatorProps={{
+              style: {
+                background: '#738136', height: '100%', borderRadius: '10px', zIndex: 1
+              }
+            }}
+          >
+            <Tab
+              label="Son môi"
+              classes={{ selected: classes.selectedTab }}
+              sx={{
+                fontWeight: 'bold',
+                zIndex: 999,
+                '&.Mui-selected': {
+                  color: '#fff',
+                },
+                '&:hover': {
+                  color: '#738136'
+                }
+              }}
+            />
+            <Tab
+              label="Chăm sóc da"
+              sx={{
+                fontWeight: 'bold',
+                zIndex: 999,
+                '&.Mui-selected': {
+                  color: '#fff',
+                },
+                '&:hover': {
+                  color: '#738136'
+                }
+              }}
+            />
+            <Tab
+              label="Chăm sóc tóc"
+              sx={{
+                fontWeight: 'bold',
+                zIndex: 999,
+                '&.Mui-selected': {
+                  color: '#fff',
+                },
+                '&:hover': {
+                  color: '#738136'
+                }
+              }}
+            />
+            <Tab
+              label="Hương thơm"
+              sx={{
+                fontWeight: 'bold',
+                zIndex: 999,
+                '&.Mui-selected': {
+                  color: '#fff',
+                },
+                '&:hover': {
+                  color: '#738136'
+                }
+              }}
+            />
+            <Tab
+              label="Chăm sóc cơ thể"
+              sx={{
+                fontWeight: 'bold',
+                zIndex: 999,
+                '&.Mui-selected': {
+                  color: '#fff',
+                },
+                '&:hover': {
+                  color: '#738136'
+                }
+              }}
+            />
+            <Tab
+              label="Trang điểm"
+              sx={{
+                fontWeight: 'bold',
+                zIndex: 999,
+                '&.Mui-selected': {
+                  color: '#fff',
+                },
+                '&:hover': {
+                  color: '#738136'
+                }
+              }}
+            />
+          </Tabs>
+        </Container>
+        <Box />
       </Container>
     </>
   );

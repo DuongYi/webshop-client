@@ -110,7 +110,7 @@ function CarouselSlick({ items }) {
   return (
     <Slider {...settings}>
       {items.map((item) => (
-        <ProductItem key={item.id} product={item} />
+        <ProductItem key={item} product={item} />
       ))}
     </Slider>
   );
