@@ -36,22 +36,62 @@ const useStyles = makeStyles(() => ({
       top: 27,
       left: 0,
       width: '100%',
+      height: '100%',
       backgroundImage: `url(${'static/images/collections-bg.png'})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       minHeight: '640px',
+      paddingBottom: '30px',
       zIndex: -1
     }
+  },
+  allShop_button: {
+    display: 'inline-flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minWidth: '280px',
+    height: '50px',
+    borderRadius: '25px',
+    border: '2px solid #fff',
+    backgroundColor: 'hsla(0,0%,100%,.6)',
+    padding: '0 50px',
+    color: '#fff',
+    fontSize: '16px',
+    fontWeight: 500,
+    textDecoration: 'none',
+    transition: 'all ease 0.3s',
+    '&:hover': {
+      backgroundColor: '#738136',
+    }
+  },
+  home_react: {
+    marginTop: '130px',
+    width: '100%',
+    height: '100%',
+    backgroundImage: `url(${'static/images/mewspapers.png'})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    borderRadius: '15px'
   }
 }));
 
 function Home() {
   const classes = useStyles();
-  const [value, setValue] = useState(0);
+  const [currentTab, setCurrentTab] = useState('sp1');
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const tabs = [
+    { value: 'sp1', label: 'Son môi' },
+    { value: 'sp2', label: 'Chăm sóc da' },
+    { value: 'sp3', label: 'Chăm sóc tóc' },
+    { value: 'sp4', label: 'Hương thơm' },
+    { value: 'sp5', label: 'Chăm sóc cơ thể' },
+    { value: 'sp6', label: 'Trang điểm' },
+  ];
+
+  const handleTabsChange = (event, newValue) => {
+    setCurrentTab(newValue);
   };
   const items = [
     {
@@ -205,6 +245,7 @@ function Home() {
           </Grid>
           <CarouselSlick items={productList} />
         </Box>
+
         <Box>
           <Grid
             container
@@ -217,7 +258,7 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 15px', color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive"
+                color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0', marginRight: '-50px'
               }}
             >
               Gian hàng
@@ -228,7 +269,7 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 15px', color: '#738136', fontSize: '36px', fontFamily: " Yeseva One, cursive"
+                color: '#738136', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0', marginLeft: '-45px'
               }}
             >
               Cỏ mềm
@@ -236,6 +277,7 @@ function Home() {
           </Grid>
         </Box>
       </Container>
+
       <Container maxWidth="" className={classes.home_shop_container}>
         <Container maxWidth="lg" style={{ zIndex: 1 }}>
           <Tabs
@@ -247,11 +289,8 @@ function Home() {
               paddingLeft: '20px',
               paddingRight: '20px'
             }}
-            sx={{
-
-            }}
-            value={value}
-            onChange={handleChange}
+            value={currentTab}
+            onChange={handleTabsChange}
             variant="fullWidth"
             TabIndicatorProps={{
               style: {
@@ -259,88 +298,59 @@ function Home() {
               }
             }}
           >
-            <Tab
-              label="Son môi"
-              classes={{ selected: classes.selectedTab }}
-              sx={{
-                fontWeight: 'bold',
-                zIndex: 999,
-                '&.Mui-selected': {
-                  color: '#fff',
-                },
-                '&:hover': {
-                  color: '#738136'
-                }
-              }}
-            />
-            <Tab
-              label="Chăm sóc da"
-              sx={{
-                fontWeight: 'bold',
-                zIndex: 999,
-                '&.Mui-selected': {
-                  color: '#fff',
-                },
-                '&:hover': {
-                  color: '#738136'
-                }
-              }}
-            />
-            <Tab
-              label="Chăm sóc tóc"
-              sx={{
-                fontWeight: 'bold',
-                zIndex: 999,
-                '&.Mui-selected': {
-                  color: '#fff',
-                },
-                '&:hover': {
-                  color: '#738136'
-                }
-              }}
-            />
-            <Tab
-              label="Hương thơm"
-              sx={{
-                fontWeight: 'bold',
-                zIndex: 999,
-                '&.Mui-selected': {
-                  color: '#fff',
-                },
-                '&:hover': {
-                  color: '#738136'
-                }
-              }}
-            />
-            <Tab
-              label="Chăm sóc cơ thể"
-              sx={{
-                fontWeight: 'bold',
-                zIndex: 999,
-                '&.Mui-selected': {
-                  color: '#fff',
-                },
-                '&:hover': {
-                  color: '#738136'
-                }
-              }}
-            />
-            <Tab
-              label="Trang điểm"
-              sx={{
-                fontWeight: 'bold',
-                zIndex: 999,
-                '&.Mui-selected': {
-                  color: '#fff',
-                },
-                '&:hover': {
-                  color: '#738136'
-                }
-              }}
-            />
+            {tabs.map((tab) => (
+              <Tab
+                label={tab.label}
+                key={tab.value}
+                value={tab.value}
+                classes={{ selected: classes.selectedTab }}
+                sx={{
+                  fontWeight: 'bold',
+                  zIndex: 999,
+                  '&.Mui-selected': {
+                    color: '#fff',
+                  },
+                  '&:hover': {
+                    color: '#738136'
+                  }
+                }}
+              />
+            ))}
           </Tabs>
+          <Box mt={6}>
+            <CarouselSlick items={productList} />
+          </Box>
+          <Box mt={3}>
+            <CarouselSlick items={productList} />
+          </Box>
+          <Box mt={3} display="flex" justifyContent="center">
+            <a href="" className={classes.allShop_button}>
+              Xem thêm
+            </a>
+          </Box>
         </Container>
         <Box />
+      </Container>
+
+      <Container maxWidth="lg" className={classes.home_react}>
+        <Box mt={6}>
+          <Grid
+            container
+            mb={2}
+            display="flex"
+            justifyContent="center"
+            style={{ padding: '60px 0 0' }}
+          >
+            <Typography
+              variant="h2"
+              style={{
+                margin: '0 0 15px', color: '#fff', fontSize: '36px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
+              }}
+            >
+              Báo chí nói gì về Cỏ Mềm
+            </Typography>
+          </Grid>
+        </Box>
       </Container>
     </>
   );
