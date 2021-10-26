@@ -5,6 +5,11 @@
   font-family: sans-serif;
 }
 
+:after, :before {
+  outline: none;
+  box-sizing: border-box;
+}
+
 html::-webkit-scrollbar {
   width: 0.6em;
   color: transparent;

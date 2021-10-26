@@ -1,0 +1,86 @@
+.track-grid {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 1px;
+  vertical-align: top;
+  margin-left: 0!important;
+  margin-right: 0!important;
+  padding: 15px;
+  width: 100%;
+  max-width: 400px;
+  align-self: normal;
+}
+
+.track-grid .track-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 10px 15px 0 rgb(76 80 61 / 8%);
+  background-color: #fff;
+  border-radius: 20px;
+  transition: all ease .3s;
+  height: 100%;
+  min-height: 260px;
+}
+
+.track-grid .track-card::before{
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 34px;
+  height: 34px;
+  background-image: url('./quots.svg');
+  opacity: .08;
+  background-size: contain;
+  background-position: top;
+}
+
+.track-grid .track-card:hover{
+
+}
+
+.track-grid .track-card .track-card-thumbnail {
+  flex: 0 0 90px;
+  position: relative;
+  margin-right: 18px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.track-grid .track-card .track-card-thumbnail::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+}
+
+.track-grid .track-card .track-card-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.track-grid .track-card .track-card-content {
+  flex: 1;
+}
+
+.track-card-content p {
+  display: block;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+
+.track-grid .track-card .track-card-content .track-card-content-description {
+  color: #414141;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: .3px;
+  font-weight: 550;
+}
+

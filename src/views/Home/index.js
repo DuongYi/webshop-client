@@ -12,10 +12,13 @@ import {
 } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 
+import BlogSlick from "src/components/BlogSlick";
 import CarouselSlick from "src/components/CarouselSlick";
+import TrackSlick from "src/components/TrackSlick";
 
 import AboutItem from './components/AboutItem';
 import HomeBanner from "./components/HomeBanner";
+import NewsSlick from "./components/NewsSlick";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -69,11 +72,25 @@ const useStyles = makeStyles(() => ({
     marginTop: '130px',
     width: '100%',
     height: '100%',
+  },
+  box_react: {
+    padding: '80px 0 165px',
     backgroundImage: `url(${'static/images/mewspapers.png'})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    borderRadius: '15px'
+    borderRadius: '15px',
+  },
+  homeNews_thumbnail: {
+    textAlign: 'center',
+    width: '100%',
+    marginTop: '-100px',
+  },
+  home_blog: {
+    width: '100%',
+    padding: '0 15px',
+    display: 'flex',
+    direction: 'column'
   }
 }));
 
@@ -333,7 +350,7 @@ function Home() {
       </Container>
 
       <Container maxWidth="lg" className={classes.home_react}>
-        <Box mt={6}>
+        <Box mt={6} className={classes.box_react}>
           <Grid
             container
             mb={2}
@@ -350,7 +367,50 @@ function Home() {
               Báo chí nói gì về Cỏ Mềm
             </Typography>
           </Grid>
+          <NewsSlick />
         </Box>
+        <div className={classes.homeNews_thumbnail}>
+          <img
+            style={{ textIndent: '100%', whiteSpace: 'nowrap', overflow: 'hidden' }}
+            src="static/images/Title.png"
+            alt="home new title"
+          />
+        </div>
+      </Container>
+
+      <Container maxWidth="lg">
+        <TrackSlick />
+      </Container>
+
+      <Container mt={6} maxWidth="">
+        <Grid
+          container
+          mb={3}
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+          className={classes.home_blog}
+        >
+          <Typography
+            variant="h2"
+            mb={2}
+            style={{
+              color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0'
+            }}
+          >
+            Blog làm đẹp
+          </Typography>
+          <Typography
+            style={{
+              fontSize: '16px', color: "#4c503d", lineHeight: 1.5
+            }}
+          >
+            Là phụ nữ, nhất định phải xinh đẹp và tự tin. Hãy cùng Cỏ mềm HomeLab
+            <br />
+            khám phá những bí quyết làm đẹp thú vị nhé!
+          </Typography>
+        </Grid>
+        <BlogSlick />
       </Container>
     </>
   );
