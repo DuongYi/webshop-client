@@ -12,7 +12,13 @@ import './Footer.css';
 
 const useStyle = makeStyles(() => ({
   root: {
-
+    '& a': {
+      textDecoration: 'none',
+      color: "#4c503d",
+      '&:hover': {
+        color: "#738136"
+      }
+    }
   },
   footerLogo: {
     textIndent: '100%',
@@ -46,6 +52,43 @@ const useStyle = makeStyles(() => ({
     width: "40px",
     height: "40px",
     margin: "0 5px",
+  },
+  footer_menu: {
+    margin: 0,
+    padding: 0
+  },
+  footer_menu_item: {
+    listStyle: 'none',
+    lineHeight: 2.57,
+    fontSize: "14px",
+    color: "#4c503d",
+  },
+  footer_contact: {
+    margin: 0,
+    padding: 0
+  },
+  footer_contact_item: {
+    listStyle: 'none',
+    lineHeight: 2.57,
+    fontSize: "14px",
+    color: "#4c503d",
+  },
+  footer_note: {
+    position: 'relative',
+    padding: '20px 15px 0px 15px',
+    borderRadius: '10px',
+    backgroundColor: '#e9f0d5',
+    marginTop: '-20px',
+    '&:before': {
+      content: "''",
+      position: 'absolute',
+      left: '10px',
+      top: '-15px',
+      width: 0,
+      height: 0,
+      border: '8px solid #ffffff00',
+      borderBottomColor: '#e9f0d5'
+    }
   }
 }));
 
@@ -85,117 +128,123 @@ function Footer() {
           </a>
         </Grid>
       </Grid>
-      <Grid container style={{ paddingBottom: '40px', borderBottom: '1px solid rgba(76,80,61,.14)' }}>
+      <Grid
+        container
+        spacing={5}
+        style={{ paddingBottom: '40px', borderBottom: '1px solid rgba(76,80,61,.14)' }}
+      >
         <Grid xs={4} item container>
-          Công ty cổ phần trách nghiệm hữu hạn Cỏ mềm
-          <Typography>
+          <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
+            Công ty cổ phần trách nghiệm hữu hạn Cỏ mềm
+          </Typography>
+          <Typography style={{ fontSize: '14px', fontWeight: 500, color: "#4c503d" }}>
             ĐKKD số 0109153702 do Sở KHĐT Tp. Hà Nội cấp ngày 09/04/2020
           </Typography>
-          <ul>
-            <li>
-              <a href="">
+          <ul className={classes.footer_contact}>
+            <li className={classes.footer_contact_item}>
+              <a href="/">
                 Tại 225 Trần Đăng Ninh,
                 P.Dịch Vọng, Q.Cầu Giấy, Hà Nội
               </a>
 
             </li>
-            <li>
-              <a href="">Email: comem@songan.vn</a>
+            <li className={classes.footer_contact_item}>
+              <a href="/">Email: comem@songan.vn</a>
             </li>
-            <li>
-              <a href="">
+            <li className={classes.footer_contact_item}>
+              <a href="/">
                 Hotline: 1800.646.890
               </a>
             </li>
           </ul>
           <Box className={classes.footer_note}>
-            <span>
+            <span style={{ fontSize: '15px', color: "#4c503d" }}>
               <b>*Lưu ý:</b>
               Tác dụng của sản phẩm có thể thay đổi tùy theo tình trạng thể chất của mỗi người
             </span>
           </Box>
         </Grid>
         <Grid item xs={3}>
-          <Typography>
+          <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
             Gian hàng cỏ mềm
           </Typography>
-          <ul>
-            <li>
+          <ul className={classes.footer_menu}>
+            <li className={classes.footer_menu_item}>
               <a href="/">Son môi</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Chăm sóc da</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Chăm sóc tóc</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Chăm sóc cơ thể</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Sản phẩm cho bé</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Hương thơm</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Trang điểm</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Khuyến mại và combo</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Túi vải</a>
             </li>
           </ul>
         </Grid>
         <Grid item xs={2}>
-          <Typography>
+          <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
             Truy cập nhanh
           </Typography>
-          <ul>
-            <li>
+          <ul className={classes.footer_menu}>
+            <li className={classes.footer_menu_item}>
               <a href="/">Về cỏ mềm</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Hệ thống cửa hàng</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Minh bạch nguyên liệu</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Phản hồi sản phẩm</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Hoạt động cộng đồng</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Blog làm đẹp</a>
             </li>
           </ul>
         </Grid>
         <Grid item xs={3}>
-          <Typography>
+          <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
             Hướng dẫn mua hàng
           </Typography>
-          <ul>
-            <li>
+          <ul className={classes.footer_menu}>
+            <li className={classes.footer_menu_item}>
               <a href="/">Chính sách mua hàng và thanh toán</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Chính sách bảo hành</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Chính sách đổi trả và hoàn tiền</a>
             </li>
-            <li>
+            <li className={classes.footer_menu_item}>
               <a href="/">Chính sách bảo mật thông tin</a>
             </li>
           </ul>
         </Grid>
       </Grid>
       <Grid container display="flex" justifyContent="space-between" alignItems="center" my={2}>
-        <Typography>
+        <Typography style={{ fontSize: '14px', color: "#4c503d" }}>
           © Bản quyền thuộc về Công ty Cổ phần Mỹ phẩm Thiên nhiên Cỏ Mềm
         </Typography>
         <a href="/">
