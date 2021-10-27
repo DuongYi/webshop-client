@@ -1,0 +1,47 @@
+.footer-form input,select,textarea  {
+  font-size: 1.6rem;
+  max-width: 100%;
+  border: 1px solid #f4f4f4;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.footer-form .footer-form-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #e9f0d5;
+  border-radius: 5px;
+  padding: 7px;
+  background-color: #fff;
+}
+
+.footer-form .footer-form-field textarea {
+  min-height: auto;
+  padding-top: 8px;
+  line-height: 1.6em;
+  padding: 0 11px;
+  width: 500px;
+  max-width: 100%;
+  height: 35px;
+  border: 0;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+.footer-form .footer-form-field .footer-form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  padding: 0 34px;
+  border: 0;
+  border-radius: 5px;
+  background: #e7edd7;
+  color: #738136;
+  font-weight: 700;
+  transition: all .3s;
+}
+
+
+

@@ -14,6 +14,7 @@ import Carousel from 'react-material-ui-carousel';
 
 import BlogSlick from "src/components/BlogSlick";
 import CarouselSlick from "src/components/CarouselSlick";
+import Footer from "src/components/Footer";
 import TrackSlick from "src/components/TrackSlick";
 
 import AboutItem from './components/AboutItem';
@@ -412,6 +413,7 @@ function Home() {
         </Grid>
         <BlogSlick />
       </Container>
+      <Footer />
     </>
   );
 }
