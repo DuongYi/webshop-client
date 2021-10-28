@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable max-len */
 import React, { useState } from "react";
 
 import { makeStyles } from '@material-ui/core';
@@ -17,6 +15,7 @@ import Carousel from 'react-material-ui-carousel';
 import BlogSlick from "src/components/BlogSlick";
 import CarouselSlick from "src/components/CarouselSlick";
 import Footer from "src/components/Footer";
+import Page from "src/components/Page";
 import ResourcesSlick from "src/components/ResourcesSlick";
 import TrackSlick from "src/components/TrackSlick";
 
@@ -195,9 +194,9 @@ function Home() {
   ];
 
   return (
-    <>
+    <Page>
       <HomeBanner />
-      {/* <Container maxWidth="lg" style={{ marginTop: '50px' }}>
+      <Container maxWidth="lg" style={{ marginTop: '50px' }}>
         <Grid
           container
           spacing={12}
@@ -323,9 +322,9 @@ function Home() {
             </Typography>
           </Grid>
         </Box>
-      </Container> */}
+      </Container>
 
-      {/* <Container maxWidth="" className={classes.home_shop_container}>
+      <Container maxWidth="" className={classes.home_shop_container}>
         <Container maxWidth="lg" style={{ zIndex: 1 }}>
           <Tabs
             style={{
@@ -377,7 +376,7 @@ function Home() {
           </Box>
         </Container>
         <Box />
-      </Container> */}
+      </Container>
 
       <Container maxWidth="lg" className={classes.home_resources}>
         <Grid
@@ -483,7 +482,7 @@ function Home() {
         <BlogSlick />
       </Container>
       <Footer />
-    </>
+    </Page>
   );
 }
 
