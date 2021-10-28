@@ -203,11 +203,13 @@ function Navbar(props) {
                 padding: "0 150px", backgroundColor: "#fff", borderTop: "1px solid #e7edd7", borderBottom: "1px solid #e7edd7"
               }}
             >
-              <Tooltip title="Delete">
-                <IconButton>
-                  <HomeIcon style={{ fontSize: '25px' }} className={classes.navIcon} />
-                </IconButton>
-              </Tooltip>
+              <Link to="/">
+                <Tooltip title="Home">
+                  <IconButton>
+                    <HomeIcon style={{ fontSize: '25px' }} className={classes.navIcon} />
+                  </IconButton>
+                </Tooltip>
+              </Link>
               <List className={classes.list}>
                 <ListItem className={classes.listItem}>
                   <Link to="/" className={classes.navLink}>
