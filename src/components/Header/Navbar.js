@@ -153,7 +153,7 @@ function Navbar(props) {
   return (
     <>
       <ElevationScroll {...props}>
-        <AppBar position="relative">
+        <AppBar position="sticky">
           <Toolbar className={classes.toolbar}>
             <Link to="/">
               <img className={classes.logo} src="static/images/logo.png" alt="" />
