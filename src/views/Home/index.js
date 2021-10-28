@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable max-len */
 import React, { useState } from "react";
 
 import { makeStyles } from '@material-ui/core';
@@ -196,7 +197,7 @@ function Home() {
   return (
     <>
       <HomeBanner />
-      <Container maxWidth="lg" style={{ marginTop: '50px' }}>
+      {/* <Container maxWidth="lg" style={{ marginTop: '50px' }}>
         <Grid
           container
           spacing={12}
@@ -271,7 +272,7 @@ function Home() {
             </Box>
           </Grid>
         </Grid>
-        {/* <Box mb={0}>
+        <Box mb={0}>
           <Grid
             container
             mb={2}
@@ -283,17 +284,16 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 15px', color: '#4c503d', fontSize: '36px'
-                , fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
+                margin: '0 0 15px', color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
               }}
             >
               Sản phẩm bán chạy nhất
             </Typography>
           </Grid>
           <CarouselSlick items={productList} />
-        </Box> */}
+        </Box>
 
-        {/* <Box>
+        <Box>
           <Grid
             container
             display="flex"
@@ -305,8 +305,7 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One,
-                cursive", padding: '40px 0 0', marginRight: '-50px'
+                color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0', marginRight: '-50px'
               }}
             >
               Gian hàng
@@ -317,15 +316,14 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                color: '#738136', fontSize: '36px', fontFamily: " Yeseva One,
-                cursive", padding: '40px 0 0', marginLeft: '-45px'
+                color: '#738136', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0', marginLeft: '-45px'
               }}
             >
               Cỏ mềm
             </Typography>
           </Grid>
-        </Box> */}
-      </Container>
+        </Box>
+      </Container> */}
 
       {/* <Container maxWidth="" className={classes.home_shop_container}>
         <Container maxWidth="lg" style={{ zIndex: 1 }}>
