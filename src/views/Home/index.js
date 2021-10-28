@@ -15,6 +15,7 @@ import Carousel from 'react-material-ui-carousel';
 import BlogSlick from "src/components/BlogSlick";
 import CarouselSlick from "src/components/CarouselSlick";
 import Footer from "src/components/Footer";
+import ResourcesSlick from "src/components/ResourcesSlick";
 import TrackSlick from "src/components/TrackSlick";
 
 import AboutItem from './components/AboutItem';
@@ -69,10 +70,36 @@ const useStyles = makeStyles(() => ({
       backgroundColor: '#738136',
     }
   },
+  home_resources: {
+    marginTop: '74px',
+    overflow: 'hidden',
+    paddingBottom: '20px'
+  },
+  home_resources_header: {
+    flex: '0 0 600px',
+    maxWidth: '600px',
+  },
+  home_resources_btn: {
+    display: 'inline-flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '5px',
+    backgroundColor: '#e7edd7',
+    padding: '0 30px',
+    fontSize: '14px',
+    fontWeight: 500,
+    lineHeight: 1.21,
+    letterSpacing: '2.8px',
+    color: '#738136',
+    height: '45px',
+    border: 0,
+    transition: 'all 0.3s',
+    '&:hover': {
+      color: '#fff',
+      backgroundColor: '#738136'
+    }
+  },
   home_react: {
-    marginTop: '130px',
-    width: '100%',
-    height: '100%',
   },
   box_react: {
     padding: '80px 0 165px',
@@ -348,6 +375,46 @@ function Home() {
           </Box>
         </Container>
         <Box />
+      </Container>
+
+      <Container maxWidth="lg" className={classes.home_resources}>
+        <Grid
+          container
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Grid
+            container
+            item
+            display="flex"
+            direction="column"
+            alignItems="center"
+            alignContent="center"
+            className={classes.home_resources_header}
+          >
+            <Typography
+              variant="h2"
+              style={{
+                margin: '0 0 5px', color: "#4c503d", fontSize: '36px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
+              }}
+            >
+              100% Minh bạch nguyên liệu
+            </Typography>
+            <Typography style={{
+              margin: '14px 0', fontSize: '14px', color: "#4c503d", fontWeight: 400
+            }}
+            >
+              Sản phẩm an LÀNH - con người chân THẬT
+            </Typography>
+            <Box display="flex" alignItems="center" justifyContent="center">
+              <a href="/" className={classes.home_resources_btn} style={{ textDecoration: 'none' }}>
+                Xem thêm
+              </a>
+            </Box>
+          </Grid>
+          <ResourcesSlick />
+        </Grid>
       </Container>
 
       <Container maxWidth="lg" className={classes.home_react}>
