@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 
 import { makeStyles } from '@material-ui/core';
@@ -10,7 +11,7 @@ import {
   Tabs,
   Typography
 } from '@mui/material';
-// import Carousel from 'react-material-ui-carousel';
+import Carousel from 'react-material-ui-carousel';
 
 import BlogSlick from "src/components/BlogSlick";
 import CarouselSlick from "src/components/CarouselSlick";
@@ -18,8 +19,8 @@ import Footer from "src/components/Footer";
 import ResourcesSlick from "src/components/ResourcesSlick";
 import TrackSlick from "src/components/TrackSlick";
 
-// import AboutItem from './components/AboutItem';
-// import HomeBanner from "./components/HomeBanner";
+import AboutItem from './components/AboutItem';
+import HomeBanner from "./components/HomeBanner";
 import NewsSlick from "./components/NewsSlick";
 
 const useStyles = makeStyles(() => ({
@@ -138,16 +139,16 @@ function Home() {
   const handleTabsChange = (event, newValue) => {
     setCurrentTab(newValue);
   };
-  // const items = [
-  //   {
-  //     link: "https://www.facebook.com/VSsYii",
-  //     image: "static/images/banner1.jpg"
-  //   },
-  //   {
-  //     link: "https://www.facebook.com/VSsYii",
-  //     image: "static/images/banner2.jpg"
-  //   },
-  // ];
+  const items = [
+    {
+      link: "https://www.facebook.com/VSsYii",
+      image: "static/images/banner1.jpg"
+    },
+    {
+      link: "https://www.facebook.com/VSsYii",
+      image: "static/images/banner2.jpg"
+    },
+  ];
 
   const productList = [
     {
@@ -194,7 +195,7 @@ function Home() {
 
   return (
     <>
-      {/* <HomeBanner /> */}
+      <HomeBanner />
       <Container maxWidth="lg" style={{ marginTop: '50px' }}>
         <Grid
           container
@@ -244,7 +245,7 @@ function Home() {
             >
               <b>Xem thêm</b>
             </Button>
-            {/* <Box mt={6}>
+            <Box mt={6}>
               <Carousel
                 animation="fade" // Previous Example
                 fullHeightHover="true"
@@ -267,10 +268,10 @@ function Home() {
                 items.map((item) => <AboutItem key={item} item={item} />)
               }
               </Carousel>
-            </Box> */}
+            </Box>
           </Grid>
         </Grid>
-        <Box mb={0}>
+        {/* <Box mb={0}>
           <Grid
             container
             mb={2}
@@ -282,16 +283,17 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 15px', color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
+                margin: '0 0 15px', color: '#4c503d', fontSize: '36px'
+                , fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
               }}
             >
               Sản phẩm bán chạy nhất
             </Typography>
           </Grid>
           <CarouselSlick items={productList} />
-        </Box>
+        </Box> */}
 
-        <Box>
+        {/* <Box>
           <Grid
             container
             display="flex"
@@ -303,7 +305,8 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0', marginRight: '-50px'
+                color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One,
+                cursive", padding: '40px 0 0', marginRight: '-50px'
               }}
             >
               Gian hàng
@@ -314,16 +317,17 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                color: '#738136', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0', marginLeft: '-45px'
+                color: '#738136', fontSize: '36px', fontFamily: " Yeseva One,
+                cursive", padding: '40px 0 0', marginLeft: '-45px'
               }}
             >
               Cỏ mềm
             </Typography>
           </Grid>
-        </Box>
+        </Box> */}
       </Container>
 
-      <Container maxWidth="" className={classes.home_shop_container}>
+      {/* <Container maxWidth="" className={classes.home_shop_container}>
         <Container maxWidth="lg" style={{ zIndex: 1 }}>
           <Tabs
             style={{
@@ -375,7 +379,7 @@ function Home() {
           </Box>
         </Container>
         <Box />
-      </Container>
+      </Container> */}
 
       <Container maxWidth="lg" className={classes.home_resources}>
         <Grid
