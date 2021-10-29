@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core';
@@ -87,9 +88,9 @@ function ProductView() {
               Sản phẩm liên quan
             </Typography>
           </Grid>
-          <Box style={{ padding: '0 20px 0 40px' }}>
+          {/* <Box style={{ padding: '0 20px 0 40px' }}>
             <CarouselSlick items={productList} />
-          </Box>
+          </Box> */}
 
         </Box>
       </Container>
