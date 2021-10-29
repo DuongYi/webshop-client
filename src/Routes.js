@@ -31,6 +31,11 @@ function Routes() {
               <Switch>
                 <Route
                   exact
+                  path="/sp"
+                  component={lazy(() => import("src/views/ProductView"))}
+                />
+                <Route
+                  exact
                   path="/allsp"
                   component={lazy(() => import("src/views/AllProductView"))}
                 />

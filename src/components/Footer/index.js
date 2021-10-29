@@ -118,13 +118,13 @@ function Footer() {
         </Grid>
         <Grid item display="flex" justifyContent="center" alignItems="center" className={classes.footer_social}>
           <a href="/" className={classes.footer_social_item}>
-            <img style={{ width: '100%', height: '100%', 'object-fit': 'cover' }} src="static/images/fb.svg" alt="Facebook" />
+            <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="static/images/fb.svg" alt="Facebook" />
           </a>
           <a href="/" className={classes.footer_social_item}>
-            <img style={{ width: '100%', height: '100%', 'object-fit': 'cover' }} src="static/images/insta.svg" alt="Instagram" />
+            <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="static/images/insta.svg" alt="Instagram" />
           </a>
           <a href="/" className={classes.footer_social_item}>
-            <img style={{ width: '100%', height: '100%', 'object-fit': 'cover' }} src="static/images/youtube.svg" alt="Youtube" />
+            <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="static/images/youtube.svg" alt="Youtube" />
           </a>
         </Grid>
       </Grid>
