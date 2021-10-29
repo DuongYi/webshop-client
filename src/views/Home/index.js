@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 
 import { makeStyles } from '@material-ui/core';
@@ -378,7 +379,7 @@ function Home() {
         <Box />
       </Container>
 
-      <Container maxWidth="lg" className={classes.home_resources}>
+      {/* <Container maxWidth="lg" className={classes.home_resources}>
         <Grid
           container
           display="flex"
@@ -397,7 +398,8 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 5px', color: "#4c503d", fontSize: '36px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
+                margin: '0 0 5px', color: "#4c503d", fontSize: '36px',
+                fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
               }}
             >
               100% Minh bạch nguyên liệu
@@ -430,7 +432,8 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 15px', color: '#fff', fontSize: '36px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
+                margin: '0 0 15px', color: '#fff', fontSize: '36px',
+                fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
               }}
             >
               Báo chí nói gì về Cỏ Mềm
@@ -445,9 +448,9 @@ function Home() {
             alt="home new title"
           />
         </div>
-      </Container>
+      </Container> */}
 
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" style={{ marginTop: '60px' }}>
         <TrackSlick />
       </Container>
 
