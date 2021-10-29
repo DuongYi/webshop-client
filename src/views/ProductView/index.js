@@ -73,7 +73,7 @@ function ProductView() {
   return (
     <Page>
       <Container maxWidth="lg">
-        <Box className={classes.product_related}>
+        {/* <Box className={classes.product_related}>
           <Grid
             container
             display="flex"
@@ -82,17 +82,19 @@ function ProductView() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 60px', color: '#fff', fontSize: '24px', fontFamily: " Yeseva One, cursive"
+                margin: '0 0 60px', color: '#fff',
+                fontSize: '24px', fontFamily: " Yeseva One, cursive"
               }}
             >
               Sản phẩm liên quan
             </Typography>
           </Grid>
-          {/* <Box style={{ padding: '0 20px 0 40px' }}>
+          <Box style={{ padding: '0 20px 0 40px' }}>
             <CarouselSlick items={productList} />
-          </Box> */}
+          </Box>
 
-        </Box>
+        </Box> */}
+        <h1>Hello</h1>
       </Container>
       <Footer />
     </Page>
