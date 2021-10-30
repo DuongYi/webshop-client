@@ -25,31 +25,31 @@ import HomeBanner from "./components/HomeBanner";
 import NewsSlick from "./components/NewsSlick";
 
 const useStyles = makeStyles(() => ({
-  home_about: {
-  },
-  home_product: {
-  },
-  arrow: {
-    color: "#000"
-  },
-  home_shop_container: {
-    position: 'relative',
-    '&:before': {
-      content: "''",
-      position: 'absolute',
-      top: 27,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      backgroundImage: `url(${'static/images/collections-bg.png'})`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      minHeight: '640px',
-      paddingBottom: '30px',
-      zIndex: -1
-    }
-  },
+  // home_about: {
+  // },
+  // home_product: {
+  // },
+  // arrow: {
+  //   color: "#000"
+  // },
+  // home_shop_container: {
+  //   position: 'relative',
+  //   '&:before': {
+  //     content: "''",
+  //     position: 'absolute',
+  //     top: 27,
+  //     left: 0,
+  //     width: '100%',
+  //     height: '100%',
+  //     backgroundImage: `url(${'static/images/collections-bg.png'})`,
+  //     backgroundSize: 'cover',
+  //     backgroundRepeat: 'no-repeat',
+  //     backgroundPosition: 'center',
+  //     minHeight: '640px',
+  //     paddingBottom: '30px',
+  //     zIndex: -1
+  //   }
+  // },
   // allShop_button: {
   //   display: 'inline-flex',
   //   justifyContent: 'center',
@@ -69,56 +69,56 @@ const useStyles = makeStyles(() => ({
   //     backgroundColor: '#738136',
   //   }
   // },
-  home_resources: {
-    marginTop: '74px',
-    overflow: 'hidden',
-    paddingBottom: '20px'
-  },
-  home_resources_header: {
-    flex: '0 0 600px',
-    maxWidth: '600px',
-  },
-  home_resources_btn: {
-    display: 'inline-flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: '5px',
-    backgroundColor: '#e7edd7',
-    padding: '0 30px',
-    fontSize: '14px',
-    fontWeight: 500,
-    lineHeight: 1.21,
-    letterSpacing: '2.8px',
-    color: '#738136',
-    height: '45px',
-    border: 0,
-    transition: 'all 0.3s',
-    '&:hover': {
-      color: '#fff',
-      backgroundColor: '#738136'
-    }
-  },
-  home_react: {
-  },
-  box_react: {
-    padding: '80px 0 165px',
-    backgroundImage: `url(${'static/images/mewspapers.png'})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    borderRadius: '15px',
-  },
-  homeNews_thumbnail: {
-    textAlign: 'center',
-    width: '100%',
-    marginTop: '-100px',
-  },
-  home_blog: {
-    width: '100%',
-    padding: '0 15px',
-    display: 'flex',
-    direction: 'column'
-  }
+  // home_resources: {
+  //   marginTop: '74px',
+  //   overflow: 'hidden',
+  //   paddingBottom: '20px'
+  // },
+  // home_resources_header: {
+  //   flex: '0 0 600px',
+  //   maxWidth: '600px',
+  // },
+  // home_resources_btn: {
+  //   display: 'inline-flex',
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   borderRadius: '5px',
+  //   backgroundColor: '#e7edd7',
+  //   padding: '0 30px',
+  //   fontSize: '14px',
+  //   fontWeight: 500,
+  //   lineHeight: 1.21,
+  //   letterSpacing: '2.8px',
+  //   color: '#738136',
+  //   height: '45px',
+  //   border: 0,
+  //   transition: 'all 0.3s',
+  //   '&:hover': {
+  //     color: '#fff',
+  //     backgroundColor: '#738136'
+  //   }
+  // },
+  // home_react: {
+  // },
+  // box_react: {
+  //   padding: '80px 0 165px',
+  //   backgroundImage: `url(${'static/images/mewspapers.png'})`,
+  //   backgroundSize: 'cover',
+  //   backgroundRepeat: 'no-repeat',
+  //   backgroundPosition: 'center',
+  //   borderRadius: '15px',
+  // },
+  // homeNews_thumbnail: {
+  //   textAlign: 'center',
+  //   width: '100%',
+  //   marginTop: '-100px',
+  // },
+  // home_blog: {
+  //   width: '100%',
+  //   padding: '0 15px',
+  //   display: 'flex',
+  //   direction: 'column'
+  // }
 }));
 
 function Home() {
@@ -325,7 +325,7 @@ function Home() {
         </Box>
       </Container> */}
 
-      <Container maxWidth="" className={classes.home_shop_container}>
+      {/* <Container maxWidth="" className={classes.home_shop_container}>
         <Container maxWidth="lg" style={{ zIndex: 1 }}>
           <Tabs
             style={{
@@ -377,7 +377,7 @@ function Home() {
           </Box>
         </Container>
         <Box />
-      </Container>
+      </Container> */}
 
       {/* <Container maxWidth="lg" className={classes.home_resources}>
         <Grid
