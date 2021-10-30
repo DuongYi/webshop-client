@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 
+import { makeStyles } from '@material-ui/core';
 import {
   Box,
   Button,
@@ -7,9 +9,8 @@ import {
   Grid,
   Tab,
   Tabs,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
+  Typography
+} from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 
 import BlogSlick from "src/components/BlogSlick";
@@ -193,7 +194,7 @@ function Home() {
   return (
     <Page>
       <HomeBanner />
-      <Container maxWidth="lg" style={{ marginTop: '50px' }}>
+      {/* <Container maxWidth="lg" style={{ marginTop: '50px' }}>
         <Grid
           container
           spacing={12}
@@ -206,7 +207,8 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 5px', color: '#4c503d', fontSize: '42px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
+                margin: '0 0 5px', color: '#4c503d',
+                fontSize: '42px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
               }}
             >
               Chuyện của cỏ
@@ -279,7 +281,8 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 15px', color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
+                margin: '0 0 15px', color: '#4c503d',
+                fontSize: '36px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
               }}
             >
               Sản phẩm bán chạy nhất
@@ -300,7 +303,8 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0', marginRight: '-50px'
+                color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive",
+                padding: '40px 0 0', marginRight: '-50px'
               }}
             >
               Gian hàng
@@ -311,14 +315,15 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                color: '#738136', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0', marginLeft: '-45px'
+                color: '#738136', fontSize: '36px',
+                fontFamily: " Yeseva One, cursive", padding: '40px 0 0', marginLeft: '-45px'
               }}
             >
               Cỏ mềm
             </Typography>
           </Grid>
         </Box>
-      </Container>
+      </Container> */}
 
       <Container maxWidth="" className={classes.home_shop_container}>
         <Container maxWidth="lg" style={{ zIndex: 1 }}>
@@ -374,7 +379,7 @@ function Home() {
         <Box />
       </Container>
 
-      <Container maxWidth="lg" className={classes.home_resources}>
+      {/* <Container maxWidth="lg" className={classes.home_resources}>
         <Grid
           container
           display="flex"
@@ -393,11 +398,8 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 5px',
-                color: "#4c503d",
-                fontSize: '36px',
-                fontFamily: " Yeseva One, cursive",
-                fontWeight: 'bold'
+                margin: '0 0 5px', color: "#4c503d", fontSize: '36px',
+                fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
               }}
             >
               100% Minh bạch nguyên liệu
@@ -430,11 +432,8 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 15px',
-                color: '#fff',
-                fontSize: '36px',
-                fontFamily: " Yeseva One, cursive",
-                fontWeight: 'bold'
+                margin: '0 0 15px', color: '#fff', fontSize: '36px',
+                fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
               }}
             >
               Báo chí nói gì về Cỏ Mềm
@@ -449,9 +448,9 @@ function Home() {
             alt="home new title"
           />
         </div>
-      </Container>
+      </Container> */}
 
-      <Container maxWidth="lg" style={{ marginTop: '60px' }}>
+      {/* <Container maxWidth="lg" style={{ marginTop: '60px' }}>
         <TrackSlick />
       </Container>
 
@@ -468,7 +467,8 @@ function Home() {
             variant="h2"
             mb={2}
             style={{
-              color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0'
+              color: '#4c503d', fontSize: '36px',
+              fontFamily: " Yeseva One, cursive", padding: '40px 0 0'
             }}
           >
             Blog làm đẹp
@@ -484,7 +484,7 @@ function Home() {
           </Typography>
         </Grid>
         <BlogSlick />
-      </Container>
+      </Container> */}
       <Footer />
     </Page>
   );
