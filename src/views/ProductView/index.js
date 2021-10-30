@@ -2,26 +2,52 @@ import React from 'react';
 
 import {
   Box,
+  Button,
   Grid,
   Typography,
   makeStyles
 } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
+import BorderColorIcon from '@material-ui/icons/BorderColor';
 
 import CarouselSlick from 'src/components/CarouselSlick';
 import Footer from 'src/components/Footer';
 import Page from 'src/components/Page';
 
 const useStyles = makeStyles(() => ({
+  product_review_grid: {
+    backgroundColor: '#fafbf7',
+    paddingTop: '60px',
+    paddingBottom: '50px'
+  },
+  review_button: {
+    background: "#738136",
+    '&:hover': {
+      background: "#636e33"
+    }
+  },
+  product_related_grid: {
+    position: 'relative',
+    '&:before': {
+      content: "''",
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '50%',
+      backgroundColor: '#fafbf7',
+    }
+  },
   product_related: {
+    position: 'relative',
     padding: '70px 0 60px',
     backgroundImage: `url(${'static/images/collections-bg.png'})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    borderRadius: '10px',
+    borderRadius: '10px'
   },
-  pRelated_title: {
+  pDetail_title: {
     fontFamily: 'Yeseva One, sans-serif',
     textAlign: 'center',
     fontWeight: 400,
@@ -80,23 +106,64 @@ function ProductView() {
 
   return (
     <Page>
-      <Container maxWidth="lg">
-        <Box className={classes.product_related}>
-          <Grid
-            container
-            display="flex"
-            justifyContent="center"
-
-          >
-            <Typography className={classes.pRelated_title}>
-              Sản phẩm liên quan
-            </Typography>
-          </Grid>
-          <Box style={{ padding: '30px 30px 30px 50px' }}>
-            <CarouselSlick items={productList} />
+      <Box className={classes.product_review_grid}>
+        <Container maxWidth="lg">
+          <Box className={classes.product_reviews}>
+            <Grid
+              container
+              display="flex"
+              justifyContent="center"
+            >
+              <Typography
+                style={{ color: "#000" }}
+                className={classes.pDetail_title}
+              >
+                Đánh giá sản phẩm
+              </Typography>
+            </Grid>
+            <Grid container display="flex" justifyContent="space-between">
+              <Grid item style={{ width: '100%', borderRightWidth: '1px solid #ccc' }}>
+                4.9
+                Theo 600 đánh giá
+              </Grid>
+              <Grid item>
+                Sao
+              </Grid>
+              <Grid item>
+                Ảnh
+              </Grid>
+              <Grid item>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={classes.review_button}
+                  endIcon={<BorderColorIcon />}
+                >
+                  <b>Viết đánh giá</b>
+                </Button>
+              </Grid>
+            </Grid>
           </Box>
-        </Box>
-      </Container>
+        </Container>
+      </Box>
+      <Box className={classes.product_related_grid}>
+        <Container maxWidth="lg">
+          <Box className={classes.product_related}>
+            <Grid
+              container
+              display="flex"
+              justifyContent="center"
+            >
+              <Typography className={classes.pDetail_title}>
+                Sản phẩm liên quan
+              </Typography>
+            </Grid>
+            <Box style={{ padding: '30px 30px 30px 50px' }}>
+              <CarouselSlick items={productList} />
+            </Box>
+          </Box>
+        </Container>
+      </Box>
       <Footer />
     </Page>
   );
