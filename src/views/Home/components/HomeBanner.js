@@ -3,20 +3,11 @@ import React from 'react';
 
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import { makeStyles } from '@mui/styles';
 import Carousel from 'react-material-ui-carousel';
 
 import Item from './Item';
 
-const useStyles = makeStyles({
-  root: {
-  },
-
-});
-
 function HomeBanner() {
-  const classes = useStyles();
-
   const items = [
     {
       link: "https://www.facebook.com/VSsYii",
@@ -47,7 +38,6 @@ function HomeBanner() {
       }}
       NextIcon={<NavigateNextIcon style={{ color: "#fff" }} />}
       PrevIcon={<NavigateBeforeIcon style={{ color: "#fff" }} />}
-      className={classes.root}
     >
       {
         items.map((item) => <Item key={item} item={item} />)

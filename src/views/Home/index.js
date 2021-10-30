@@ -370,11 +370,11 @@ function Home() {
           <Box mt={3}>
             <CarouselSlick items={productList} />
           </Box>
-          {/* <Box mt={3} display="flex" justifyContent="center">
+          <Box mt={3} display="flex" justifyContent="center">
             <a href="/" className={classes.allShop_button}>
               Xem thêm
             </a>
-          </Box> */}
+          </Box>
         </Container>
         <Box />
       </Container>
