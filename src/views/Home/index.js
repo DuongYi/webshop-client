@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 
-import { makeStyles } from '@material-ui/core';
 import {
   Box,
   Button,
@@ -11,6 +10,7 @@ import {
   Tabs,
   Typography
 } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import Carousel from 'react-material-ui-carousel';
 
 import BlogSlick from "src/components/BlogSlick";
