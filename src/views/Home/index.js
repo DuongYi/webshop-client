@@ -50,25 +50,25 @@ const useStyles = makeStyles(() => ({
       zIndex: -1
     }
   },
-  allShop_button: {
-    display: 'inline-flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minWidth: '280px',
-    height: '50px',
-    borderRadius: '25px',
-    border: '2px solid #fff',
-    backgroundColor: 'hsla(0,0%,100%,.6)',
-    padding: '0 50px',
-    color: '#fff',
-    fontSize: '16px',
-    fontWeight: 500,
-    textDecoration: 'none',
-    transition: 'all ease 0.3s',
-    '&:hover': {
-      backgroundColor: '#738136',
-    }
-  },
+  // allShop_button: {
+  //   display: 'inline-flex',
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   minWidth: '280px',
+  //   height: '50px',
+  //   borderRadius: '25px',
+  //   border: '2px solid #fff',
+  //   backgroundColor: 'hsla(0,0%,100%,.6)',
+  //   padding: '0 50px',
+  //   color: '#fff',
+  //   fontSize: '16px',
+  //   fontWeight: 500,
+  //   textDecoration: 'none',
+  //   transition: 'all ease 0.3s',
+  //   '&:hover': {
+  //     backgroundColor: '#738136',
+  //   }
+  // },
   home_resources: {
     marginTop: '74px',
     overflow: 'hidden',
