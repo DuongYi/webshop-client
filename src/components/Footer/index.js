@@ -11,7 +11,7 @@ import {
 import './Footer.css';
 
 const useStyle = makeStyles(() => ({
-  root: {
+  footer: {
     '& a': {
       textDecoration: 'none',
       color: "#4c503d",
@@ -95,7 +95,7 @@ const useStyle = makeStyles(() => ({
 function Footer() {
   const classes = useStyle();
   return (
-    <Container maxWidth="xl" className={classes.root}>
+    <Container maxWidth="xl" className={classes.footer}>
       <Grid container mt={5} display="flex" alignItems="center" justifyContent="space-between" style={{ paddingBottom: '25px' }}>
         <Grid item>
           <img className={classes.footerLogo} src="static/images/logo.png" alt="" />

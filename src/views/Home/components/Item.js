@@ -5,9 +5,6 @@ import { Paper } from '@mui/material';
 import propTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    color: "#fff"
-  },
   carousel_item: {
     height: '85vh',
   },
@@ -33,7 +30,7 @@ function Item({ item }) {
   const classes = useStyles();
 
   return (
-    <Paper className={classes.root}>
+    <Paper>
       <a href={item.link} target="_blank" rel="noreferrer">
         <div className={classes.carousel_item}>
           <img className={classes.carousel_item_image} src={item.image} alt="bg" />

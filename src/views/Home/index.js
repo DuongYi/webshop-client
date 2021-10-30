@@ -25,9 +25,6 @@ import HomeBanner from "./components/HomeBanner";
 import NewsSlick from "./components/NewsSlick";
 
 const useStyles = makeStyles(() => ({
-  root: {
-    color: '#000'
-  },
   home_about: {
   },
   home_product: {
@@ -263,7 +260,6 @@ function Home() {
                     marginBottom: '25px', // 4
                   }
                 }}
-                className={classes.root}
               >
                 {
                 items.map((item) => <AboutItem key={item} item={item} />)

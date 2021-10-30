@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const useStyles = makeStyles(() => ({
-  root: {
+  newSlick: {
     padding: '0 50px'
   },
   nextArrow: {
@@ -153,7 +153,7 @@ function NewsSlick() {
     ]
   };
   return (
-    <Slider className={classes.root} {...settings}>
+    <Slider className={classes.newSlick} {...settings}>
       {news.map((item) => (
         <NewsItem key={item.title} news={item} />
       ))}

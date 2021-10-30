@@ -11,9 +11,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const useStyles = makeStyles(() => ({
-  root: {
-    color: '#000'
-  },
   nextArrow: {
     cursor: 'pointer',
     position: 'absolute',
