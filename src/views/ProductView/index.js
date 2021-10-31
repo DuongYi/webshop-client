@@ -15,6 +15,55 @@ import Footer from 'src/components/Footer';
 import Page from 'src/components/Page';
 
 const useStyles = makeStyles(() => ({
+  product_policy: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '25px 0',
+    borderBottom: '1px solid #e7edd7'
+  },
+  product_policy_item: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: '0 15px',
+    fontWeight: 600,
+    fontSize: '15px',
+    lineHeight: '21px',
+    color: '#6a6a69',
+    textDecoration: 'none',
+    transition: 'all ease 0.3s'
+  },
+  product_policy_icon: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: '0 0 50px',
+    maxWidth: '50px',
+    width: '100%',
+    height: '50px',
+    border: '1px dashed #738136',
+    borderRadius: '100px',
+    '& img': {
+      textIndent: '100%',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      verticalAlign: 'middle',
+      margin: 0,
+      maxWidth: '100%'
+    }
+  },
+  product_policy_content: {
+    flex: '0 0 100%',
+    padding: '0 20px'
+  },
+  product_policy_description: {
+    display: 'block'
+  },
+  product_policy_title: {
+    fontFamily: 'Yeseva One,Helvetica,Arial,sans-serif',
+    fontSize: '28px',
+    lineHeight: '32px'
+  },
   product_review_grid: {
     backgroundColor: '#fafbf7',
     paddingTop: '60px',
@@ -106,6 +155,48 @@ function ProductView() {
 
   return (
     <Page>
+      <Container maxWidth="lg">
+        <Box className={classes.product_policy}>
+          <a href="/" className={classes.product_policy_item}>
+            <Box
+              className={classes.product_policy_icon}
+              style={{ border: '1px dashed #de8d1e' }}
+            >
+              <img src="static/images/icon-phone.svg" alt="Miễn phí vận chuyển" />
+            </Box>
+            <Box className={classes.product_policy_content}>
+              <span
+                className={classes.product_policy_description}
+                style={{ color: '#de8d1e' }}
+              >
+                Hotline mua hàng
+              </span>
+              <span
+                className={classes.product_policy_title}
+                style={{ color: '#de8d1e' }}
+              >
+                1800.646.890
+              </span>
+            </Box>
+          </a>
+          <a href="/" className={classes.product_policy_item}>
+            <Box className={classes.product_policy_icon}>
+              <img src="static/images/icon-location.svg" alt="Miễn phí vận chuyển" />
+            </Box>
+            <Box className={classes.product_policy_content}>
+              <span className={classes.product_policy_description}>Hệ thống cửa hàng</span>
+            </Box>
+          </a>
+          <a href="/" className={classes.product_policy_item}>
+            <Box className={classes.product_policy_icon}>
+              <img src="static/images/icon-tutorial.svg" alt="Miễn phí vận chuyển" />
+            </Box>
+            <Box className={classes.product_policy_content}>
+              <span className={classes.product_policy_description}>Hướng dẫn mua hàng</span>
+            </Box>
+          </a>
+        </Box>
+      </Container>
       <Box className={classes.product_review_grid}>
         <Container maxWidth="lg">
           <Box className={classes.product_reviews}>
