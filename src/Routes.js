@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { Suspense, lazy } from "react";
 
 import { Redirect, Route, Switch } from "react-router-dom";
@@ -28,31 +27,31 @@ function Routes() {
         <Route
           path="*"
           render={() => (
-
-            <Switch>
-              <Route
-                exact
-                path="/sp"
-                component={lazy(() => import("src/views/ProductView"))}
-              />
-              <Route
-                exact
-                path="/allsp"
-                component={lazy(() => import("src/views/AllProductView"))}
-              />
-              <Route
-                exact
-                path="/home"
-                component={lazy(() => import("src/views/Home"))}
-              />
-              <Route
-                exact
-                path="/"
-                component={lazy(() => import("src/views/Home"))}
-              />
-              <Redirect to="/404" />
-            </Switch>
-
+            <Header>
+              <Switch>
+                <Route
+                  exact
+                  path="/sp"
+                  component={lazy(() => import("src/views/ProductView"))}
+                />
+                <Route
+                  exact
+                  path="/allsp"
+                  component={lazy(() => import("src/views/AllProductView"))}
+                />
+                <Route
+                  exact
+                  path="/home"
+                  component={lazy(() => import("src/views/Home"))}
+                />
+                <Route
+                  exact
+                  path="/"
+                  component={lazy(() => import("src/views/Home"))}
+                />
+                <Redirect to="/404" />
+              </Switch>
+            </Header>
           )}
         />
         <Redirect to="/404" />
