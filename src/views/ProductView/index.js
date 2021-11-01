@@ -12,6 +12,7 @@ import {
 import Container from '@material-ui/core/Container';
 import BorderColorIcon from '@material-ui/icons/BorderColor';
 import Rating from '@material-ui/lab/Rating';
+import ImageGallery from 'react-image-gallery';
 
 import CarouselSlick from 'src/components/CarouselSlick';
 import Footer from 'src/components/Footer';
@@ -20,6 +21,8 @@ import ResourcesSlick from 'src/components/ResourcesSlick';
 
 import LinearProgressWithLabel from './components/LinearProgressWithLabel';
 import ProductSuggested from './components/ProductSuggested';
+
+import "react-image-gallery/styles/css/image-gallery.css";
 
 const useStyles = makeStyles(() => ({
   pDetail_subTitle: {
@@ -225,6 +228,7 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: '50px',
     marginBottom: '55px',
     '& a': {
       display: 'flex',
@@ -397,6 +401,18 @@ const useStyles = makeStyles(() => ({
     lineHeight: '19px',
     color: '#6a6a69'
   },
+  reviews_infomations_line: {
+    paddingLeft: '25px',
+    borderLeft: '1px solid #e7edd7',
+    position: 'relative',
+  },
+  reviews_infomations_gallery: {
+    paddingLeft: '20px'
+  },
+  reviews_infomations_action: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
   review_button: {
     background: "#738136",
     '&:hover': {
@@ -494,6 +510,39 @@ function ProductView() {
     },
   ];
 
+  const images = [
+    {
+      original: 'static/images/son1.jpg',
+      thumbnail: 'static/images/son1.jpg',
+    },
+    {
+      original: 'static/images/son2.jpg',
+      thumbnail: 'static/images/son2.jpg',
+    },
+    {
+      original: 'static/images/son3.jpg',
+      thumbnail: 'static/images/son3.jpg',
+    },
+    {
+      original: 'static/images/son4.jpg',
+      thumbnail: 'static/images/son4.jpg',
+    },
+    {
+      original: 'static/images/son5.jpg',
+      thumbnail: 'static/images/son5.jpg',
+    },
+    {
+      original: 'static/images/son6.jpg',
+      thumbnail: 'static/images/son6.jpg',
+    },
+  ];
+
+  const properties = {
+    showPlayButton: false,
+    showNav: false,
+    thumbnailHeight: 700
+  };
+
   const listMaterial = ['Sabowax PG4s', 'JBC lipstick base', 'Saboderm CVC MB', 'Dầu hạnh nhân', 'Dầu cám gạo', 'Dầu hạt táo',
     'Dầu Mù Ù', 'Olivem', 'Sáp Candelilla', 'Màu khoáng thiên nhiên', 'Flavor/aroma'];
 
@@ -544,7 +593,12 @@ function ProductView() {
       <Container maxWidth="lg" style={{ paddingTop: '40px' }}>
         <Grid container spacing={5}>
           <Grid item lg={7} md={12}>
-            Slick
+            <Box style={{ display: 'block', paddingRight: '30px' }}>
+              <ImageGallery
+                {...properties}
+                items={images}
+              />
+            </Box>
           </Grid>
           <Grid item lg={5} md={12}>
             <Box className={classes.product__heading}>
@@ -862,12 +916,14 @@ function ProductView() {
             </Grid>
             <Grid
               container
+              spacing={0}
               display="flex"
               justifyContent="space-between"
               style={{ padding: '15px 0' }}
             >
               <Grid
                 item
+                lg={2}
                 className={classes.reviews_infomations_ratings}
               >
                 <Box display="flex" alignItems="center">
@@ -882,70 +938,76 @@ function ProductView() {
                 </Box>
                 <span className={classes.reviewsInfo_ratings_label}>Theo 1903 đánh giá</span>
               </Grid>
-              <Grid item className={classes.reviews_infomations_line}>
-                <Box className={classes.reviews_line_item} display="flex" alignItems="center">
-                  <Rating
-                    name="half-rating"
-                    defaultValue={5}
-                    precision={1}
-                    size="small"
-                    readOnly
-                  />
-                  <LinearProgressWithLabel per={85} sl={1618} />
-                </Box>
-                <Box className={classes.reviews_line_item} display="flex" alignItems="center">
-                  <Rating
-                    name="half-rating"
-                    defaultValue={4}
-                    precision={1}
-                    size="small"
-                    readOnly
-                  />
-                  <LinearProgressWithLabel per={7} sl={133} />
-                </Box>
-                <Box className={classes.reviews_line_item} display="flex" alignItems="center">
-                  <Rating
-                    name="half-rating"
-                    defaultValue={3}
-                    precision={1}
-                    size="small"
-                    readOnly
-                  />
-                  <LinearProgressWithLabel per={5} sl={95} />
-                </Box>
-                <Box className={classes.reviews_line_item} display="flex" alignItems="center">
-                  <Rating
-                    name="half-rating"
-                    defaultValue={2}
-                    precision={1}
-                    size="small"
-                    readOnly
-                  />
-                  <LinearProgressWithLabel per={2} sl={38} />
-                </Box>
-                <Box className={classes.reviews_line_item} display="flex" alignItems="center">
-                  <Rating
-                    name="half-rating"
-                    defaultValue={1}
-                    precision={1}
-                    size="small"
-                    readOnly
-                  />
-                  <LinearProgressWithLabel per={1} sl={19} />
+
+              <Grid item lg={3}>
+                <Box className={classes.reviews_infomations_line}>
+                  <Box className={classes.reviews_line_item} display="flex" alignItems="center">
+                    <Rating
+                      name="half-rating"
+                      defaultValue={5}
+                      precision={1}
+                      size="small"
+                      readOnly
+                    />
+                    <LinearProgressWithLabel per={85} sl={1618} />
+                  </Box>
+                  <Box className={classes.reviews_line_item} display="flex" alignItems="center">
+                    <Rating
+                      name="half-rating"
+                      defaultValue={4}
+                      precision={1}
+                      size="small"
+                      readOnly
+                    />
+                    <LinearProgressWithLabel per={7} sl={133} />
+                  </Box>
+                  <Box className={classes.reviews_line_item} display="flex" alignItems="center">
+                    <Rating
+                      name="half-rating"
+                      defaultValue={3}
+                      precision={1}
+                      size="small"
+                      readOnly
+                    />
+                    <LinearProgressWithLabel per={5} sl={95} />
+                  </Box>
+                  <Box className={classes.reviews_line_item} display="flex" alignItems="center">
+                    <Rating
+                      name="half-rating"
+                      defaultValue={2}
+                      precision={1}
+                      size="small"
+                      readOnly
+                    />
+                    <LinearProgressWithLabel per={2} sl={38} />
+                  </Box>
+                  <Box className={classes.reviews_line_item} display="flex" alignItems="center">
+                    <Rating
+                      name="half-rating"
+                      defaultValue={1}
+                      precision={1}
+                      size="small"
+                      readOnly
+                    />
+                    <LinearProgressWithLabel per={1} sl={19} />
+                  </Box>
                 </Box>
               </Grid>
-              <Grid item className={classes.reviews_infomations_gallery}>
+
+              <Grid item lg={4} className={classes.reviews_infomations_gallery}>
                 Ảnh
               </Grid>
-              <Grid item className={classes.reviews_infomations_action}>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  className={classes.review_button}
-                  endIcon={<BorderColorIcon />}
-                >
-                  <b>Viết đánh giá</b>
-                </Button>
+              <Grid item lg={2}>
+                <Box className={classes.reviews_infomations_action}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={classes.review_button}
+                    endIcon={<BorderColorIcon />}
+                  >
+                    <b>Viết đánh giá</b>
+                  </Button>
+                </Box>
               </Grid>
             </Grid>
           </Box>
