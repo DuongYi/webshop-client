@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 
-import { makeStyles } from '@material-ui/core';
 import {
   Box,
   Button,
@@ -9,8 +8,9 @@ import {
   Grid,
   Tab,
   Tabs,
-  Typography
-} from '@mui/material';
+  Typography,
+  makeStyles
+} from '@material-ui/core';
 import Carousel from 'react-material-ui-carousel';
 
 import BlogSlick from "src/components/BlogSlick";
@@ -121,6 +121,16 @@ const useStyles = makeStyles(() => ({
     padding: '0 15px',
     display: 'flex',
     direction: 'column'
+  },
+  tabSelected: {
+    '&.Mui-selected': {
+      color: '#fff',
+      transition: 'all ease 0.3s'
+    },
+    '&:hover': {
+      color: '#738136',
+      transition: 'all ease 0.3s'
+    }
   }
 }));
 
@@ -200,13 +210,13 @@ function Home() {
       <Container maxWidth="lg" style={{ marginTop: '50px' }}>
         <Grid
           container
-          spacing={12}
+          spacing={10}
           className={classes.home_about}
         >
-          <Grid item xs={5}>
+          <Grid item xs={6} style={{ padding: '80px' }}>
             <img style={{ width: '100%', height: '100%' }} src="static/images/test1.jpg" alt="" />
           </Grid>
-          <Grid item xs={7} mt={5}>
+          <Grid item xs={6} style={{ margin: '80px 0 0' }}>
             <Typography
               variant="h2"
               style={{
@@ -242,7 +252,9 @@ function Home() {
             <Button
               variant="contained"
               color="success"
-              style={{ background: '#de8d1e', borderRadius: 1000, padding: '10px 25px' }}
+              style={{
+                background: '#de8d1e', borderRadius: 1000, padding: '10px 25px', color: '#fff'
+              }}
             >
               <b>Xem thêm</b>
             </Button>
@@ -337,6 +349,7 @@ function Home() {
               paddingRight: '20px'
             }}
             value={currentTab}
+            textColor="#000"
             onChange={handleTabsChange}
             variant="fullWidth"
             TabIndicatorProps={{
@@ -350,16 +363,10 @@ function Home() {
                 label={tab.label}
                 key={tab.value}
                 value={tab.value}
-                classes={{ selected: classes.selectedTab }}
-                sx={{
+                className={classes.tabSelected}
+                style={{
                   fontWeight: 'bold',
                   zIndex: 999,
-                  '&.Mui-selected': {
-                    color: '#fff',
-                  },
-                  '&:hover': {
-                    color: '#738136'
-                  }
                 }}
               />
             ))}
@@ -379,7 +386,7 @@ function Home() {
         <Box />
       </Container>
 
-      {/* <Container maxWidth="lg" className={classes.home_resources}>
+      <Container maxWidth="lg" className={classes.home_resources}>
         <Grid
           container
           display="flex"
@@ -398,8 +405,11 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 5px', color: "#4c503d", fontSize: '36px',
-                fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
+                margin: '0 0 5px',
+                color: "#4c503d",
+                fontSize: '36px',
+                fontFamily: " Yeseva One, cursive",
+                fontWeight: 'bold'
               }}
             >
               100% Minh bạch nguyên liệu
@@ -432,8 +442,11 @@ function Home() {
             <Typography
               variant="h2"
               style={{
-                margin: '0 0 15px', color: '#fff', fontSize: '36px',
-                fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
+                margin: '0 0 15px',
+                color: '#fff',
+                fontSize: '36px',
+                fontFamily: " Yeseva One, cursive",
+                fontWeight: 'bold'
               }}
             >
               Báo chí nói gì về Cỏ Mềm
@@ -448,7 +461,7 @@ function Home() {
             alt="home new title"
           />
         </div>
-      </Container> */}
+      </Container>
 
       <Container maxWidth="lg" style={{ marginTop: '60px' }}>
         <TrackSlick />

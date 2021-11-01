@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Carousel from 'react-material-ui-carousel';
 
 import Item from './Item';

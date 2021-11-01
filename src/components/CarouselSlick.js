@@ -36,7 +36,7 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     color: "rgba(115,129,54,.4)",
     zIndex: 1,
-    left: -50,
+    left: -25,
     justifyContent: 'flex-start',
     transition: 'all ease 0.3s',
     '&:hover': {

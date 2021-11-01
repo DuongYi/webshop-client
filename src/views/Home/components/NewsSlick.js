@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core';
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { PropTypes } from "prop-types";
 import Slider from "react-slick";
 
@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
     bottom: 0.5,
     display: 'flex',
     alignItems: 'center',
-    color: 'rgba(115,129,54,.6)',
+    color: "rgba(255,255,255,.5)",
     zIndex: 1,
     right: 0,
     justifyContent: 'flex-end',
@@ -38,7 +38,7 @@ const useStyles = makeStyles(() => ({
     bottom: 0.5,
     display: 'flex',
     alignItems: 'center',
-    color: "rgba(115,129,54,.6)",
+    color: "rgba(255,255,255,.5)",
     zIndex: 1,
     left: 0,
     justifyContent: 'flex-start',
@@ -53,7 +53,7 @@ function NextArrow({ currentSlide, slideCount, onClick }) {
   const classes = useStyles({ currentSlide, slideCount });
   return (
     <div className={classes.nextArrow} onClick={onClick}>
-      <NavigateNextIcon color="inherit" fontSize="large" />
+      <NavigateNextIcon fontSize="large" />
     </div>
   );
 }
@@ -68,7 +68,7 @@ function PrevArrow({ currentSlide, onClick }) {
   const classes = useStyles({ currentSlide });
   return (
     <div className={classes.prevArrow} onClick={onClick}>
-      <NavigateBeforeIcon color="inherit" fontSize="large" />
+      <NavigateBeforeIcon fontSize="large" />
     </div>
   );
 }

@@ -11,15 +11,17 @@ import {
   ListItem,
   Tooltip,
   alpha,
-  makeStyles
+  makeStyles,
+  useScrollTrigger
 } from '@material-ui/core';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import HomeIcon from '@mui/icons-material/Home';
-import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
-import SearchIcon from '@mui/icons-material/Search';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import HomeIcon from '@material-ui/icons/Home';
+import LocalMallIcon from '@material-ui/icons/LocalMall';
+import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
+import SearchIcon from '@material-ui/icons/Search';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
+import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -119,105 +121,132 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Navbar() {
+function ElevationScroll(props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+    target: window ? window() : undefined
+  });
+
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0
+  });
+}
+
+ElevationScroll.propTypes = {
+  children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func
+};
+
+function Navbar(props) {
   const classes = useStyles();
 
   return (
     <>
-      <AppBar position="sticky">
-        <Toolbar className={classes.toolbar}>
-          <Link to="/">
-            <img className={classes.logo} src="static/images/logo.png" alt="" />
-          </Link>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Tìm sản phẩm, danh mục mong muốn..."
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <Box>
-              <a className={classes.auth} href="/register">Đăng kí</a>
-              <span className={classes.auth}>/</span>
-              <a className={classes.auth} href="/register">Đăng nhập</a>
-            </Box>
-            <Box ml={2}>
-              <Button
-                style={{ backgroundColor: "#738136", padding: "5.5px 25px", color: "#fff" }}
-                variant="contained"
-                startIcon={<FavoriteIcon style={{ color: '#fff' }} />}
-              >
-                Đã xem
-              </Button>
-            </Box>
-            <Box ml={1}>
-              <Button
-                style={{ backgroundColor: "#738136", color: "#fff" }}
-                variant="contained"
-                startIcon={<ShoppingBagIcon style={{ color: '#fff' }} />}
-              >
-                Giỏ hàng
-              </Button>
-            </Box>
-          </div>
-        </Toolbar>
-
-        <Hidden mdDown implementation="css">
-          <Grid
-            container
-            display="flex"
-            justifyContent="space-around"
-            style={{
-              padding: "0 150px", backgroundColor: "#fff", borderTop: "1px solid #e7edd7", borderBottom: "1px solid #e7edd7"
-            }}
-          >
+      <ElevationScroll {...props}>
+        <AppBar position="sticky">
+          <Toolbar className={classes.toolbar}>
             <Link to="/">
-              <Tooltip title="Home">
-                <IconButton>
-                  <HomeIcon style={{ fontSize: '25px' }} className={classes.navIcon} />
-                </IconButton>
-              </Tooltip>
+              <img className={classes.logo} src="static/images/logo.png" alt="" />
             </Link>
-            <List className={classes.list}>
-              <ListItem className={classes.listItem}>
-                <Link to="/" className={classes.navLink}>
-                  About us
-                </Link>
-                <Link to="/" className={classes.navLink}>
-                  Sản phẩm - khuyến mại
-                </Link>
-                <Link to="/" className={classes.navLink}>
-                  Nguyên liệu
-                </Link>
-                <Link to="/" className={classes.navLink}>
-                  Blog làm đẹp
-                </Link>
-                <Link to="/" className={classes.navLink}>
-                  Tin tức
-                </Link>
-                <Link to="/" className={classes.navLink}>
-                  Hệ thống cửa hàng
-                </Link>
-              </ListItem>
-            </List>
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Tìm sản phẩm, danh mục mong muốn..."
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <Box>
+                <a className={classes.auth} href="/register">Đăng kí</a>
+                <span className={classes.auth}>/</span>
+                <a className={classes.auth} href="/register">Đăng nhập</a>
+              </Box>
+              <Box ml={2}>
+                <Button
+                  style={{ backgroundColor: "#738136", padding: "5.5px 25px", color: "#fff" }}
+                  variant="contained"
+                  startIcon={<FavoriteIcon style={{ color: '#fff' }} />}
+                >
+                  Đã xem
+                </Button>
+              </Box>
+              <Box ml={1}>
+                <Button
+                  style={{ backgroundColor: "#738136", color: "#fff" }}
+                  variant="contained"
+                  startIcon={<LocalMallIcon style={{ color: '#fff' }} />}
+                >
+                  Giỏ hàng
+                </Button>
+              </Box>
+            </div>
+          </Toolbar>
 
-            <Box display="flex" alignItems="center" style={{ fontFamily: 'sans-serif', color: "#738136" }}>
-              <PhoneInTalkIcon style={{ fontSize: '25px' }} className={classes.navIcon} />
-              <span style={{ fontSize: "14px", padding: '0 5px' }}>Hotline</span>
-              <b>
-                0393919320
-              </b>
-            </Box>
-          </Grid>
-        </Hidden>
-      </AppBar>
+          <Hidden mdDown implementation="css">
+            <Grid
+              container
+              display="flex"
+              justifyContent="space-around"
+              style={{
+                padding: "0 150px", backgroundColor: "#fff", borderTop: "1px solid #e7edd7", borderBottom: "1px solid #e7edd7"
+              }}
+            >
+              <Link to="/">
+                <Tooltip title="Home">
+                  <IconButton>
+                    <HomeIcon style={{ fontSize: '25px' }} className={classes.navIcon} />
+                  </IconButton>
+                </Tooltip>
+              </Link>
+              <List className={classes.list}>
+                <ListItem className={classes.listItem}>
+                  <Link to="/" className={classes.navLink}>
+                    About us
+                  </Link>
+                  <Link to="/" className={classes.navLink}>
+                    Sản phẩm - khuyến mại
+                  </Link>
+                  <Link to="/" className={classes.navLink}>
+                    Nguyên liệu
+                  </Link>
+                  <Link to="/" className={classes.navLink}>
+                    Blog làm đẹp
+                  </Link>
+                  <Link to="/" className={classes.navLink}>
+                    Tin tức
+                  </Link>
+                  <Link to="/" className={classes.navLink}>
+                    Hệ thống cửa hàng
+                  </Link>
+                </ListItem>
+              </List>
+
+              <Box display="flex" alignItems="center" style={{ fontFamily: 'sans-serif', color: "#738136" }}>
+                <PhoneInTalkIcon style={{ fontSize: '25px' }} className={classes.navIcon} />
+                <span style={{ fontSize: "14px", padding: '0 5px' }}>Hotline</span>
+                <b>
+                  0393919320
+                </b>
+              </Box>
+            </Grid>
+          </Hidden>
+        </AppBar>
+      </ElevationScroll>
     </>
   );
 }
