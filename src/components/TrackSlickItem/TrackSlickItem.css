@@ -25,6 +25,10 @@
   min-height: 260px;
 }
 
+.track-grid .track-card:hover {
+  box-shadow: 0 10px 15px 0 rgb(76 80 61 / 15%);
+}
+
 .track-grid .track-card::before{
   content: "";
   position: absolute;
@@ -36,10 +40,6 @@
   opacity: .08;
   background-size: contain;
   background-position: top;
-}
-
-.track-grid .track-card:hover{
-
 }
 
 .track-grid .track-card .track-card-thumbnail {
@@ -83,4 +83,14 @@
   letter-spacing: .3px;
   font-weight: 550;
 }
+
+@media screen and (max-width: 767px) {
+  .track-grid {
+    max-width: 100%;
+  }
+  .track-grid .track-card {
+    padding: '10px';
+  }
+}
+
 

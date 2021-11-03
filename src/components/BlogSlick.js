@@ -74,7 +74,7 @@ function BlogSlick() {
     ]
   };
   return (
-    <Slider style={{ margin: '0 -24px' }} {...settings}>
+    <Slider {...settings}>
       {blogList.map((item) => (
         <BlogItem key={item.title} blog={item} />
       ))}

@@ -24,7 +24,7 @@ import AboutItem from './components/AboutItem';
 import HomeBanner from "./components/HomeBanner";
 import NewsSlick from "./components/NewsSlick";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     color: '#000'
   },
@@ -115,10 +115,14 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     width: '100%',
     marginTop: '-100px',
+    '& img': {
+      maxWidth: '100%'
+    }
   },
   home_blog: {
     width: '100%',
     padding: '0 15px',
+    margin: '0 0 24px',
     display: 'flex',
     direction: 'column'
   },
@@ -131,7 +135,25 @@ const useStyles = makeStyles(() => ({
       color: '#738136',
       transition: 'all ease 0.3s'
     }
-  }
+  },
+  [theme.breakpoints.down('sm')]: {
+    homeNews_thumbnail: {
+      '& img': {
+        height: '270px',
+        'object-fit': 'cover',
+        'object-position': '39%',
+        transform: 'none!important'
+      }
+    },
+    home_react: {
+      width: 'auto',
+      margin: '0 -15px',
+      '&.MuiContainer-maxWidthLg': {
+        maxWidth: '100%',
+        padding: 0,
+      }
+    },
+  },
 }));
 
 function Home() {
@@ -251,7 +273,6 @@ function Home() {
             </Typography>
             <Button
               variant="contained"
-              color="success"
               style={{
                 background: '#de8d1e', borderRadius: 1000, padding: '10px 25px', color: '#fff'
               }}
@@ -337,7 +358,7 @@ function Home() {
         </Box>
       </Container>
 
-      <Container maxWidth="" className={classes.home_shop_container}>
+      <Box className={classes.home_shop_container}>
         <Container maxWidth="lg" style={{ zIndex: 1 }}>
           <Tabs
             style={{
@@ -349,7 +370,6 @@ function Home() {
               paddingRight: '20px'
             }}
             value={currentTab}
-            textColor="#000"
             onChange={handleTabsChange}
             variant="fullWidth"
             TabIndicatorProps={{
@@ -384,7 +404,7 @@ function Home() {
           </Box>
         </Container>
         <Box />
-      </Container>
+      </Box>
 
       <Container maxWidth="lg" className={classes.home_resources}>
         <Grid
@@ -467,10 +487,9 @@ function Home() {
         <TrackSlick />
       </Container>
 
-      <Container mt={6} maxWidth="">
+      <Box mt={6}>
         <Grid
           container
-          mb={3}
           direction="column"
           alignItems="center"
           justifyContent="center"
@@ -487,7 +506,7 @@ function Home() {
           </Typography>
           <Typography
             style={{
-              fontSize: '16px', color: "#4c503d", lineHeight: 1.5
+              fontSize: '16px', color: "#4c503d", lineHeight: 1.5, textAlign: 'center'
             }}
           >
             Là phụ nữ, nhất định phải xinh đẹp và tự tin. Hãy cùng Cỏ mềm HomeLab
@@ -496,7 +515,7 @@ function Home() {
           </Typography>
         </Grid>
         <BlogSlick />
-      </Container>
+      </Box>
       <Footer />
     </Page>
   );

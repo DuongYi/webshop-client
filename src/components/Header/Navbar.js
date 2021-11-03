@@ -1,26 +1,37 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+/* eslint-disable max-len */
+import React, { useState } from 'react';
 
 import {
   Box,
   Button,
+  Divider,
+  Drawer,
   Grid,
   Hidden,
   IconButton,
   InputBase,
   List,
   ListItem,
+  ListItemText,
   Tooltip,
   alpha,
   makeStyles,
   useScrollTrigger
 } from '@material-ui/core';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import HomeIcon from '@material-ui/icons/Home';
 import LocalMallIcon from '@material-ui/icons/LocalMall';
+import MailIcon from '@material-ui/icons/Mail';
+import Menu from '@material-ui/icons/Menu';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
 import SearchIcon from '@material-ui/icons/Search';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
+import classNames from 'classnames';
 import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
 
@@ -33,7 +44,15 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     height: '60px',
-    width: '160px'
+    width: '160px',
+    [theme.breakpoints.down('sm')]: {
+      height: '45px',
+      width: '120px',
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '35px',
+      width: '90px',
+    },
   },
   auth: {
     fontFamily: 'sans-serif',
@@ -78,6 +97,49 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#738136",
     borderRadius: "300px",
   },
+  appBar: {
+  },
+  appResponsive: {
+    margin: '20px 10px',
+  },
+  absolute: {
+    position: 'absolute',
+    zIndex: '1100'
+  },
+  fixed: {
+    position: 'fixed',
+    zIndex: '1100',
+  },
+  navRe: {
+    color: '#000',
+    'white-space': 'no-wrap',
+    width: '100%',
+    overFlow: 'hidden',
+    fontSize: '1rem',
+    fontWeight: '400',
+    lineHeight: '20px',
+    cursor: 'pointer',
+    textDecoration: 'none',
+    borderTop: '1px solid #f4f4f4'
+  },
+  drawerPaper: {
+    border: 'none',
+    bottom: '0',
+    transitionProperty: 'top, bottom, width',
+    transitionDuration: '.2s, .2s, .35s',
+    transitionTimingFunction: 'linear, linear, ease',
+    position: 'fixed',
+    display: 'block',
+    top: '0',
+    height: '100vh',
+    right: '0',
+    left: 'auto',
+    visibility: 'visible',
+    overflowY: 'visible',
+    borderTop: 'none',
+    textAlign: 'left',
+    background: 'rgb(255 255 255 )'
+  },
   search: {
     position: 'relative',
     borderRadius: '5px',
@@ -91,6 +153,13 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: theme.spacing(1),
       width: 'auto',
     },
+    [theme.breakpoints.down('xs')]: {
+      backgroundColor: alpha('#738136', 0),
+      '&:hover': {
+        backgroundColor: alpha('#738136', 1),
+      },
+      margin: '0 5px'
+    },
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -101,6 +170,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    [theme.breakpoints.down('xs')]: {
+      color: '#738136'
+    },
   },
   inputRoot: {
     color: 'inherit',
@@ -111,21 +183,48 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: `calc(1em + ${theme.spacing(1)}px)`,
     paddingRight: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: '50ch',
+    width: '50ch',
+    [theme.breakpoints.down('sm')]: {
+      width: '12ch',
       '&:focus': {
-        width: '50ch',
+        width: '20ch',
+      },
+    },
+    [theme.breakpoints.down('xs')]: {
+      paddingLeft: '10px',
+      width: 0,
+      '&:focus': {
+        width: '10ch',
       },
     },
   },
+  header_cart_mobile: {
+    display: 'none'
+  },
+  [theme.breakpoints.down('sm')]: {
+    toolbar: {
+      justifyContent: 'space-between',
+    },
+    header_cart: {
+      display: 'none'
+    },
+    related_watched: {
+      display: 'none'
+    },
+    header_cart_mobile: {
+      display: 'block'
+    },
+  },
+  [theme.breakpoints.down('xs')]: {
+    header_auth: {
+      display: 'none'
+    },
+  }
 }));
 
 function ElevationScroll(props) {
   const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
+
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -139,20 +238,28 @@ function ElevationScroll(props) {
 
 ElevationScroll.propTypes = {
   children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func
 };
 
-function Navbar(props) {
+function Navbar(props, { fixed, absolute }) {
   const classes = useStyles();
+
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const appBarClasses = classNames({
+    [classes.appBar]: true,
+    [classes.absolute]: absolute,
+    [classes.fixed]: fixed
+  });
 
   return (
     <>
       <ElevationScroll {...props}>
-        <AppBar position="sticky">
+        <AppBar className={appBarClasses} position="sticky">
           <Toolbar className={classes.toolbar}>
             <Link to="/">
               <img className={classes.logo} src="static/images/logo.png" alt="" />
@@ -171,12 +278,12 @@ function Navbar(props) {
               />
             </div>
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <Box>
+              <Box ml={2} className={classes.header_auth}>
                 <a className={classes.auth} href="/register">Đăng kí</a>
                 <span className={classes.auth}>/</span>
-                <a className={classes.auth} href="/register">Đăng nhập</a>
+                <a className={classes.auth} href="/login">Đăng nhập</a>
               </Box>
-              <Box ml={2}>
+              <Box ml={2} className={classes.related_watched}>
                 <Button
                   style={{ backgroundColor: "#738136", padding: "5.5px 25px", color: "#fff" }}
                   variant="contained"
@@ -185,7 +292,7 @@ function Navbar(props) {
                   Đã xem
                 </Button>
               </Box>
-              <Box ml={1}>
+              <Box ml={1} className={classes.header_cart}>
                 <Button
                   style={{ backgroundColor: "#738136", color: "#fff" }}
                   variant="contained"
@@ -194,6 +301,25 @@ function Navbar(props) {
                   Giỏ hàng
                 </Button>
               </Box>
+              <Box ml={1} className={classes.header_cart_mobile}>
+                <Tooltip title="Giỏ hàng rỗng">
+                  <IconButton
+                    color="inherit"
+                    onClick={() => {}}
+                  >
+                    <LocalMallIcon style={{ color: '#738136' }} />
+                  </IconButton>
+                </Tooltip>
+              </Box>
+              <Hidden mdUp>
+                <IconButton
+                  aria-label="open drawer"
+                  className={classes.btDrawer}
+                  onClick={handleDrawerToggle}
+                >
+                  <Menu style={{ fontSize: 30 }} />
+                </IconButton>
+              </Hidden>
             </div>
           </Toolbar>
 
@@ -245,10 +371,53 @@ function Navbar(props) {
               </Box>
             </Grid>
           </Hidden>
+
+          <Hidden lgUp implementation="js">
+            <Drawer
+              variant="temporary"
+              anchor="right"
+              open={mobileOpen}
+              classes={{
+                paper: classes.drawerPaper
+              }}
+              onClose={handleDrawerToggle}
+            >
+              <div className={classes.appResponsive}>
+                <div className={classes.drawerHeader}>
+                  <IconButton onClick={handleDrawerToggle}>
+                    <ChevronRightIcon />
+                  </IconButton>
+                </div>
+                <Divider />
+                <List>
+                  {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                    <ListItem button key={text}>
+                      <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                      <ListItemText primary={text} />
+                    </ListItem>
+                  ))}
+                </List>
+                <Divider />
+                <List>
+                  {['All mail', 'Trash', 'Spam'].map((text, index) => (
+                    <ListItem button key={text}>
+                      <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                      <ListItemText primary={text} />
+                    </ListItem>
+                  ))}
+                </List>
+              </div>
+            </Drawer>
+          </Hidden>
         </AppBar>
       </ElevationScroll>
     </>
   );
 }
+
+Navbar.propTypes = {
+  fixed: PropTypes.bool,
+  absolute: PropTypes.bool
+};
 
 export default Navbar;
