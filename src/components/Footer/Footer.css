@@ -1,4 +1,3 @@
-
 .footer-form input,select,textarea  {
   font-size: 1.6rem;
   width: 100%;
@@ -21,7 +20,7 @@
   min-height: auto;
   padding-top: 8px;
   line-height: 1.6em;
-  padding: 11px 0px;
+  padding: 8px 0px;
   max-width: 100%;
   height: 35px;
   border: 0;
@@ -30,9 +29,8 @@
 }
 
 .footer-form .footer-form-field .footer-form-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  white-space: nowrap;
   height: 35px;
   margin-left: 15px;
   cursor: pointer;

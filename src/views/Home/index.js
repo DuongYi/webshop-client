@@ -25,10 +25,49 @@ import HomeBanner from "./components/HomeBanner";
 import NewsSlick from "./components/NewsSlick";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    color: '#000'
+  home_title: {
+    color: '#4c503d',
+    fontSize: '36px',
+    fontFamily: " Yeseva One, cursive",
+    padding: '40px 0 0',
   },
-  home_about: {
+  home_hot_title: {
+    color: '#4c503d',
+    fontSize: '36px',
+    fontFamily: " Yeseva One, cursive",
+    padding: '40px 0 0',
+    margin: '0 0 15px'
+  },
+  home_hot_product: {
+    padding: '60px 0 0'
+  },
+  home_store: {
+    width: '100%',
+    maxWidth: '1280px',
+    padding: '0 15px',
+    margin: '0 auto',
+    '& img': {
+      textIndent: '100%',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      maxWidth: '100%',
+      margin: 0,
+      'vertical-align': 'middle'
+    }
+  },
+  home_store_title1: {
+    color: '#4c503d',
+    fontSize: '36px',
+    fontFamily: " Yeseva One, cursive",
+    padding: '40px 0 0',
+    marginRight: '-50px'
+  },
+  home_store_title2: {
+    color: '#738136',
+    fontSize: '36px',
+    fontFamily: " Yeseva One, cursive",
+    padding: '40px 0 0',
+    marginLeft: '-45px'
   },
   home_product: {
   },
@@ -101,6 +140,13 @@ const useStyles = makeStyles((theme) => ({
   },
   home_react: {
   },
+  home_react_title: {
+    margin: '0 0 15px',
+    color: '#fff',
+    fontSize: '36px',
+    fontFamily: " Yeseva One, cursive",
+    fontWeight: 'bold'
+  },
   box_react: {
     padding: '80px 0 165px',
     backgroundImage: `url(${'static/images/mewspapers.png'})`,
@@ -135,6 +181,15 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   [theme.breakpoints.down('sm')]: {
+    home_about: {
+      display: 'none'
+    },
+    home_hot_product: {
+      padding: 0
+    },
+    home_hot_title: {
+      padding: 0
+    },
     homeNews_thumbnail: {
       '& img': {
         height: '270px',
@@ -145,13 +200,50 @@ const useStyles = makeStyles((theme) => ({
     },
     home_react: {
       width: 'auto',
-      margin: '0 -15px',
       '&.MuiContainer-maxWidthLg': {
         maxWidth: '100%',
         padding: 0,
       }
     },
+    box_react: {
+      borderRadius: 0
+    },
+    home_store_title1: {
+      fontSize: '28px',
+      whiteSpace: 'nowrap'
+    },
+    home_store_title2: {
+      fontSize: '28px',
+      whiteSpace: 'nowrap'
+    }
   },
+  [theme.breakpoints.down('xs')]: {
+    home_title: {
+      fontSize: '28px'
+    },
+    home_hot_title: {
+      fontSize: '28px'
+    },
+    home_store: {
+      '& img': {
+        height: '75%',
+        width: '75%'
+      }
+    },
+    box_react: {
+      padding: '0px 0 165px',
+    },
+    home_react_title: {
+      fontSize: '28px'
+    },
+    home_store_title1: {
+      fontSize: '25px',
+    },
+    home_store_title2: {
+      fontSize: '25px',
+      marginLeft: '-80px'
+    }
+  }
 }));
 
 function Home() {
@@ -230,7 +322,6 @@ function Home() {
       <Container maxWidth="lg" style={{ marginTop: '50px' }}>
         <Grid
           container
-          spacing={10}
           className={classes.home_about}
         >
           <Grid item xs={6} style={{ padding: '80px' }}>
@@ -252,7 +343,6 @@ function Home() {
               <b>
                 Tôi bắt đầu Ước mơ Xanh của mình, nghiên cứu những sản
                 phẩm thuần tuý, tối giản, chỉ tập trung vào mục đính sử dụng của chính nó.
-
               </b>
             </Typography>
             <Typography
@@ -303,20 +393,16 @@ function Home() {
             </Box>
           </Grid>
         </Grid>
+
         <Box mb={0}>
           <Grid
-            container
             mb={2}
-            display="flex"
-            justifyContent="center"
-            className={classes.home_about}
-            style={{ padding: '60px 0 0' }}
+            className={classes.home_hot_product}
           >
             <Typography
               variant="h2"
-              style={{
-                margin: '0 0 15px', color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
-              }}
+              align="center"
+              className={classes.home_hot_title}
             >
               Sản phẩm bán chạy nhất
             </Typography>
@@ -330,14 +416,12 @@ function Home() {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            className={classes.home_about}
+            className={classes.home_store}
             style={{ padding: '60px 0 0' }}
           >
             <Typography
               variant="h2"
-              style={{
-                color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0', marginRight: '-50px'
-              }}
+              className={classes.home_store_title1}
             >
               Gian hàng
             </Typography>
@@ -346,9 +430,7 @@ function Home() {
             </span>
             <Typography
               variant="h2"
-              style={{
-                color: '#738136', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0', marginLeft: '-45px'
-              }}
+              className={classes.home_store_title2}
             >
               Cỏ mềm
             </Typography>
@@ -415,12 +497,9 @@ function Home() {
           <Typography
             variant="h2"
             align="center"
+            className={classes.home_title}
             style={{
               margin: '0 0 5px',
-              color: "#4c503d",
-              fontSize: '36px',
-              fontFamily: " Yeseva One, cursive",
-              fontWeight: 'bold',
             }}
           >
             100% Minh bạch nguyên liệu
@@ -443,21 +522,13 @@ function Home() {
       <Container maxWidth="lg" className={classes.home_react}>
         <Box mt={6} className={classes.box_react}>
           <Grid
-            container
             mb={2}
-            display="flex"
-            justifyContent="center"
             style={{ padding: '60px 0 0' }}
           >
             <Typography
               variant="h2"
-              style={{
-                margin: '0 0 15px',
-                color: '#fff',
-                fontSize: '36px',
-                fontFamily: " Yeseva One, cursive",
-                fontWeight: 'bold'
-              }}
+              align="center"
+              className={classes.home_react_title}
             >
               Báo chí nói gì về Cỏ Mềm
             </Typography>
@@ -488,9 +559,7 @@ function Home() {
           <Typography
             variant="h2"
             mb={2}
-            style={{
-              color: '#4c503d', fontSize: '36px', fontFamily: " Yeseva One, cursive", padding: '40px 0 0'
-            }}
+            className={classes.home_title}
           >
             Blog làm đẹp
           </Typography>

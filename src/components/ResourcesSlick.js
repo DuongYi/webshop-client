@@ -42,6 +42,7 @@ function ResourcesSlick() {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    centerMode: true,
     responsive: [
       {
         breakpoint: 1280,

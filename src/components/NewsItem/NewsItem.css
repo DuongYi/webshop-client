@@ -27,5 +27,6 @@
 .news-grid .news-item img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 140px;
+  white-space: nowrap;
 }
