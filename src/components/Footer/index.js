@@ -1,17 +1,18 @@
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core';
 import {
   Box,
   Container,
   Grid,
-  Typography
-} from '@mui/material';
+  Typography,
+  makeStyles
+} from '@material-ui/core';
 
 import './Footer.css';
 
-const useStyle = makeStyles(() => ({
+const useStyle = makeStyles((theme) => ({
   footer: {
+    marginTop: '30px',
     '& a': {
       textDecoration: 'none',
       color: "#4c503d",
@@ -46,7 +47,10 @@ const useStyle = makeStyles(() => ({
   },
   footer_social: {
     marginLeft: '-5px',
-    marginRight: '-5px'
+    marginRight: '-5px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   footer_social_item: {
     width: "40px",
@@ -75,10 +79,9 @@ const useStyle = makeStyles(() => ({
   },
   footer_note: {
     position: 'relative',
-    padding: '20px 15px 0px 15px',
+    padding: '5px 15px 5px 15px',
     borderRadius: '10px',
     backgroundColor: '#e9f0d5',
-    marginTop: '-20px',
     '&:before': {
       content: "''",
       position: 'absolute',
@@ -89,21 +92,42 @@ const useStyle = makeStyles(() => ({
       border: '8px solid #ffffff00',
       borderBottomColor: '#e9f0d5'
     }
+  },
+  footer_bottom: {
+    margin: '20px 0 0'
+  },
+  [theme.breakpoints.down('md')]: {
+    footer_social: {
+      justifyContent: 'flex-end'
+    },
+    footer_note: {
+      padding: '15px 15px 15px 15px'
+    },
+  },
+  [theme.breakpoints.down('sm')]: {
+    footer_social: {
+      paddingTop: '15px',
+    },
+  },
+  [theme.breakpoints.down('xs')]: {
+    footer_copyRight: {
+      margin: '15px 0 0'
+    }
   }
 }));
 
 function Footer() {
   const classes = useStyle();
   return (
-    <Container maxWidth="xl" className={classes.footer}>
-      <Grid container mt={5} display="flex" alignItems="center" justifyContent="space-between" style={{ paddingBottom: '25px' }}>
-        <Grid item>
+    <Container maxWidth="lg" className={classes.footer}>
+      <Grid container mt={2} display="flex" alignItems="center" justifyContent="space-between" style={{ paddingBottom: '25px' }}>
+        <Grid lg={3} md={4} xs={12} item>
           <img className={classes.footerLogo} src="static/images/logo.png" alt="" />
           <Box className={classes.footerLogo_title}>
             <span>Mỹ phẩm thiên nhiên lành & thật</span>
           </Box>
         </Grid>
-        <Grid item>
+        <Grid lg={7} md={8} xs={12} item>
           <div className="footer-form">
             <form action="/">
               <input type="hidden" name="_token" />
@@ -116,7 +140,7 @@ function Footer() {
             </form>
           </div>
         </Grid>
-        <Grid item display="flex" justifyContent="center" alignItems="center" className={classes.footer_social}>
+        <Grid lg={2} md={12} container item className={classes.footer_social}>
           <a href="/" className={classes.footer_social_item}>
             <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="static/images/fb.svg" alt="Facebook" />
           </a>
@@ -133,7 +157,7 @@ function Footer() {
         spacing={5}
         style={{ paddingBottom: '40px', borderBottom: '1px solid rgba(76,80,61,.14)' }}
       >
-        <Grid xs={4} item container>
+        <Grid lg={4} md={12} item>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
             Công ty cổ phần trách nghiệm hữu hạn Cỏ mềm
           </Typography>
@@ -164,7 +188,7 @@ function Footer() {
             </span>
           </Box>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item lg={3} sm={4} xs={6}>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
             Gian hàng cỏ mềm
           </Typography>
@@ -198,7 +222,7 @@ function Footer() {
             </li>
           </ul>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item lg={2} sm={4} xs={6}>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
             Truy cập nhanh
           </Typography>
@@ -223,7 +247,7 @@ function Footer() {
             </li>
           </ul>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item lg={3} sm={4}>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
             Hướng dẫn mua hàng
           </Typography>
@@ -243,11 +267,11 @@ function Footer() {
           </ul>
         </Grid>
       </Grid>
-      <Grid container display="flex" justifyContent="space-between" alignItems="center" my={2}>
-        <Typography style={{ fontSize: '14px', color: "#4c503d" }}>
+      <Grid className={classes.footer_bottom} container display="flex" justifyContent="space-between" alignItems="center">
+        <Typography className={classes.footer_copyRight} style={{ fontSize: '14px', color: "#4c503d" }}>
           © Bản quyền thuộc về Công ty Cổ phần Mỹ phẩm Thiên nhiên Cỏ Mềm
         </Typography>
-        <a href="/">
+        <a style={{ margin: '5px 0 0' }} href="/">
           <img src="static/images/thongbao.png" width="111" height="43" alt="thongbao" />
         </a>
       </Grid>

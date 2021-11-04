@@ -78,8 +78,6 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: '20px'
   },
   home_resources_header: {
-    flex: '0 0 600px',
-    maxWidth: '600px',
   },
   home_resources_btn: {
     display: 'inline-flex',
@@ -410,44 +408,36 @@ function Home() {
         <Grid
           container
           display="flex"
+          direction="column"
           alignItems="center"
-          justifyContent="center"
+          className={classes.home_resources_header}
         >
-          <Grid
-            container
-            item
-            display="flex"
-            direction="column"
-            alignItems="center"
-            alignContent="center"
-            className={classes.home_resources_header}
-          >
-            <Typography
-              variant="h2"
-              style={{
-                margin: '0 0 5px',
-                color: "#4c503d",
-                fontSize: '36px',
-                fontFamily: " Yeseva One, cursive",
-                fontWeight: 'bold'
-              }}
-            >
-              100% Minh bạch nguyên liệu
-            </Typography>
-            <Typography style={{
-              margin: '14px 0', fontSize: '14px', color: "#4c503d", fontWeight: 400
+          <Typography
+            variant="h2"
+            align="center"
+            style={{
+              margin: '0 0 5px',
+              color: "#4c503d",
+              fontSize: '36px',
+              fontFamily: " Yeseva One, cursive",
+              fontWeight: 'bold',
             }}
-            >
-              Sản phẩm an LÀNH - con người chân THẬT
-            </Typography>
-            <Box display="flex" alignItems="center" justifyContent="center">
-              <a href="/" className={classes.home_resources_btn} style={{ textDecoration: 'none' }}>
-                Xem thêm
-              </a>
-            </Box>
-          </Grid>
-          <ResourcesSlick />
+          >
+            100% Minh bạch nguyên liệu
+          </Typography>
+          <Typography style={{
+            margin: '14px 0', fontSize: '14px', color: "#4c503d", fontWeight: 400
+          }}
+          >
+            Sản phẩm an LÀNH - con người chân THẬT
+          </Typography>
+          <Box display="flex" alignItems="center" justifyContent="center">
+            <a href="/" className={classes.home_resources_btn} style={{ textDecoration: 'none' }}>
+              Xem thêm
+            </a>
+          </Box>
         </Grid>
+        <ResourcesSlick />
       </Container>
 
       <Container maxWidth="lg" className={classes.home_react}>
