@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 
@@ -20,13 +19,13 @@ import {
   useScrollTrigger
 } from '@material-ui/core';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import CreateIcon from '@material-ui/icons/Create';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import HomeIcon from '@material-ui/icons/Home';
 import LocalMallIcon from '@material-ui/icons/LocalMall';
-import MailIcon from '@material-ui/icons/Mail';
 import Menu from '@material-ui/icons/Menu';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
 import SearchIcon from '@material-ui/icons/Search';
 import AppBar from '@mui/material/AppBar';
@@ -158,7 +157,7 @@ const useStyles = makeStyles((theme) => ({
       '&:hover': {
         backgroundColor: alpha('#738136', 1),
       },
-      margin: '0 5px'
+      margin: '0 5px 0 20px'
     },
   },
   searchIcon: {
@@ -171,7 +170,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     [theme.breakpoints.down('xs')]: {
-      color: '#738136'
+      color: '#738136',
+      right: -20,
+      top: 2,
     },
   },
   inputRoot: {
@@ -192,9 +193,9 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('xs')]: {
       paddingLeft: '10px',
-      width: 0,
+      width: '5ch',
       '&:focus': {
-        width: '10ch',
+        width: '5ch',
       },
     },
   },
@@ -390,22 +391,24 @@ function Navbar(props, { fixed, absolute }) {
                 </div>
                 <Divider />
                 <List>
-                  {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                  <ListItem button>
+                    <ListItemIcon><AccountCircleIcon /></ListItemIcon>
+                    <ListItemText>Đăng nhập</ListItemText>
+                  </ListItem>
+                  <ListItem button>
+                    <ListItemIcon><CreateIcon /></ListItemIcon>
+                    <ListItemText>Đăng kí</ListItemText>
+                  </ListItem>
+                </List>
+                <Divider />
+                <List>
+                  {['Về cỏ mềm', 'Minh bạch nguyên liệu', 'Blog làm đẹp', 'Tin tức'].map((text) => (
                     <ListItem button key={text}>
-                      <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                       <ListItemText primary={text} />
                     </ListItem>
                   ))}
                 </List>
                 <Divider />
-                <List>
-                  {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                      <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                      <ListItemText primary={text} />
-                    </ListItem>
-                  ))}
-                </List>
               </div>
             </Drawer>
           </Hidden>

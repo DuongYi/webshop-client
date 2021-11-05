@@ -131,7 +131,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '25px'
+    marginBottom: '25px',
   },
   product_quantity: {
     display: 'flex',
@@ -251,6 +251,10 @@ const useStyles = makeStyles((theme) => ({
         transition: 'all ease 0.3s',
       }
     }
+  },
+  product_material: {
+    paddingBottom: '60px',
+    marginBottom: '50px'
   },
   pInfomations_widget: {
     background: '#fff',
@@ -398,6 +402,15 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '60px',
     paddingBottom: '50px'
   },
+  product_review_title: {
+    fontFamily: 'Yeseva One, sans-serif',
+    textAlign: 'center',
+    fontWeight: 400,
+    fontSize: '24px',
+    lineHeight: '28px',
+    color: '#4c503d',
+    marginBottom: '45px'
+  },
   reviewsInfo_ratings_point: {
     fontWeight: 'bold',
     fontSize: '36px',
@@ -449,6 +462,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center',
     borderRadius: '10px'
   },
+  product_related_detail: {
+    padding: '30px'
+  },
   pDetail_title: {
     fontFamily: 'Yeseva One, sans-serif',
     textAlign: 'center',
@@ -457,6 +473,16 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '28px',
     color: '#fff',
     marginBottom: '45px'
+  },
+  product_Detail_title: {
+    fontFamily: 'Yeseva One, sans-serif',
+    textAlign: 'start',
+    fontWeight: 400,
+    color: '#4c503d',
+    marginBottom: '10px',
+    fontSize: '28px',
+    lineHeight: '46px',
+
   },
   [theme.breakpoints.down('sm')]: {
     container_product_policy: {
@@ -470,8 +496,67 @@ const useStyles = makeStyles((theme) => ({
     },
     pInfomations_widget: {
       marginRight: 0
+    },
+    product_material: {
+      marginBottom: 0
+    },
+    product_review_title: {
+      marginBottom: '20px'
     }
   },
+  [theme.breakpoints.down(760)]: {
+
+  },
+  [theme.breakpoints.down('xs')]: {
+    product_Detail_title: {
+      fontSize: '22px',
+      lineHeight: '28px',
+      marginBottom: '10px'
+    },
+    pDetail_subTitle: {
+      fontSize: '17px',
+      lineHeight: '18px',
+      color: '#6a6a69',
+      marginBottom: '15px'
+    },
+    product_info: {
+      margin: '0 0 15px',
+      flexDirection: 'column',
+      alignItems: 'start'
+    },
+    product_prices: {
+      fontSize: '20px',
+      lineHeight: '23px',
+      margin: '0 0 15px',
+    },
+    product_social: {
+      margin: '30px 0'
+    },
+    product_related: {
+      borderRadius: 0
+    },
+    product_related_container: {
+      width: 'auto',
+      '&.MuiContainer-maxWidthLg': {
+        maxWidth: '100%',
+        padding: 0,
+      }
+    },
+    product_related_detail: {
+      padding: 0
+    }
+  },
+  [theme.breakpoints.down(450)]: {
+    product_actions: {
+      flexDirection: 'column',
+      alignItems: 'start',
+    },
+    product_BuyNow: {
+      width: '288.77px',
+      padding: '10.5px 8px',
+      marginTop: '15px'
+    }
+  }
 }));
 
 function ProductView() {
@@ -633,10 +718,7 @@ function ProductView() {
           <Grid item md={5} sm={12}>
             <Box className={classes.product__heading}>
               <Typography
-                className={classes.pDetail_title}
-                style={{
-                  color: '#4c503d', marginBottom: '10px', fontSize: '28px', lineHeight: '46px', textAlign: 'start'
-                }}
+                className={classes.product_Detail_title}
               >
                 Son kem nhung (Lì mượt không silicon)
               </Typography>
@@ -805,7 +887,7 @@ function ProductView() {
       </Container>
 
       {/* Nguyên liệu */}
-      <Container maxWidth="lg" style={{ paddingBottom: '60px', marginBottom: '50px' }}>
+      <Container maxWidth="lg" className={classes.product_material}>
         <Typography
           className={classes.pDetail_title}
           style={{ color: '#4c503d', margin: '0 0 20px' }}
@@ -938,8 +1020,7 @@ function ProductView() {
               justifyContent="center"
             >
               <Typography
-                style={{ color: "#000" }}
-                className={classes.pDetail_title}
+                className={classes.product_review_title}
               >
                 Đánh giá sản phẩm
               </Typography>
@@ -949,12 +1030,13 @@ function ProductView() {
               spacing={0}
               display="flex"
               justifyContent="space-between"
-              style={{ padding: '15px 0' }}
+              style={{ padding: '15px 0 0' }}
             >
               <Grid
                 item
                 lg={2}
                 className={classes.reviews_infomations_ratings}
+                style={{ padding: '0 0 15px' }}
               >
                 <Box display="flex" alignItems="center">
                   <span className={classes.reviewsInfo_ratings_point}>4.6</span>
@@ -969,7 +1051,7 @@ function ProductView() {
                 <span className={classes.reviewsInfo_ratings_label}>Theo 1903 đánh giá</span>
               </Grid>
 
-              <Grid item lg={3}>
+              <Grid item lg={3} style={{ padding: '0 0 15px', marginRight: '15px' }}>
                 <Box className={classes.reviews_infomations_line}>
                   <Box className={classes.reviews_line_item} display="flex" alignItems="center">
                     <Rating
@@ -1024,10 +1106,10 @@ function ProductView() {
                 </Box>
               </Grid>
 
-              <Grid item lg={4} className={classes.reviews_infomations_gallery}>
-                Ảnh
+              <Grid item lg={4} style={{ padding: '0 0 15px' }} className={classes.reviews_infomations_gallery}>
+                image1 image2 image3 image4 image5
               </Grid>
-              <Grid item lg={2}>
+              <Grid item lg={2} style={{ padding: '0 0 15px' }}>
                 <Box className={classes.reviews_infomations_action}>
                   <Button
                     variant="contained"
@@ -1046,7 +1128,7 @@ function ProductView() {
 
       {/* Sản phẩm liên quan */}
       <Box className={classes.product_related_grid}>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" className={classes.product_related_container}>
           <Box className={classes.product_related}>
             <Grid
               container
@@ -1057,7 +1139,7 @@ function ProductView() {
                 Sản phẩm liên quan
               </Typography>
             </Grid>
-            <Box style={{ padding: '30px 30px 30px 50px' }}>
+            <Box className={classes.product_related_detail}>
               <CarouselSlick items={productList} />
             </Box>
           </Box>

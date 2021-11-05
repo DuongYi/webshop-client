@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
-const useStyle = makeStyles({
+const useStyle = makeStyles((theme) => ({
   pSuggested_column: {
     position: 'relative',
     boxSizing: 'border-box',
@@ -77,8 +77,14 @@ const useStyle = makeStyles({
       color: '#738136',
       textDecoration: 'none'
     }
+  },
+  [theme.breakpoints.down('xs')]: {
+    pSuggested_column: {
+      width: '100%',
+      padding: '15px 15px 0 15px',
+    }
   }
-});
+}));
 
 function ProductSuggested({ product }) {
   const classes = useStyle();
