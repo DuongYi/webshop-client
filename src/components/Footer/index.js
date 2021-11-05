@@ -154,10 +154,9 @@ function Footer() {
       </Grid>
       <Grid
         container
-        spacing={5}
         style={{ paddingBottom: '40px', borderBottom: '1px solid rgba(76,80,61,.14)' }}
       >
-        <Grid lg={4} md={12} item>
+        <Grid style={{ padding: '0 20px 10px 0' }} lg={4} md={12} item>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
             Công ty cổ phần trách nghiệm hữu hạn Cỏ mềm
           </Typography>
@@ -188,7 +187,7 @@ function Footer() {
             </span>
           </Box>
         </Grid>
-        <Grid item lg={3} sm={4} xs={6}>
+        <Grid style={{ padding: '0 20px 10px 0' }} item lg={3} sm={4} xs={6}>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
             Gian hàng cỏ mềm
           </Typography>
@@ -222,7 +221,7 @@ function Footer() {
             </li>
           </ul>
         </Grid>
-        <Grid item lg={2} sm={4} xs={6}>
+        <Grid style={{ padding: '0 20px 10px 0' }} item lg={2} sm={4} xs={6}>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
             Truy cập nhanh
           </Typography>
@@ -247,7 +246,7 @@ function Footer() {
             </li>
           </ul>
         </Grid>
-        <Grid item lg={3} sm={4}>
+        <Grid style={{ padding: '0 20px 10px 0' }} item lg={3} sm={4}>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
             Hướng dẫn mua hàng
           </Typography>

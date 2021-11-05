@@ -23,6 +23,7 @@ import TrackSlick from "src/components/TrackSlick";
 import AboutItem from './components/AboutItem';
 import HomeBanner from "./components/HomeBanner";
 import NewsSlick from "./components/NewsSlick";
+import TabData from "./components/TabData";
 
 const useStyles = makeStyles((theme) => ({
   product_container: {
@@ -89,29 +90,8 @@ const useStyles = makeStyles((theme) => ({
       backgroundImage: `url(${'static/images/collections-bg.png'})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      minHeight: '640px',
       paddingBottom: '30px',
       zIndex: -1
-    }
-  },
-  allShop_button: {
-    display: 'inline-flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minWidth: '280px',
-    height: '50px',
-    borderRadius: '25px',
-    border: '2px solid #fff',
-    backgroundColor: 'hsla(0,0%,100%,.6)',
-    padding: '0 50px',
-    color: '#fff',
-    fontSize: '16px',
-    fontWeight: 500,
-    textDecoration: 'none',
-    transition: 'all ease 0.3s',
-    '&:hover': {
-      backgroundColor: '#738136',
     }
   },
   home_resources: {
@@ -477,16 +457,13 @@ function Home() {
               />
             ))}
           </Tabs>
-          <Box mt={6}>
-            <CarouselSlick items={productList} />
-          </Box>
           <Box mt={3}>
-            <CarouselSlick items={productList} />
-          </Box>
-          <Box mt={3} display="flex" justifyContent="center">
-            <a href="/" className={classes.allShop_button}>
-              Xem thêm
-            </a>
+            {currentTab === 'sp1' && <TabData />}
+            {currentTab === 'sp2' && <TabData />}
+            {currentTab === 'sp3' && <TabData />}
+            {currentTab === 'sp4' && <TabData />}
+            {currentTab === 'sp5' && <TabData />}
+            {currentTab === 'sp6' && <TabData />}
           </Box>
         </Container>
         <Box />

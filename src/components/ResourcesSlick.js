@@ -40,6 +40,7 @@ function ResourcesSlick() {
   const settings = {
     infinite: true,
     speed: 500,
+    arrows: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     centerMode: true,

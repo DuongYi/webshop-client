@@ -1,5 +1,10 @@
 .slick-dots li.slick-active button:before {
-  color: #881798;
+  color: #738136;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  color: #738136;
+  opacity: 0.6;
 }
 
 .slick-prev:before,
@@ -17,7 +22,7 @@
     height: inherit !important;
 }
 
-.slick-slide {
-  margin-bottom: 0;
-  object-fit: cover;
+.slick-slide > div
+{
+    height: 100%;
 }

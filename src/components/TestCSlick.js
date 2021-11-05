@@ -43,7 +43,7 @@ function TestCSlick() {
       price: "180.000đ"
     },
     {
-      title: "Bột khử mùi Wings Up - Khô thoáng tuyệt đối",
+      title: "Bột khử mùi Wings Up - Khô thoáng tuyệt đối, jasd hsaj jsdgafj hjasfgj shjdgfaj gsjdhfgaj shdgfaj hjsgdafj,  sạ sagjf sagdfj gsadj ",
       image: "static/images/sp7.jpg",
       price: "115.000đ"
     },
@@ -56,7 +56,6 @@ function TestCSlick() {
 
   const settings = {
     infinite: true,
-    dots: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,

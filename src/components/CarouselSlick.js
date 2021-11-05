@@ -108,6 +108,7 @@ function CarouselSlick({ items }) {
         breakpoint: 450,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           arrows: false,
           centerMode: true
         }
