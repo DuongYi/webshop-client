@@ -202,6 +202,12 @@ const useStyles = makeStyles((theme) => ({
   header_cart_mobile: {
     display: 'none'
   },
+  mobile_bottom_menu: {
+    display: 'none'
+  },
+  [theme.breakpoints.down(1500)]: {
+
+  },
   [theme.breakpoints.down('sm')]: {
     toolbar: {
       justifyContent: 'space-between',
@@ -213,6 +219,9 @@ const useStyles = makeStyles((theme) => ({
       display: 'none'
     },
     header_cart_mobile: {
+      display: 'block'
+    },
+    mobile_bottom_menu: {
       display: 'block'
     },
   },
@@ -324,7 +333,7 @@ function Navbar(props, { fixed, absolute }) {
             </div>
           </Toolbar>
 
-          <Hidden mdDown implementation="css">
+          <Hidden smDown implementation="css">
             <Grid
               container
               display="flex"
@@ -362,8 +371,13 @@ function Navbar(props, { fixed, absolute }) {
                   </Link>
                 </ListItem>
               </List>
-
-              <Box display="flex" alignItems="center" style={{ fontFamily: 'sans-serif', color: "#738136" }}>
+              <Box
+                display="flex"
+                alignItems="center"
+                style={{
+                  fontFamily: 'sans-serif', color: "#738136", marginBottom: 20, transform: 'translateY(10px)'
+                }}
+              >
                 <PhoneInTalkIcon style={{ fontSize: '25px' }} className={classes.navIcon} />
                 <span style={{ fontSize: "14px", padding: '0 5px' }}>Hotline</span>
                 <b>
@@ -372,6 +386,28 @@ function Navbar(props, { fixed, absolute }) {
               </Box>
             </Grid>
           </Hidden>
+
+          <Box className={classes.mobile_bottom_menu}>
+            <Grid
+              container
+              display="flex"
+              justifyContent="space-evenly"
+              style={{
+                padding: "0 20px", backgroundColor: "#fff", borderTop: "1px solid #e7edd7", borderBottom: "1px solid #e7edd7"
+              }}
+            >
+              <List className={classes.list}>
+                <ListItem className={classes.listItem}>
+                  <Link to="/" className={classes.navLink}>
+                    <b>Sản phẩm - khuyến mại</b>
+                  </Link>
+                  <Link to="/" className={classes.navLink}>
+                    <b>Hệ thống cửa hàng</b>
+                  </Link>
+                </ListItem>
+              </List>
+            </Grid>
+          </Box>
 
           <Hidden lgUp implementation="js">
             <Drawer
