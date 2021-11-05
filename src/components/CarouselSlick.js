@@ -9,6 +9,7 @@ import Slider from "react-slick";
 import ProductItem from 'src/components/ProductItem';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import 'src/styles/slick.css';
 
 const useStyles = makeStyles(() => ({
   nextArrow: {
@@ -97,9 +98,18 @@ function CarouselSlick({ items }) {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 2,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          centerMode: true
         }
       }
     ]

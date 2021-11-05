@@ -25,6 +25,9 @@ import HomeBanner from "./components/HomeBanner";
 import NewsSlick from "./components/NewsSlick";
 
 const useStyles = makeStyles((theme) => ({
+  product_container: {
+    padding: '0 30px'
+  },
   home_title: {
     color: '#4c503d',
     fontSize: '36px',
@@ -221,6 +224,9 @@ const useStyles = makeStyles((theme) => ({
     home_title: {
       fontSize: '28px'
     },
+    product_container: {
+      padding: 0
+    },
     home_hot_title: {
       fontSize: '28px'
     },
@@ -394,7 +400,7 @@ function Home() {
           </Grid>
         </Grid>
 
-        <Box mb={0}>
+        <Box className={classes.product_container} mb={0}>
           <Grid
             mb={2}
             className={classes.home_hot_product}
