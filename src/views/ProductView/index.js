@@ -24,13 +24,20 @@ import ProductSuggested from './components/ProductSuggested';
 
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   pDetail_subTitle: {
     fontStyle: 'italic',
     fontWeight: '400',
     fontSize: '16px',
     lineHeight: '5px',
     marginBottom: '20px'
+  },
+  product_heading_carousel: {
+    display: 'block',
+    paddingRight: '80px'
+  },
+  mProduct_heading_carousel: {
+    display: 'none'
   },
   product_policy: {
     display: 'flex',
@@ -250,7 +257,8 @@ const useStyles = makeStyles(() => ({
     boxShadow: '0 7px 15px rgb(0 0 0 / 10%)',
     borderRadius: '20px',
     padding: '25px 30px',
-    marginBottom: '30px'
+    marginBottom: '30px',
+    marginRight: '50px'
   },
   pInfomation_widget_heading: {
     position: 'relative',
@@ -373,11 +381,12 @@ const useStyles = makeStyles(() => ({
     }
   },
   product_policy_content: {
-    flex: '0 0 100%',
-    padding: '0 20px'
+    padding: '0 20px',
+    whiteSpace: 'nowrap'
   },
   product_policy_description: {
-    display: 'block'
+    display: 'block',
+    overflow: 'hidden'
   },
   product_policy_title: {
     fontFamily: 'Yeseva One,Helvetica,Arial,sans-serif',
@@ -448,7 +457,21 @@ const useStyles = makeStyles(() => ({
     lineHeight: '28px',
     color: '#fff',
     marginBottom: '45px'
-  }
+  },
+  [theme.breakpoints.down('sm')]: {
+    container_product_policy: {
+      display: 'none'
+    },
+    product_heading_carousel: {
+      display: 'none'
+    },
+    mProduct_heading_carousel: {
+      display: 'block'
+    },
+    pInfomations_widget: {
+      marginRight: 0
+    }
+  },
 }));
 
 function ProductView() {
@@ -548,7 +571,7 @@ function ProductView() {
 
   return (
     <Page>
-      <Container maxWidth="lg">
+      <Container className={classes.container_product_policy} maxWidth="lg">
         <Box className={classes.product_policy}>
           <a href="/" className={classes.product_policy_item}>
             <Box
@@ -591,16 +614,23 @@ function ProductView() {
         </Box>
       </Container>
       <Container maxWidth="lg" style={{ paddingTop: '40px' }}>
-        <Grid container spacing={5}>
-          <Grid item lg={7} md={12}>
-            <Box style={{ display: 'block', paddingRight: '30px' }}>
+        <Box className={classes.mProduct_heading_carousel}>
+          <ImageGallery
+            {...properties}
+            items={images}
+          />
+        </Box>
+
+        <Grid container>
+          <Grid item md={7} sm={12}>
+            <Box className={classes.product_heading_carousel}>
               <ImageGallery
                 {...properties}
                 items={images}
               />
             </Box>
           </Grid>
-          <Grid item lg={5} md={12}>
+          <Grid item md={5} sm={12}>
             <Box className={classes.product__heading}>
               <Typography
                 className={classes.pDetail_title}
@@ -787,8 +817,8 @@ function ProductView() {
 
       {/* Thông tin sản phẩm */}
       <Container maxWidth="lg" style={{ marginBottom: '70px' }}>
-        <Grid container display="flex" spacing={6}>
-          <Grid item lg={4} xs={12}>
+        <Grid container display="flex">
+          <Grid item md={4} xs={12}>
             <Box className={classes.pInfomations_widget}>
               <Typography
                 className={classes.pInfomation_widget_heading}
@@ -831,7 +861,7 @@ function ProductView() {
               </Box>
             </Box>
           </Grid>
-          <Grid item lg={8} xs={12} className={classes.pInfomation_description}>
+          <Grid item md={8} xs={12} className={classes.pInfomation_description}>
             <Typography
               className={classes.pDetail_title}
               style={{ color: '#4c503d', margin: '0 0 24px', textAlign: "start" }}
