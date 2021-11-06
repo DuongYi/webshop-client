@@ -199,31 +199,84 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  subNav_grid: {
+    padding: "0 150px",
+    backgroundColor: "#fff",
+    borderTop: "1px solid #e7edd7",
+    borderBottom: "1px solid #e7edd7",
+    display: "flex",
+    justifyContent: "space-around"
+  },
+  nav_hotline: {
+    fontFamily: 'sans-serif',
+    color: "#738136",
+    marginBottom: 20,
+    transform: 'translateY(10px)'
+  },
+  mNav_hotline: {
+    fontFamily: 'sans-serif',
+    color: "#738136",
+    marginBottom: 20,
+    transform: 'translateY(10px)',
+    display: 'none'
+  },
+  list: {
+    borderTop: "1px solid #e7edd7",
+  },
   header_cart_mobile: {
+    display: 'none'
+  },
+  related_watched_mobile: {
     display: 'none'
   },
   mobile_bottom_menu: {
     display: 'none'
   },
   [theme.breakpoints.down(1500)]: {
-
+    subNav_grid: {
+      padding: 0
+    }
   },
-  [theme.breakpoints.down('sm')]: {
-    toolbar: {
-      justifyContent: 'space-between',
+  [theme.breakpoints.down(1200)]: {
+    subNav_grid: {
+      justifyContent: 'space-between'
+    },
+    nav_hotline: {
+      display: 'none',
+    },
+    mNav_hotline: {
+      display: 'flex',
+      paddingRight: '24px'
+    },
+    home_icon_grid: {
+      paddingLeft: '12px'
+    },
+    list: {
+      width: '100%'
     },
     header_cart: {
-      display: 'none'
-    },
-    related_watched: {
       display: 'none'
     },
     header_cart_mobile: {
       display: 'block'
     },
+    related_watched: {
+      display: 'none'
+    },
+    related_watched_mobile: {
+      display: 'block'
+    }
+  },
+  [theme.breakpoints.down('sm')]: {
+    toolbar: {
+      justifyContent: 'space-between',
+    },
     mobile_bottom_menu: {
       display: 'block'
     },
+    related_watched_mobile: {
+      display: 'none'
+    }
   },
   [theme.breakpoints.down('xs')]: {
     header_auth: {
@@ -302,6 +355,16 @@ function Navbar(props, { fixed, absolute }) {
                   Đã xem
                 </Button>
               </Box>
+              <Box ml={1} className={classes.related_watched_mobile}>
+                <Tooltip title="watched">
+                  <IconButton
+                    color="inherit"
+                    onClick={() => {}}
+                  >
+                    <FavoriteIcon style={{ color: '#738136' }} />
+                  </IconButton>
+                </Tooltip>
+              </Box>
               <Box ml={1} className={classes.header_cart}>
                 <Button
                   style={{ backgroundColor: "#738136", color: "#fff" }}
@@ -336,19 +399,26 @@ function Navbar(props, { fixed, absolute }) {
           <Hidden smDown implementation="css">
             <Grid
               container
-              display="flex"
-              justifyContent="space-around"
-              style={{
-                padding: "0 150px", backgroundColor: "#fff", borderTop: "1px solid #e7edd7", borderBottom: "1px solid #e7edd7"
-              }}
+              className={classes.subNav_grid}
             >
-              <Link to="/">
+              <Link className={classes.home_icon_grid} to="/">
                 <Tooltip title="Home">
                   <IconButton>
                     <HomeIcon style={{ fontSize: '25px' }} className={classes.navIcon} />
                   </IconButton>
                 </Tooltip>
               </Link>
+              <Box
+                display="flex"
+                alignItems="center"
+                className={classes.mNav_hotline}
+              >
+                <PhoneInTalkIcon style={{ fontSize: '25px' }} className={classes.navIcon} />
+                <span style={{ fontSize: "14px", padding: '0 5px' }}>Hotline</span>
+                <b>
+                  0393919320
+                </b>
+              </Box>
               <List className={classes.list}>
                 <ListItem className={classes.listItem}>
                   <Link to="/" className={classes.navLink}>
@@ -374,6 +444,7 @@ function Navbar(props, { fixed, absolute }) {
               <Box
                 display="flex"
                 alignItems="center"
+                className={classes.nav_hotline}
                 style={{
                   fontFamily: 'sans-serif', color: "#738136", marginBottom: 20, transform: 'translateY(10px)'
                 }}
@@ -396,7 +467,7 @@ function Navbar(props, { fixed, absolute }) {
                 padding: "0 20px", backgroundColor: "#fff", borderTop: "1px solid #e7edd7", borderBottom: "1px solid #e7edd7"
               }}
             >
-              <List className={classes.list}>
+              <List className={classes.subList}>
                 <ListItem className={classes.listItem}>
                   <Link to="/" className={classes.navLink}>
                     <b>Sản phẩm - khuyến mại</b>
