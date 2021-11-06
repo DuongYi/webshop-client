@@ -83,39 +83,39 @@ function NewsSlick() {
 
   const news = [
     {
-      image: 'static/images/Vietnamnet.jpg',
+      image: 'static/images/News/Vietnamnet.jpg',
       title: 'Vietnamnet'
     },
     {
-      image: 'static/images/afamily.jpg',
+      image: 'static/images/News/afamily.jpg',
       title: 'AFamily'
     },
     {
-      image: 'static/images/cafef.jpg',
+      image: 'static/images/News/cafef.jpg',
       title: 'CafeF'
     },
     {
-      image: 'static/images/kenh14.jpg',
+      image: 'static/images/News/kenh14.jpg',
       title: 'Kenh14'
     },
     {
-      image: 'static/images/eva.png',
+      image: 'static/images/News/eva.png',
       title: 'Eva'
     },
     {
-      image: 'static/images/24h.jpg',
+      image: 'static/images/News/24h.jpg',
       title: '24h'
     },
     {
-      image: 'static/images/skds.jpg',
+      image: 'static/images/News/skds.jpg',
       title: 'SucKhoeDoiSong'
     },
     {
-      image: 'static/images/giadinh.jpg',
+      image: 'static/images/News/giadinh.jpg',
       title: 'GiaDinh'
     },
     {
-      image: 'static/images/dantri.jpg',
+      image: 'static/images/News/dantri.jpg',
       title: 'DanTri'
     }
   ];

@@ -10,12 +10,12 @@ import Item from './Item';
 function HomeBanner() {
   const items = [
     {
-      link: "https://www.facebook.com/VSsYii",
-      image: "static/images/banner1.jpg"
+      link: "/",
+      image: "static/images/Banner/Lavitalite-Cover banner1.jpg"
     },
     {
-      link: "https://www.facebook.com/VSsYii",
-      image: "static/images/banner2.jpg"
+      link: "/",
+      image: "static/images/Banner/Lavitalite-Cover banner2.jpg"
     },
   ];
 

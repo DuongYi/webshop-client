@@ -77,24 +77,20 @@ PrevArrow.propTypes = {
 function TrackSlick() {
   const trackList = [
     {
-      image: "static/images/track1.jpg",
-      description: "Dùng rất thích, mình cho cả con gái dùng luôn, mùi Trầu không đặc trưng nhưng rửa không bị khô như đun lá trầu không - Chị Hà Đào Thu chia sẻ"
+      image: "static/images/Feedbacks/giam-rung-toc.jpg",
+      description: "Tôi đã bị rụng tóc rất nhiều cách đây vài năm khi sinh em bé. Đây là một sản phẩm tuyệt vời , kết hợp với một chế độ ăn uống tốt và một số loại vitamin, nó đã tạo ra sự khác biệt lớn cho mái tóc của mình."
     },
     {
-      image: "static/images/track2.jpg",
-      description: "Son dưỡng mềm sau 1 đêm ngủ. Sáng đánh răng rửa mặt môi vẫn mềm. Mình mới dùng có 1 đêm thôi. Son này có người giới thiệu nên mua nè"
+      image: "static/images/Feedbacks/chinh-phuc.jpg",
+      description: "Tôi hoàn toàn bị sản phẩm này chinh phục. Nó đã hồi sinh mái tóc mỏng trước kia của tôi  và giờ tóc trở lên bồng bệnh và khỏe mạnh. Quan trọng nhất là nó được làm từ các thành phần tự nhiên nên càng yên tâm sử dụng lâu dài."
     },
     {
-      image: "static/images/track3.jpg",
-      description: "Nước gội thảo mộc rất thơm và dễ chịu. Mình dùng cảm thấy đỡ bị rụng hơn và được cái là tiết kiệm nước"
+      image: "static/images/Feedbacks/nam-gioi-tin-dung.jpg",
+      description: "Đây là một loại dầu gội rất tốt, lưu lại hương thơm thoang thoảng tự nhiên dễ chịu, tôi sẽ tiếp tục sử dụng nó, thật tuyệt."
     },
     {
-      image: "static/images/track4.jpg",
-      description: "Xà bông xài rất thích. Xà bông trà xanh tắm sáng làm tỉnh cả người. Mùi oải hương thì đi làm về xong tắm cực kỳ thư giãn luôn. Có cơ hội sẽ ủng hộ Cỏ tiếp"
-    },
-    {
-      image: "static/images/track5.jpg",
-      description: "Mình dùng Taptap và muối cafe da mịn ghê ý. Tắm xong thơm mịn, da đã trắng nay còn trắng hơn"
+      image: "static/images/Feedbacks/giam-rung-toc.jpg",
+      description: "Sau nửa năm sử dụng sản phẩm này, tóc của tôi trông khỏe mạnh hơn và gần như trở lại như trước khi bắt đầu rụng."
     },
   ];
 

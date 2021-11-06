@@ -276,9 +276,9 @@ function Home() {
   const [currentTab, setCurrentTab] = useState('sp1');
 
   const tabs = [
-    { value: 'sp1', label: 'Son môi' },
+    { value: 'sp1', label: 'Chăm sóc tóc' },
     { value: 'sp2', label: 'Chăm sóc da' },
-    { value: 'sp3', label: 'Chăm sóc tóc' },
+    { value: 'sp3', label: 'Son môi' },
     { value: 'sp4', label: 'Hương thơm' },
     { value: 'sp5', label: 'Chăm sóc cơ thể' },
     { value: 'sp6', label: 'Trang điểm' },
@@ -289,55 +289,35 @@ function Home() {
   };
   const items = [
     {
-      link: "https://www.facebook.com/VSsYii",
-      image: "static/images/banner1.jpg"
+      link: "/",
+      image: "static/images/Banner/Lavitalite-Cover banner1.jpg"
     },
     {
-      link: "https://www.facebook.com/VSsYii",
-      image: "static/images/banner2.jpg"
+      link: "/",
+      image: "static/images/Banner/Lavitalite-Cover banner2.jpg"
     },
   ];
 
   const productList = [
     {
-      title: "Son kem Nhung (Lì mượt không silicon)",
-      image: "static/images/sp1.jpg",
-      price: "150.000đ"
+      title: "Dầu gội bưởi La Vitalité",
+      image: "static/images/TopSelling/buoi-huong-nhu.png",
+      price: "250.000đ"
     },
     {
-      title: "Sữa tắm hương HOA SỮA Hà Nội và Em (Giới hạn 2000 chai duy nhất)",
-      image: "static/images/sp2.jpg",
-      price: "150.000đ"
+      title: "Dầu xả La Vitalité",
+      image: "static/images/TopSelling/dau-xa.png",
+      price: "250.000đ"
     },
     {
-      title: "Nước hoa Unisex Dreamer",
-      image: "static/images/sp3.jpg",
-      price: "350.000đ"
+      title: "Dầu gội dược liệu làm đen tóc Vitalité",
+      image: "static/images/TopSelling/den-toc.png",
+      price: "300.000đ"
     },
     {
-      title: "Kem Chống Nắng Hây Hây",
-      image: "static/images/sp4.jpg",
-      price: "260.000đ"
-    },
-    {
-      title: "Dầu gội thảo dược Tóc Mây",
-      image: "static/images/sp5.jpg",
-      price: "325.000đ"
-    },
-    {
-      title: "Son Lụa không chì",
-      image: "static/images/sp6.jpg",
-      price: "180.000đ"
-    },
-    {
-      title: "Bột khử mùi Wings Up - Khô thoáng tuyệt đối",
-      image: "static/images/sp7.jpg",
-      price: "115.000đ"
-    },
-    {
-      title: "Serum dưỡng da ban đêm Hoàng Lan",
-      image: "static/images/sp8.jpg",
-      price: "180.000đ"
+      title: "Combo Dầu gội & Dầu xả chăm sóc tóc toàn diện La Vitalité",
+      image: "static/images/TopSelling/combo.png",
+      price: "450.000đ"
     },
   ];
 
@@ -359,15 +339,17 @@ function Home() {
                 margin: '0 0 5px', color: '#4c503d', fontSize: '42px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
               }}
             >
-              Chuyện của cỏ
+              Chuyện của Bưởi
             </Typography>
             <Typography
               variant="h6"
               style={{ margin: '16px 0', color: '#4c503d', fontSize: '16px' }}
             >
               <b>
-                Tôi bắt đầu Ước mơ Xanh của mình, nghiên cứu những sản
-                phẩm thuần tuý, tối giản, chỉ tập trung vào mục đính sử dụng của chính nó.
+                Câu chuyện về “MẸ” như kỷ niệm bao năm không bao giờ vơi
+                trong lòng. ấp ủ điều gì đó để “SỨC SỐNG” còn mãi với thời
+                gian, gìn giữ tinh túy từ mẹ thiên nhiên, phục hồi “SỨC
+                SỐNG” tự nhiên của con người và vạn vật.
               </b>
             </Typography>
             <Typography
@@ -376,13 +358,13 @@ function Home() {
                 margin: '16px 0', color: '#4c503d', fontSize: '16px', lineHeight: 1.5
               }}
             >
-              Nghĩa là nước giặt thì chỉ cần giặt sạch, chứ không cần phải nhiều bọt.
-              Nghĩa là dưỡng da dưỡng tóc thì để da tóc khoẻ từ gốc chứ
-              không cần cảm giác giả mướt tay từ silicon.
-              Tôi từ chối mọi sản phẩm chứa hạt vi nhựa, chỉ dùng cafe
-              xay mịn và muối biển để tẩy tế bào chết.
-              Tôi không dùng những hoá chất tẩy rửa mà thay bằng xà bông dầu
-              dừa và quả bồ hòn xưa cũ...
+              Sau khi có bé đầu lòng, MẸ chuyển lên chăm con giúp mình.
+              Tới giờ ngẫm lại, thời gian bên mẹ nhiều hơn bên chồng.
+              MẸ là người tinh tế, dù là con dâu, nhưng mẹ quan tâm tới cả
+              những điều nhỏ nhặt nhất. Tuần đầu sau sinh, căng thẳng
+              triền miên cùng với những thay đổi nội tiết tố. Cuộc sống
+              24/7 của mình không còn chút nào giành cho bản thân. Chỉ
+              có tiếng con khóc, những xáo trộn từ sinh linh mới, cùng với bỉm và sữa...
             </Typography>
             <Button
               variant="contained"
@@ -457,7 +439,7 @@ function Home() {
               variant="h2"
               className={classes.home_store_title2}
             >
-              Cỏ mềm
+              DG Bưởi
             </Typography>
           </Grid>
         </Box>
