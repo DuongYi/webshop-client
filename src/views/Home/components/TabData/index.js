@@ -1,10 +1,14 @@
 import React from 'react';
 
-import { Box, Grid, makeStyles } from '@material-ui/core';
+import {
+  Box, Grid, makeStyles
+} from '@material-ui/core';
+
+import './TabData.css';
 
 import ProductItem from 'src/components/ProductItem';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   allShop_button: {
     display: 'inline-flex',
     justifyContent: 'center',
@@ -24,6 +28,14 @@ const useStyles = makeStyles(() => ({
       backgroundColor: '#738136',
     }
   },
+  mTab_Data: {
+    display: 'none'
+  },
+  [theme.breakpoints.down('sm')]: {
+    mTab_Data: {
+      display: 'flex'
+    }
+  }
 }));
 
 const productList = [
@@ -74,9 +86,18 @@ function TabData() {
 
   return (
     <>
-      <Grid container>
-        {productList.map((item) => (
-          <Grid key={item.title} item lg={3} md={4} xs={6}>
+      <div className="tTab_Data">
+        <Grid container>
+          {productList.map((item) => (
+            <Grid key={item.title} item md={3} xs={6}>
+              <ProductItem key={item} product={item} />
+            </Grid>
+          ))}
+        </Grid>
+      </div>
+      <Grid container className={classes.mTab_Data}>
+        {productList.slice(0, 4).map((item) => (
+          <Grid key={item.title} item md={3} xs={6}>
             <ProductItem key={item} product={item} />
           </Grid>
         ))}

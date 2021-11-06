@@ -22,6 +22,7 @@ import TrackSlick from "src/components/TrackSlick";
 
 import AboutItem from './components/AboutItem';
 import HomeBanner from "./components/HomeBanner";
+import MobileAboutUs from "./components/MobileAboutUs";
 import NewsSlick from "./components/NewsSlick";
 import TabData from "./components/TabData";
 
@@ -75,10 +76,13 @@ const useStyles = makeStyles((theme) => ({
   },
   home_product: {
   },
+  mobile_about_us: {
+    display: 'none'
+  },
   arrow: {
     color: "#000"
   },
-  home_shop_container: {
+  home_shop_grid: {
     position: 'relative',
     '&:before': {
       content: "''",
@@ -92,6 +96,18 @@ const useStyles = makeStyles((theme) => ({
       backgroundRepeat: 'no-repeat',
       paddingBottom: '30px',
       zIndex: -1
+    }
+  },
+  home_shop_container: {
+    zIndex: 1
+  },
+  shop_Tabs: {
+    background: "#fff",
+    borderBottomLeftRadius: '10px',
+    borderBottomRightRadius: '10px',
+    paddingBottom: '15px',
+    '& .MuiTabs-flexContainer': {
+      justifyContent: 'center',
     }
   },
   home_resources: {
@@ -167,6 +183,9 @@ const useStyles = makeStyles((theme) => ({
     home_about: {
       display: 'none'
     },
+    mobile_about_us: {
+      display: 'block'
+    },
     home_hot_product: {
       padding: 0
     },
@@ -198,6 +217,21 @@ const useStyles = makeStyles((theme) => ({
     home_store_title2: {
       fontSize: '28px',
       whiteSpace: 'nowrap'
+    },
+    home_shop_grid: {
+      '&:before': {
+        top: 63,
+      }
+    },
+    home_shop_container: {
+      '&.MuiContainer-root': {
+        padding: 0
+      }
+    },
+    shop_Tabs: {
+      '& .MuiTabs-flexContainer': {
+        justifyContent: 'flex-start',
+      }
     }
   },
   [theme.breakpoints.down('xs')]: {
@@ -228,6 +262,11 @@ const useStyles = makeStyles((theme) => ({
     home_store_title2: {
       fontSize: '25px',
       marginLeft: '-80px'
+    },
+    shop_Tabs: {
+      '& .MuiTabs-flexContainer': {
+        padding: '0 15px'
+      }
     }
   }
 }));
@@ -424,20 +463,14 @@ function Home() {
         </Box>
       </Container>
 
-      <Box className={classes.home_shop_container}>
-        <Container maxWidth="lg" style={{ zIndex: 1 }}>
+      <Box className={classes.home_shop_grid}>
+        <Container className={classes.home_shop_container} maxWidth="lg">
           <Tabs
-            style={{
-              background: "#fff",
-              borderBottomLeftRadius: '10px',
-              borderBottomRightRadius: '10px',
-              paddingBottom: '15px',
-              paddingLeft: '20px',
-              paddingRight: '20px'
-            }}
+            className={classes.shop_Tabs}
             value={currentTab}
             onChange={handleTabsChange}
-            variant="fullWidth"
+            variant="scrollable"
+            scrollButtons="auto"
             TabIndicatorProps={{
               style: {
                 background: '#738136', height: '100%', borderRadius: '10px', zIndex: 1
@@ -459,7 +492,7 @@ function Home() {
           </Tabs>
           <Box mt={3}>
             {currentTab === 'sp1' && <TabData />}
-            {currentTab === 'sp2' && <TabData />}
+            {currentTab === 'sp2' && <TabData /> }
             {currentTab === 'sp3' && <TabData />}
             {currentTab === 'sp4' && <TabData />}
             {currentTab === 'sp5' && <TabData />}
@@ -501,6 +534,11 @@ function Home() {
         </Grid>
         <ResourcesSlick />
       </Container>
+
+      {/* mobile Home about us */}
+      <Box className={classes.mobile_about_us}>
+        <MobileAboutUs />
+      </Box>
 
       <Container maxWidth="lg" className={classes.home_react}>
         <Box mt={6} className={classes.box_react}>

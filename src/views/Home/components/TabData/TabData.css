@@ -1,0 +1,9 @@
+.tTab_Data {
+  display: flex;
+}
+
+@media screen and (max-width: 960px) {
+  .tTab_Data {
+    display: none;
+  }
+}
