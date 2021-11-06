@@ -220,9 +220,6 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translateY(10px)',
     display: 'none'
   },
-  list: {
-    borderTop: "1px solid #e7edd7",
-  },
   header_cart_mobile: {
     display: 'none'
   },
@@ -252,6 +249,7 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: '12px'
     },
     list: {
+      borderTop: "1px solid #e7edd7",
       width: '100%'
     },
     header_cart: {
