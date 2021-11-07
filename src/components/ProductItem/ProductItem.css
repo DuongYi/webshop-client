@@ -11,7 +11,7 @@
 .product-grid {
   padding: 25px;
   border-radius: 10px;
-  border: 3px solid rgba(115,129,54,.08);
+  border: 3px solid rgba(54, 129, 83, 0.08);
   background-color: #fff;
   text-align: center;
   transition: all .3s;
@@ -24,7 +24,7 @@
 .product-grid:hover {
   cursor: pointer;
   box-shadow: 0 10px 20px 0 rgb(76 80 61 / 10%);
-  border: 3px solid rgba(115,129,54,.2);
+  border: 3px solid rgba(54, 129, 83,.2);
 }
 
 .product-thumbnail {
@@ -60,7 +60,7 @@
 }
 
 .product-grid .product-title:hover {
-  color: #738136;
+  color: #079b61;
 }
 
 .product-grid a {
@@ -78,7 +78,7 @@
 }
 
 .product-grid .product-price span {
-    color: #738136;
+    color: #079b61;
 }
 
 

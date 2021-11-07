@@ -17,7 +17,7 @@ const useStyle = makeStyles((theme) => ({
       textDecoration: 'none',
       color: "#4c503d",
       '&:hover': {
-        color: "#738136"
+        color: "#079b61"
       }
     }
   },
@@ -34,7 +34,7 @@ const useStyle = makeStyles((theme) => ({
     textTransform: "uppercase",
     fontSize: '12px',
     fontWeight: 600,
-    color: "#738136",
+    color: "#079b61",
     '&:before': {
       content: "''",
       position: 'absolute',
@@ -42,7 +42,7 @@ const useStyle = makeStyles((theme) => ({
       left: 0,
       height: '2px',
       width: '30px',
-      backgroundColor: "#738136"
+      backgroundColor: "#079b61"
     }
   },
   footer_social: {
@@ -81,16 +81,16 @@ const useStyle = makeStyles((theme) => ({
     position: 'relative',
     padding: '5px 15px 5px 15px',
     borderRadius: '10px',
-    backgroundColor: '#e9f0d5',
+    backgroundColor: '#079b6138',
     '&:before': {
       content: "''",
       position: 'absolute',
       left: '10px',
-      top: '-15px',
+      top: '-16px',
       width: 0,
       height: 0,
       border: '8px solid #ffffff00',
-      borderBottomColor: '#e9f0d5'
+      borderBottomColor: '#079b6138'
     }
   },
   footer_bottom: {
@@ -268,7 +268,7 @@ function Footer() {
       </Grid>
       <Grid className={classes.footer_bottom} container display="flex" justifyContent="space-between" alignItems="center">
         <Typography className={classes.footer_copyRight} style={{ fontSize: '14px', color: "#4c503d" }}>
-          © Bản quyền thuộc về Công ty Cổ phần Mỹ phẩm Thiên nhiên Cỏ Mềm
+          © Bản quyền thuộc về Công ty Cổ phần Mỹ phẩm Thiên nhiên
         </Typography>
         <a style={{ margin: '5px 0 0' }} href="/">
           <img src="static/images/thongbao.png" width="111" height="43" alt="thongbao" />

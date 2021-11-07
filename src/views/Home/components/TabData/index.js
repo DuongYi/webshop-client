@@ -19,13 +19,14 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid #fff',
     backgroundColor: 'hsla(0,0%,100%,.6)',
     padding: '0 50px',
-    color: '#fff',
+    color: '#079b61',
     fontSize: '16px',
     fontWeight: 500,
     textDecoration: 'none',
     transition: 'all ease 0.3s',
     '&:hover': {
-      backgroundColor: '#738136',
+      backgroundColor: '#079b61',
+      color: '#fff',
     }
   },
   mTab_Data: {

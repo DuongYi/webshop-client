@@ -26,11 +26,15 @@
 }
 
 .resources-grid--orange {
-  background-color: #c57200;
+  background-color: #c8a100;
+}
+
+.resource-grid--ggreen {
+  background-color: #8fb446;
 }
 
 .resource-grid--green {
-  background-color: #66883f;
+  background-color: #6a913e;
 }
 
 .resources-grid--brown {

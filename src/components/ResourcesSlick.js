@@ -23,19 +23,27 @@ function ResourcesSlick() {
       imgbottom: 'img-bottom'
     },
     {
-      class: 'resource-grid resource-grid--green ',
+      class: 'resource-grid resource-grid--ggreen ',
       image: "static/images/Resources/grapefruit.png",
       title: "Tinh dầu vỏ bưởi",
       description: "Tinh dầu bưởi là một trong những loại tinh dầu thiên nhiên được chiết xuất từ vỏ bưởi (vỏ xanh có những giọt tinh dầu nhỏ li ti) có chứa pectin, naringin,.. có tính diệt nấm sát khuẩn rất cao..."
     },
+    {
+      class: 'resource-grid resources-grid--brown resource-grid--bottom',
+      image: "static/images/res4.png",
+      title: "Dầu dừa",
+      description: "Dầu dừa được chiết xuất từ phần cùi trắng của quả dừa, có thể được tìm thấy trong nhiều loại mỹ phẩm và sản phẩm chăm sóc cá nhân.",
+      imgbottom: 'img-bottom'
+    }
   ];
 
   const settings = {
     infinite: true,
     speed: 500,
     arrows: false,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
+    centerMode: true,
     responsive: [
       {
         breakpoint: 1280,

@@ -1,9 +1,9 @@
 .slick-dots li.slick-active button:before {
-  color: #738136;
+  color: #079b61;
 }
 
 .slick-dots li button:hover:before, .slick-dots li button:focus:before {
-  color: #738136;
+  color: #079b61;
   opacity: 0.6;
 }
 

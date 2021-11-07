@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'sans-serif',
     fontWeight: 550,
     textDecoration: 'none',
-    color: '#738136',
+    color: '#079b61',
     fontSize: '15px',
     lineHeight: 1.6,
     letterSpacing: '.3px'
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: 'pointer',
     textDecoration: 'none',
     '&:hover': {
-      color: "#738136",
+      color: "#079b61",
       "&:before": {
         position: "absolute",
         content: '""',
@@ -86,14 +86,14 @@ const useStyles = makeStyles((theme) => ({
         borderTopRightRadius: '100px',
         transform: 'translate3d(50%, 0, 0)',
         transition: 'all ease 0.3s',
-        background: "#738136",
+        background: "#079b61",
       },
     },
   },
   navIcon: {
     color: "#fff",
     padding: "5px",
-    backgroundColor: "#738136",
+    backgroundColor: "#079b61",
     borderRadius: "300px",
   },
   appBar: {
@@ -142,9 +142,9 @@ const useStyles = makeStyles((theme) => ({
   search: {
     position: 'relative',
     borderRadius: '5px',
-    backgroundColor: alpha('#738136', 0.8),
+    backgroundColor: alpha('#079b61', 0.8),
     '&:hover': {
-      backgroundColor: alpha('#738136', 1),
+      backgroundColor: alpha('#079b61', 1),
     },
     marginLeft: 0,
     width: '100%',
@@ -153,9 +153,9 @@ const useStyles = makeStyles((theme) => ({
       width: 'auto',
     },
     [theme.breakpoints.down('xs')]: {
-      backgroundColor: alpha('#738136', 0),
+      backgroundColor: alpha('#079b61', 0),
       '&:hover': {
-        backgroundColor: alpha('#738136', 1),
+        backgroundColor: alpha('#079b61', 1),
       },
       margin: '0 5px 0 20px'
     },
@@ -170,7 +170,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     [theme.breakpoints.down('xs')]: {
-      color: '#738136',
+      color: '#079b61',
       right: -20,
       top: 2,
     },
@@ -202,20 +202,20 @@ const useStyles = makeStyles((theme) => ({
   subNav_grid: {
     padding: "0 150px",
     backgroundColor: "#fff",
-    borderTop: "1px solid #e7edd7",
-    borderBottom: "1px solid #e7edd7",
+    borderTop: "1px solid #079b6138",
+    borderBottom: "1px solid #079b6138",
     display: "flex",
     justifyContent: "space-around"
   },
   nav_hotline: {
     fontFamily: 'sans-serif',
-    color: "#738136",
+    color: "#079b61",
     marginBottom: 20,
     transform: 'translateY(10px)'
   },
   mNav_hotline: {
     fontFamily: 'sans-serif',
-    color: "#738136",
+    color: "#079b61",
     marginBottom: 20,
     transform: 'translateY(10px)',
     display: 'none'
@@ -249,7 +249,7 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: '12px'
     },
     list: {
-      borderTop: "1px solid #e7edd7",
+      borderTop: "1px solid #079b6138",
       width: '100%'
     },
     header_cart: {
@@ -346,7 +346,7 @@ function Navbar(props, { fixed, absolute }) {
               </Box>
               <Box ml={2} className={classes.related_watched}>
                 <Button
-                  style={{ backgroundColor: "#738136", padding: "5.5px 25px", color: "#fff" }}
+                  style={{ backgroundColor: "#079b61", padding: "5.5px 25px", color: "#fff" }}
                   variant="contained"
                   startIcon={<FavoriteIcon style={{ color: '#fff' }} />}
                 >
@@ -359,13 +359,13 @@ function Navbar(props, { fixed, absolute }) {
                     color="inherit"
                     onClick={() => {}}
                   >
-                    <FavoriteIcon style={{ color: '#738136' }} />
+                    <FavoriteIcon style={{ color: '#079b61' }} />
                   </IconButton>
                 </Tooltip>
               </Box>
               <Box ml={1} className={classes.header_cart}>
                 <Button
-                  style={{ backgroundColor: "#738136", color: "#fff" }}
+                  style={{ backgroundColor: "#079b61", color: "#fff" }}
                   variant="contained"
                   startIcon={<LocalMallIcon style={{ color: '#fff' }} />}
                 >
@@ -378,7 +378,7 @@ function Navbar(props, { fixed, absolute }) {
                     color="inherit"
                     onClick={() => {}}
                   >
-                    <LocalMallIcon style={{ color: '#738136' }} />
+                    <LocalMallIcon style={{ color: '#079b61' }} />
                   </IconButton>
                 </Tooltip>
               </Box>
@@ -444,7 +444,7 @@ function Navbar(props, { fixed, absolute }) {
                 alignItems="center"
                 className={classes.nav_hotline}
                 style={{
-                  fontFamily: 'sans-serif', color: "#738136", marginBottom: 20, transform: 'translateY(10px)'
+                  fontFamily: 'sans-serif', color: "#079b61", marginBottom: 20, transform: 'translateY(10px)'
                 }}
               >
                 <PhoneInTalkIcon style={{ fontSize: '25px' }} className={classes.navIcon} />
@@ -462,7 +462,7 @@ function Navbar(props, { fixed, absolute }) {
               display="flex"
               justifyContent="space-evenly"
               style={{
-                padding: "0 20px", backgroundColor: "#fff", borderTop: "1px solid #e7edd7", borderBottom: "1px solid #e7edd7"
+                padding: "0 20px", backgroundColor: "#fff", borderTop: "1px solid #079b6138", borderBottom: "1px solid #079b6138"
               }}
             >
               <List className={classes.subList}>

@@ -18,13 +18,13 @@ const useStyles = makeStyles(() => ({
     bottom: 0.5,
     display: 'flex',
     alignItems: 'center',
-    color: 'rgba(115,129,54,.4)',
+    color: 'rgba(7,155,97,.4)',
     zIndex: 1,
     right: -25,
     justifyContent: 'flex-end',
     transition: 'all ease 0.3s',
     '&:hover': {
-      color: 'rgba(115,129,54)',
+      color: 'rgba(7,155,97)',
     }
   },
   prevArrow: {
@@ -34,13 +34,13 @@ const useStyles = makeStyles(() => ({
     bottom: 0.5,
     display: 'flex',
     alignItems: 'center',
-    color: "rgba(115,129,54,.4)",
+    color: "rgba(7,155,97,.4)",
     zIndex: 1,
     left: -25,
     justifyContent: 'flex-start',
     transition: 'all ease 0.3s',
     '&:hover': {
-      color: 'rgba(115,129,54)',
+      color: 'rgba(7,155,97)',
     }
   }
 }));

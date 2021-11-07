@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: '-50px'
   },
   home_store_title2: {
-    color: '#738136',
+    color: '#079b61',
     fontSize: '36px',
     fontFamily: " Yeseva One, cursive",
     padding: '40px 0 0',
@@ -91,7 +91,8 @@ const useStyles = makeStyles((theme) => ({
       left: 0,
       width: '100%',
       height: '100%',
-      backgroundImage: `url(${'static/images/collections-bg.png'})`,
+      backgroundImage: `url(${'https://a-static.besthdwallpaper.com/valentyn-ruzove-tulipany-s-srdce-fabric-tapeta-na-zed-2560x1080-13881_14.jpg'})`,
+      filter: 'blur(1.5px)',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       paddingBottom: '30px',
@@ -122,19 +123,19 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '5px',
-    backgroundColor: '#e7edd7',
+    backgroundColor: '#079b6138',
     padding: '0 30px',
     fontSize: '14px',
     fontWeight: 500,
     lineHeight: 1.21,
     letterSpacing: '2.8px',
-    color: '#738136',
+    color: '#079b61',
     height: '45px',
     border: 0,
     transition: 'all 0.3s',
     '&:hover': {
       color: '#fff',
-      backgroundColor: '#738136'
+      backgroundColor: '#079b61'
     }
   },
   home_react: {
@@ -171,11 +172,10 @@ const useStyles = makeStyles((theme) => ({
   },
   tabSelected: {
     '&.Mui-selected': {
-      color: '#fff',
       transition: 'all ease 0.3s'
     },
     '&:hover': {
-      color: '#738136',
+      color: '#079b61',
       transition: 'all ease 0.3s'
     }
   },
@@ -455,7 +455,7 @@ function Home() {
             scrollButtons="auto"
             TabIndicatorProps={{
               style: {
-                background: '#738136', height: '100%', borderRadius: '10px', zIndex: 1
+                background: '#079b61', borderRadius: '10px', zIndex: 1
               }
             }}
           >
@@ -533,7 +533,7 @@ function Home() {
               align="center"
               className={classes.home_react_title}
             >
-              Báo chí nói gì về Cỏ Mềm
+              Báo chí nói gì về Bưởi
             </Typography>
           </Grid>
           <NewsSlick />

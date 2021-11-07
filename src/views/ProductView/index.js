@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '25px 0',
-    borderBottom: '1px solid #e7edd7'
+    borderBottom: '1px solid #079b6138'
   },
   product_info: {
     display: 'flex',
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '28px',
     '& ins': {
       textDecoration: 'none',
-      color: '#738136'
+      color: '#079b61'
     }
   },
   product_rating: {
@@ -141,13 +141,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: 'url(static/images/flower-2.png)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundColor: '#738136',
+    backgroundColor: '#079b61',
     marginRight: '10px',
     transition: 'all ease 0.3s',
   },
   product_quantity_change: {
     "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-      borderColor: "#738136",
+      borderColor: "#079b61",
       borderRadius: '100px'
     },
   },
@@ -169,14 +169,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '18px',
     flex: 1,
     height: '56px',
-    border: '2px solid #738136',
-    color: '#738136',
+    border: '2px solid #079b61',
+    color: '#079b61',
     borderRadius: '30px',
     backgroundColor: 'transparent',
     fontWeight: 'bold',
     '&:hover': {
       color: '#fff',
-      backgroundColor: '#738136'
+      backgroundColor: '#079b61'
     }
   },
   product_features: {
@@ -205,7 +205,7 @@ const useStyles = makeStyles((theme) => ({
   },
   product_description: {
     padding: '16px 0',
-    borderTop: '1px solid #e7edd7',
+    borderTop: '1px solid #079b6138',
     fontWeight: '400',
     fontSize: '16px',
     lineHeight: '24px',
@@ -213,7 +213,7 @@ const useStyles = makeStyles((theme) => ({
   },
   product_suggested: {
     paddingTop: '25px',
-    borderTop: '1px solid #e7edd7',
+    borderTop: '1px solid #079b6138',
     '& span': {
       color: '#4c503d',
       fontWeight: 600,
@@ -240,7 +240,7 @@ const useStyles = makeStyles((theme) => ({
     '& a': {
       display: 'flex',
       margin: '10px',
-      color: '#738136',
+      color: '#079b61',
       textDecoration: 'none',
       transition: 'all ease 0.3s',
       '& i': {
@@ -290,7 +290,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     fontSize: '16px',
     lineHeight: '24px',
-    color: '#738136',
+    color: '#079b61',
     marginBottom: '5px',
     paddingBottom: '10px',
     fontWeight: 'bold',
@@ -301,7 +301,7 @@ const useStyles = makeStyles((theme) => ({
       left: 0,
       width: '20px',
       height: '2px',
-      backgroundColor: '#738136'
+      backgroundColor: '#079b61'
     }
   },
   pInfomation_widget_content: {
@@ -327,7 +327,7 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid rgba(115,129,54,.08)',
     boxSizing: 'border-box',
     borderRadius: '5px',
-    color: '#738136',
+    color: '#079b61',
     fontWeight: 'normal',
     fontSize: '14px',
     lineHeight: '21px',
@@ -373,7 +373,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '50px',
     width: '100%',
     height: '50px',
-    border: '1px dashed #738136',
+    border: '1px dashed #079b61',
     borderRadius: '100px',
     '& img': {
       textIndent: '100%',
@@ -415,7 +415,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     fontSize: '36px',
     lineHeight: '42px',
-    color: '#738136',
+    color: '#079b61',
     marginRight: '14px'
   },
   reviewsInfo_ratings_label: {
@@ -425,7 +425,7 @@ const useStyles = makeStyles((theme) => ({
   },
   reviews_infomations_line: {
     paddingLeft: '25px',
-    borderLeft: '1px solid #e7edd7',
+    borderLeft: '1px solid #079b6138',
     position: 'relative',
   },
   reviews_infomations_gallery: {
@@ -436,7 +436,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-end'
   },
   review_button: {
-    background: "#738136",
+    background: "#079b61",
     '&:hover': {
       background: "#636e33"
     }
