@@ -94,7 +94,7 @@ const useStyle = makeStyles((theme) => ({
     }
   },
   footer_bottom: {
-    margin: '10px 0 20px 0'
+    padding: '10px 0 20px 0'
   },
   [theme.breakpoints.down('md')]: {
     footer_social: {

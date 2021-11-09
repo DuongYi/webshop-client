@@ -27,6 +27,10 @@ import NewsSlick from "./components/NewsSlick";
 import TabData from "./components/TabData";
 
 const useStyles = makeStyles((theme) => ({
+  home_page: {
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  },
   product_container: {
     padding: '0 30px'
   },
@@ -382,7 +386,7 @@ function Home() {
   ];
 
   return (
-    <Page>
+    <Page className={classes.home_page}>
       <HomeBanner />
       <Container maxWidth="lg" style={{ marginTop: '50px' }}>
         <Grid

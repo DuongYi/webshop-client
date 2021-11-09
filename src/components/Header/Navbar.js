@@ -37,6 +37,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     backgroundImage: `url(static/images/header-bg.png)`,
+    background: '#fff',
     display: 'flex',
     justifyContent: 'space-evenly',
     padding: '10px 0'
@@ -323,7 +324,7 @@ function Navbar(props, { fixed, absolute }) {
         <AppBar className={appBarClasses} position="sticky">
           <Toolbar className={classes.toolbar}>
             <Link to="/">
-              <img className={classes.logo} src="static/images/logoDG.png" alt="" />
+              <img className={classes.logo} src="static/images/logo-TPX.png" alt="" />
             </Link>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
