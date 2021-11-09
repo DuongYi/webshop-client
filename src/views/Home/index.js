@@ -457,7 +457,7 @@ function Home() {
           </Grid>
         </Grid>
 
-        <Box className={classes.product_container} mb={0}>
+        {/* <Box className={classes.product_container} mb={0}>
           <Grid
             mb={2}
             className={classes.home_hot_product}
@@ -471,7 +471,7 @@ function Home() {
             </Typography>
           </Grid>
           <CarouselSlick items={productList} />
-        </Box>
+        </Box> */}
 
         <Box>
           <Grid

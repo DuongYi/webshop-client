@@ -81,7 +81,7 @@ function MobileAboutUs() {
         </Typography>
         <Box className={classes.thumbnail}>
           <a href="/">
-            <img src="static/images/aboutus_banner.png" alt="About Us Banner" />
+            <img src="https://naturerepublicstore.vn/wp-content/uploads/2020/04/top-8-cac-hang-my-pham-thien-nhien-noi-tieng-o-viet-nam-1.jpg" alt="About Us Banner" />
           </a>
         </Box>
         <a className={classes.button} href="/">

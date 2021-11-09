@@ -22,6 +22,8 @@ const useStyle = makeStyles((theme) => ({
     }
   },
   footerLogo: {
+    height: '100px',
+    width: '160px',
     textIndent: '100%',
     whiteSpace: 'nowrap',
     overflow: 'hidden'
@@ -122,9 +124,9 @@ function Footer() {
     <Container maxWidth="lg" className={classes.footer}>
       <Grid container mt={2} display="flex" alignItems="center" justifyContent="space-between" style={{ paddingBottom: '25px' }}>
         <Grid lg={3} md={4} xs={12} item>
-          <img className={classes.footerLogo} src="static/images/logo.png" alt="" />
+          <img className={classes.footerLogo} src="static/images/logoDG.png" alt="" />
           <Box className={classes.footerLogo_title}>
-            <span>Mỹ phẩm thiên nhiên lành & thật</span>
+            <span>Sản phẩm thiên nhiên </span>
           </Box>
         </Grid>
         <Grid lg={7} md={8} xs={12} item>
@@ -158,25 +160,24 @@ function Footer() {
       >
         <Grid style={{ padding: '0 20px 10px 0' }} lg={4} md={12} item>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
-            Công ty cổ phần trách nghiệm hữu hạn Cỏ mềm
+            Công ty cổ phần trách nghiệm hữu hạn DG Bưởi
           </Typography>
           <Typography style={{ fontSize: '14px', fontWeight: 500, color: "#4c503d" }}>
-            ĐKKD số 0109153702 do Sở KHĐT Tp. Hà Nội cấp ngày 09/04/2020
+            ĐKKD số 02328956238 do Sở KHĐT Tp. Hà Nội cấp ngày 19/03/2021
           </Typography>
           <ul className={classes.footer_contact}>
             <li className={classes.footer_contact_item}>
               <a href="/">
-                Tại 225 Trần Đăng Ninh,
-                P.Dịch Vọng, Q.Cầu Giấy, Hà Nội
+                Tại đường Bưởi, Vĩnh Phúc, Ba Đình, Hà Nội
               </a>
 
             </li>
             <li className={classes.footer_contact_item}>
-              <a href="/">Email: comem@songan.vn</a>
+              <a href="/">Email: dgbuoi@gmail.com.vn</a>
             </li>
             <li className={classes.footer_contact_item}>
               <a href="/">
-                Hotline: 1800.646.890
+                Hotline: 1900.193.084
               </a>
             </li>
           </ul>
@@ -189,7 +190,7 @@ function Footer() {
         </Grid>
         <Grid style={{ padding: '0 20px 10px 0' }} item lg={3} sm={4} xs={6}>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
-            Gian hàng cỏ mềm
+            Gian hàng DG Bưởi
           </Typography>
           <ul className={classes.footer_menu}>
             <li className={classes.footer_menu_item}>
@@ -227,7 +228,7 @@ function Footer() {
           </Typography>
           <ul className={classes.footer_menu}>
             <li className={classes.footer_menu_item}>
-              <a href="/">Về cỏ mềm</a>
+              <a href="/">Về chúng tôi</a>
             </li>
             <li className={classes.footer_menu_item}>
               <a href="/">Hệ thống cửa hàng</a>
@@ -268,7 +269,7 @@ function Footer() {
       </Grid>
       <Grid className={classes.footer_bottom} container display="flex" justifyContent="space-between" alignItems="center">
         <Typography className={classes.footer_copyRight} style={{ fontSize: '14px', color: "#4c503d" }}>
-          © Bản quyền thuộc về Công ty Cổ phần Mỹ phẩm Thiên nhiên
+          © 2021 by VSsYii. All rights reserved
         </Typography>
         <a style={{ margin: '5px 0 0' }} href="/">
           <img src="static/images/thongbao.png" width="111" height="43" alt="thongbao" />

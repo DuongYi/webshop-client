@@ -323,7 +323,7 @@ function Navbar(props, { fixed, absolute }) {
         <AppBar className={appBarClasses} position="sticky">
           <Toolbar className={classes.toolbar}>
             <Link to="/">
-              <img className={classes.logo} src="static/images/logo.png" alt="" />
+              <img className={classes.logo} src="static/images/logoDG.png" alt="" />
             </Link>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
