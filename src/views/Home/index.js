@@ -179,6 +179,55 @@ const useStyles = makeStyles((theme) => ({
       transition: 'all ease 0.3s'
     }
   },
+  home_review_react: {
+    boxShadow: '0 10px 15px rgb(0 0 0 / 20%)',
+    borderRadius: '17px',
+    padding: 0,
+    marginTop: '48px',
+    display: 'flex'
+  },
+  box_review_react: {
+    padding: '0 0 50px',
+    backgroundImage: `url(${'static/images/mewspapers.png'})`,
+    backgroundSize: 'cover',
+    width: '90%',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    borderTopLeftRadius: '15px',
+    borderBottomLeftRadius: '15px',
+  },
+  box_left_react: {
+    width: '10%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    '& a': {
+      display: 'flex',
+      margin: '15px',
+      color: '#079b61',
+      textDecoration: 'none',
+      transition: 'all ease 0.3s',
+      '& i': {
+        fontSize: '15px'
+      },
+      '&:hover': {
+        color: '#8c8d8a',
+        transition: 'all ease 0.3s',
+      }
+    }
+  },
+  bLeft_react_grid: {
+    position: 'relative',
+    '&:before': {
+      content: "''",
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      background: '#079b61',
+      height: '30px'
+    }
+  },
   [theme.breakpoints.down('sm')]: {
     home_about: {
       display: 'none'
@@ -232,7 +281,14 @@ const useStyles = makeStyles((theme) => ({
       '& .MuiTabs-flexContainer': {
         justifyContent: 'flex-start',
       }
-    }
+    },
+    home_review_react: {
+      borderRadius: 0,
+    },
+    box_review_react: {
+      borderTopLeftRadius: 0,
+      borderBottomLeftRadius: 0,
+    },
   },
   [theme.breakpoints.down('xs')]: {
     home_title: {
@@ -522,7 +578,7 @@ function Home() {
         <MobileAboutUs />
       </Box>
 
-      <Container maxWidth="lg" className={classes.home_react}>
+      {/* <Container maxWidth="lg" className={classes.home_react}>
         <Box mt={6} className={classes.box_react}>
           <Grid
             mb={2}
@@ -545,10 +601,67 @@ function Home() {
             alt="home new title"
           />
         </div>
-      </Container>
+      </Container> */}
 
-      <Container maxWidth="lg" style={{ marginTop: '60px' }}>
+      {/* <Container maxWidth="lg" style={{ marginTop: '60px' }}>
         <TrackSlick />
+      </Container> */}
+
+      <Container maxWidth="lg" className={classes.home_review_react}>
+        <Box className={classes.box_review_react}>
+          <Grid
+            mb={2}
+            style={{ padding: '60px 0 0' }}
+          >
+            <Typography
+              variant="h2"
+              align="center"
+              className={classes.home_react_title}
+            >
+              Khách hàng nói gì về chúng tôi
+            </Typography>
+          </Grid>
+          <TrackSlick />
+        </Box>
+        <Box className={classes.box_left_react}>
+          <Box style={{
+            height: '100px', width: '1px', background: '#ccc', marginBottom: '30px'
+          }}
+          />
+          <Box className={classes.bLeft_react_grid} display="block">
+            <ul style={{ listStyleType: 'none' }}>
+              <li>
+                <a href="/">
+                  <i className="fab fa-facebook-f" />
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <i className="fab fa-twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <i className="fab fa-instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <i className="fab fa-pinterest-p" />
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <i className="fab fa-telegram-plane" />
+                </a>
+              </li>
+            </ul>
+          </Box>
+          <Box style={{
+            height: '100px', width: '1px', background: '#ccc', marginTop: '30px'
+          }}
+          />
+        </Box>
       </Container>
 
       <Box mt={6}>

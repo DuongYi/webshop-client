@@ -97,35 +97,20 @@ function TrackSlick() {
   const settings = {
     infinite: true,
     speed: 500,
-    arrows: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    arrows: false,
+    dots: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        }
-      },
-      {
         breakpoint: 960,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
-          dots: true
         }
-      }
+      },
     ]
   };
   return (
