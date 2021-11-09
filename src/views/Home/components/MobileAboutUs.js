@@ -76,7 +76,7 @@ function MobileAboutUs() {
     <Box className={classes.container}>
       <Box className={classes.wrapper}>
         <Typography className={classes.heading_title}>
-          <span>DG Bưởi Homelab</span>
+          <span>TPX Homelab</span>
           Giới thiệu về chúng tôi
         </Typography>
         <Box className={classes.thumbnail}>
@@ -85,7 +85,7 @@ function MobileAboutUs() {
           </a>
         </Box>
         <a className={classes.button} href="/">
-          Chuyện của Bưởi
+          Chuyện của TPX
         </a>
       </Box>
     </Box>

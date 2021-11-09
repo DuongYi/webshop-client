@@ -22,8 +22,6 @@ const useStyle = makeStyles((theme) => ({
     }
   },
   footerLogo: {
-    height: '100px',
-    width: '160px',
     textIndent: '100%',
     whiteSpace: 'nowrap',
     overflow: 'hidden'
@@ -96,7 +94,7 @@ const useStyle = makeStyles((theme) => ({
     }
   },
   footer_bottom: {
-    margin: '20px 0 0'
+    margin: '10px 0 20px 0'
   },
   [theme.breakpoints.down('md')]: {
     footer_social: {
@@ -160,7 +158,7 @@ function Footer() {
       >
         <Grid style={{ padding: '0 20px 10px 0' }} lg={4} md={12} item>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
-            Công ty cổ phần trách nghiệm hữu hạn DG Bưởi
+            Công ty cổ phần thương mại xuất nhập khẩu TPX
           </Typography>
           <Typography style={{ fontSize: '14px', fontWeight: 500, color: "#4c503d" }}>
             ĐKKD số 02328956238 do Sở KHĐT Tp. Hà Nội cấp ngày 19/03/2021
@@ -173,7 +171,7 @@ function Footer() {
 
             </li>
             <li className={classes.footer_contact_item}>
-              <a href="/">Email: dgbuoi@gmail.com.vn</a>
+              <a href="/">Email: tpx@gmail.com.vn</a>
             </li>
             <li className={classes.footer_contact_item}>
               <a href="/">
@@ -190,7 +188,7 @@ function Footer() {
         </Grid>
         <Grid style={{ padding: '0 20px 10px 0' }} item lg={3} sm={4} xs={6}>
           <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
-            Gian hàng DG Bưởi
+            Gian hàng TPX
           </Typography>
           <ul className={classes.footer_menu}>
             <li className={classes.footer_menu_item}>
@@ -269,7 +267,7 @@ function Footer() {
       </Grid>
       <Grid className={classes.footer_bottom} container display="flex" justifyContent="space-between" alignItems="center">
         <Typography className={classes.footer_copyRight} style={{ fontSize: '14px', color: "#4c503d" }}>
-          © 2021 by VSsYii. All rights reserved
+          © 2021 TPX. All rights reserved
         </Typography>
         <a style={{ margin: '5px 0 0' }} href="/">
           <img src="static/images/thongbao.png" width="111" height="43" alt="thongbao" />

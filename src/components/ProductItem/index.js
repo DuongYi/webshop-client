@@ -8,11 +8,11 @@ function ProductItem({ product }) {
     <div className="product-grid-column">
       <div className="product-grid">
         <div className="product-thumbnail">
-          <a href="/sp">
+          <a href={`sp${product.id}`}>
             <img src={product.image} alt="" />
           </a>
         </div>
-        <a className="product-title" href="/sp">{product.title}</a>
+        <a className="product-title" href={`sp${product.id}`}>{product.title}</a>
         <div className="product-price">
           <span>{product.price}</span>
         </div>

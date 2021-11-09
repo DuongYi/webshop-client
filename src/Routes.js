@@ -31,7 +31,27 @@ function Routes() {
               <Switch>
                 <Route
                   exact
-                  path="/producs/:pid"
+                  path="/sp1"
+                  component={lazy(() => import("src/views/Test/ProductView1"))}
+                />
+                <Route
+                  exact
+                  path="/sp2"
+                  component={lazy(() => import("src/views/Test/ProductView2"))}
+                />
+                <Route
+                  exact
+                  path="/sp3"
+                  component={lazy(() => import("src/views/Test/ProductView3"))}
+                />
+                <Route
+                  exact
+                  path="/sp4"
+                  component={lazy(() => import("src/views/Test/ProductView4"))}
+                />
+                <Route
+                  exact
+                  path="/sp"
                   component={lazy(() => import("src/views/ProductView"))}
                 />
                 <Route

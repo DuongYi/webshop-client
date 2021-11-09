@@ -510,12 +510,12 @@ function ProductDetail({ product }) {
     {
       title: "Dầu gội bưởi La Vitalité",
       image: "static/images/TopSelling/buoi-huong-nhu.png",
-      price: "250.000đ"
+      price: "200.000đ"
     },
     {
       title: "Dầu xả La Vitalité",
       image: "static/images/TopSelling/dau-xa.png",
-      price: "250.000đ"
+      price: "200.000đ"
     },
     {
       title: "Dầu gội dược liệu làm đen tóc Vitalité",
@@ -532,8 +532,8 @@ function ProductDetail({ product }) {
   const listSuggested = [
     {
       image: "static/images/TopSelling/buoi-huong-nhu.png",
-      title: "Dầu gội bưởi La Vitalité",
-      price: "250.000đ"
+      title: "Dầu gội tinh dầu bưởi, hương nhu La Vitalité",
+      price: "200.000đ"
     },
     {
       image: "static/images/TopSelling/combo.png",
@@ -544,28 +544,12 @@ function ProductDetail({ product }) {
 
   const images = [
     {
-      original: 'static/images/son1.jpg',
-      thumbnail: 'static/images/son1.jpg',
+      original: 'static/images/Product/den-toc.png',
+      thumbnail: 'static/images/Product/den-toc.png',
     },
     {
-      original: 'static/images/son2.jpg',
-      thumbnail: 'static/images/son2.jpg',
-    },
-    {
-      original: 'static/images/son3.jpg',
-      thumbnail: 'static/images/son3.jpg',
-    },
-    {
-      original: 'static/images/son4.jpg',
-      thumbnail: 'static/images/son4.jpg',
-    },
-    {
-      original: 'static/images/son5.jpg',
-      thumbnail: 'static/images/son5.jpg',
-    },
-    {
-      original: 'static/images/son6.jpg',
-      thumbnail: 'static/images/son6.jpg',
+      original: 'static/images/TopSelling/den-toc.png',
+      thumbnail: 'static/images/TopSelling/den-toc.png',
     },
   ];
 
@@ -602,13 +586,13 @@ function ProductDetail({ product }) {
               <Typography
                 className={classes.product_Detail_title}
               >
-                Son kem nhung (Lì mượt không silicon)
+                Dầu gội thảo dược làm đen tóc La Vitalité
               </Typography>
-              <h4 className={classes.pDetail_subTitle}>Lì mượt không cần Silicon</h4>
+              <h4 className={classes.pDetail_subTitle}>Chăm sóc tóc</h4>
             </Box>
             <Box className={classes.product_info}>
               <Box className={classes.product_prices}>
-                <ins>160.000đ</ins>
+                <ins>300.000đ</ins>
               </Box>
               <a href="/" className={classes.product_rating}>
                 <Box className={classes.product_ratings}>
@@ -625,7 +609,7 @@ function ProductDetail({ product }) {
                 </Box>
               </a>
             </Box>
-            <Box className={classes.product_options}>
+            {/* <Box className={classes.product_options}>
               <span className={classes.options_label}>Mùi hương</span>
               <Box className={classes.options_detail}>
                 <label htmlFor="option-id" className={classes.product_option} style={{ background: '#de8d1e', border: '1px solid #de8d1e' }}>
@@ -660,8 +644,8 @@ function ProductDetail({ product }) {
                   <span className={classes.option_checkmark_label}>Gạo cam</span>
                 </label>
               </Box>
-            </Box>
-            <Box className={classes.product_actions}>
+            </Box> */}
+            {/* <Box className={classes.product_actions}>
               <Box className={classes.product_quantity}>
                 <Box>
                   <TextField
@@ -684,7 +668,7 @@ function ProductDetail({ product }) {
               <Button className={classes.product_BuyNow}>
                 Mua ngay
               </Button>
-            </Box>
+            </Box> */}
             <Box className={classes.product_features}>
               <Box className={classes.pFeatures_item}>
                 <span className={classes.pFeatures_item_label}>
@@ -692,16 +676,7 @@ function ProductDetail({ product }) {
                   {' '}
                 </span>
                 <span className={classes.pFeatures_item_description}>
-                  3ml
-                </span>
-              </Box>
-              <Box className={classes.pFeatures_item}>
-                <span className={classes.pFeatures_item_label}>
-                  Số công bố:
-                  {' '}
-                </span>
-                <span className={classes.pFeatures_item_description}>
-                  10692/21/CBMP - HN
+                  300ml
                 </span>
               </Box>
               <Box className={classes.pFeatures_item}>
@@ -710,7 +685,16 @@ function ProductDetail({ product }) {
                   {' '}
                 </span>
                 <span className={classes.pFeatures_item_description}>
-                  Cho mọi phụ nữ, bà bầu, trẻ em và những đôi môi nhạy cảm
+                  Cho mọi phụ nữ
+                </span>
+              </Box>
+              <Box className={classes.pFeatures_item}>
+                <span className={classes.pFeatures_item_label}>
+                  Đơn vị cung cấp:
+                  {' '}
+                </span>
+                <span className={classes.pFeatures_item_description}>
+                  Công ty cổ phần thương mại xuất nhập khẩu TPX
                 </span>
               </Box>
               <Box className={classes.pFeatures_item}>
@@ -725,7 +709,7 @@ function ProductDetail({ product }) {
             </Box>
             <Box className={classes.product_description}>
               <Typography>
-                Bộ combo dành cho môi giúp các nàng chăm sóc đôi môi mềm mịn căng mọng và hồng hào.
+                Dầu gội đen tóc La Vitalité chứa chiết xuất từ thảo dược như nhân sâm đen, linh chi, hà thủ ô đỏ, cỏ nhọ nồi... với công nghệ nano được sử dụng để tạo nên sản phẩm này giúp cho việc hấp thụ hắc sắc tố từ thảo dược tốt hơn, làm tóc bạc nhanh chóng trở nên đen óng tự nhiên.
               </Typography>
             </Box>
             <Box className={classes.product_suggested}>

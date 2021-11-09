@@ -41,21 +41,25 @@ const useStyles = makeStyles((theme) => ({
 
 const productList = [
   {
+    id: "1",
     title: "Dầu gội bưởi La Vitalité",
     image: "static/images/Product/buoi-huong-nhu.png",
     price: "250.000đ"
   },
   {
+    id: "2",
     title: "Dầu xả La Vitalité",
     image: "static/images/Product/dau-xa.png",
     price: "250.000đ"
   },
   {
+    id: "3",
     title: "Dầu gội dược liệu làm đen tóc Vitalité",
     image: "static/images/Product/den-toc.png",
     price: "300.000đ"
   },
   {
+    id: "4",
     title: "Combo Dầu gội & Dầu xả chăm sóc tóc toàn diện La Vitalité",
     image: "static/images/TopSelling/combo.png",
     price: "450.000đ"

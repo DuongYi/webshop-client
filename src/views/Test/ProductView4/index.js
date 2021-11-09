@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ProductView() {
+function ProductView4() {
   const classes = useStyles();
 
   return (
@@ -118,4 +118,4 @@ function ProductView() {
   );
 }
 
-export default ProductView;
+export default ProductView4;
