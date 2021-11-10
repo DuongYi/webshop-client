@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
       display: 'block',
       fontSize: '22px',
       fontFamily: 'Yeseva One,Helvetica,Arial,sans-serif',
-      color: '#079b61',
+      color: '#49856e',
     }
   },
   thumbnail: {
@@ -62,7 +62,7 @@ const useStyles = makeStyles(() => ({
     letterSpacing: '2.8px',
     height: '45px',
     border: 0,
-    backgroundColor: '#079b61',
+    backgroundColor: '#49856e',
     borderRadius: '100px',
     backgroundImage: `url(${'static/images/flower-2.png'})`,
     backgroundRepeat: 'no-repeat',

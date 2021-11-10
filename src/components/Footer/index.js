@@ -17,7 +17,7 @@ const useStyle = makeStyles((theme) => ({
       textDecoration: 'none',
       color: "#4c503d",
       '&:hover': {
-        color: "#079b61"
+        color: "#49856e"
       }
     }
   },
@@ -34,7 +34,7 @@ const useStyle = makeStyles((theme) => ({
     textTransform: "uppercase",
     fontSize: '12px',
     fontWeight: 600,
-    color: "#079b61",
+    color: "#49856e",
     '&:before': {
       content: "''",
       position: 'absolute',
@@ -42,7 +42,7 @@ const useStyle = makeStyles((theme) => ({
       left: 0,
       height: '2px',
       width: '30px',
-      backgroundColor: "#079b61"
+      backgroundColor: "#49856e"
     }
   },
   footer_social: {
@@ -81,7 +81,7 @@ const useStyle = makeStyles((theme) => ({
     position: 'relative',
     padding: '5px 15px 5px 15px',
     borderRadius: '10px',
-    backgroundColor: '#079b6138',
+    backgroundColor: '#49856e38',
     '&:before': {
       content: "''",
       position: 'absolute',
@@ -90,7 +90,7 @@ const useStyle = makeStyles((theme) => ({
       width: 0,
       height: 0,
       border: '8px solid #ffffff00',
-      borderBottomColor: '#079b6138'
+      borderBottomColor: '#49856e38'
     }
   },
   footer_bottom: {
@@ -119,161 +119,163 @@ const useStyle = makeStyles((theme) => ({
 function Footer() {
   const classes = useStyle();
   return (
-    <Container maxWidth="lg" className={classes.footer}>
-      <Grid container mt={2} display="flex" alignItems="center" justifyContent="space-between" style={{ paddingBottom: '25px' }}>
-        <Grid lg={3} md={4} xs={12} item>
-          <img className={classes.footerLogo} src="static/images/logoDG.png" alt="" />
-          <Box className={classes.footerLogo_title}>
-            <span>Sản phẩm thiên nhiên </span>
-          </Box>
+    <Box style={{ background: '#fff' }}>
+      <Container maxWidth="lg" className={classes.footer}>
+        <Grid container mt={2} display="flex" alignItems="center" justifyContent="space-between" style={{ paddingBottom: '25px' }}>
+          <Grid lg={3} md={4} xs={12} item>
+            <img className={classes.footerLogo} src="static/images/logoDG.png" alt="" />
+            <Box className={classes.footerLogo_title}>
+              <span>Sản phẩm thiên nhiên </span>
+            </Box>
+          </Grid>
+          <Grid lg={7} md={8} xs={12} item>
+            <div className="footer-form">
+              <form action="/">
+                <input type="hidden" name="_token" />
+                <div className="footer-form-field">
+                  <textarea name="email" placeholder="Đăng ký địa chỉ email để nhận được những thông tin khuyến mại sớm nhất..." id="" cols="30" rows="10" />
+                  <button className="footer-form-button" type="submit">
+                    Tham gia
+                  </button>
+                </div>
+              </form>
+            </div>
+          </Grid>
+          <Grid lg={2} md={12} container item className={classes.footer_social}>
+            <a href="/" className={classes.footer_social_item}>
+              <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="static/images/fb.svg" alt="Facebook" />
+            </a>
+            <a href="/" className={classes.footer_social_item}>
+              <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="static/images/insta.svg" alt="Instagram" />
+            </a>
+            <a href="/" className={classes.footer_social_item}>
+              <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="static/images/youtube.svg" alt="Youtube" />
+            </a>
+          </Grid>
         </Grid>
-        <Grid lg={7} md={8} xs={12} item>
-          <div className="footer-form">
-            <form action="/">
-              <input type="hidden" name="_token" />
-              <div className="footer-form-field">
-                <textarea name="email" placeholder="Đăng ký địa chỉ email để nhận được những thông tin khuyến mại sớm nhất..." id="" cols="30" rows="10" />
-                <button className="footer-form-button" type="submit">
-                  Tham gia
-                </button>
-              </div>
-            </form>
-          </div>
-        </Grid>
-        <Grid lg={2} md={12} container item className={classes.footer_social}>
-          <a href="/" className={classes.footer_social_item}>
-            <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="static/images/fb.svg" alt="Facebook" />
-          </a>
-          <a href="/" className={classes.footer_social_item}>
-            <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="static/images/insta.svg" alt="Instagram" />
-          </a>
-          <a href="/" className={classes.footer_social_item}>
-            <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} src="static/images/youtube.svg" alt="Youtube" />
-          </a>
-        </Grid>
-      </Grid>
-      <Grid
-        container
-        style={{ paddingBottom: '40px', borderBottom: '1px solid rgba(76,80,61,.14)' }}
-      >
-        <Grid style={{ padding: '0 20px 10px 0' }} lg={4} md={12} item>
-          <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
-            Công ty cổ phần thương mại xuất nhập khẩu TPX
-          </Typography>
-          <Typography style={{ fontSize: '14px', fontWeight: 500, color: "#4c503d" }}>
-            ĐKKD số 02328956238 do Sở KHĐT Tp. Hà Nội cấp ngày 19/03/2021
-          </Typography>
-          <ul className={classes.footer_contact}>
-            <li className={classes.footer_contact_item}>
-              <a href="/">
-                Tại đường Bưởi, Vĩnh Phúc, Ba Đình, Hà Nội
-              </a>
+        <Grid
+          container
+          style={{ paddingBottom: '40px', borderBottom: '1px solid rgba(76,80,61,.14)' }}
+        >
+          <Grid style={{ padding: '0 20px 10px 0' }} lg={4} md={12} item>
+            <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
+              Công ty cổ phần thương mại xuất nhập khẩu TPX
+            </Typography>
+            <Typography style={{ fontSize: '14px', fontWeight: 500, color: "#4c503d" }}>
+              ĐKKD số 02328956238 do Sở KHĐT Tp. Hà Nội cấp ngày 19/03/2021
+            </Typography>
+            <ul className={classes.footer_contact}>
+              <li className={classes.footer_contact_item}>
+                <a href="/">
+                  Tại đường Bưởi, Vĩnh Phúc, Ba Đình, Hà Nội
+                </a>
 
-            </li>
-            <li className={classes.footer_contact_item}>
-              <a href="/">Email: tpx@gmail.com.vn</a>
-            </li>
-            <li className={classes.footer_contact_item}>
-              <a href="/">
-                Hotline: 1900.193.084
-              </a>
-            </li>
-          </ul>
-          <Box className={classes.footer_note}>
-            <span style={{ fontSize: '15px', color: "#4c503d" }}>
-              <b>*Lưu ý:</b>
-              Tác dụng của sản phẩm có thể thay đổi tùy theo tình trạng thể chất của mỗi người
-            </span>
-          </Box>
+              </li>
+              <li className={classes.footer_contact_item}>
+                <a href="/">Email: tpx@gmail.com.vn</a>
+              </li>
+              <li className={classes.footer_contact_item}>
+                <a href="/">
+                  Hotline: 1900.193.084
+                </a>
+              </li>
+            </ul>
+            <Box className={classes.footer_note}>
+              <span style={{ fontSize: '15px', color: "#4c503d" }}>
+                <b>*Lưu ý:</b>
+                Tác dụng của sản phẩm có thể thay đổi tùy theo tình trạng thể chất của mỗi người
+              </span>
+            </Box>
+          </Grid>
+          <Grid style={{ padding: '0 20px 10px 0' }} item lg={3} sm={4} xs={6}>
+            <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
+              Gian hàng TPX
+            </Typography>
+            <ul className={classes.footer_menu}>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Son môi</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Chăm sóc da</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Chăm sóc tóc</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Chăm sóc cơ thể</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Sản phẩm cho bé</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Hương thơm</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Trang điểm</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Khuyến mại và combo</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Túi vải</a>
+              </li>
+            </ul>
+          </Grid>
+          <Grid style={{ padding: '0 20px 10px 0' }} item lg={2} sm={4} xs={6}>
+            <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
+              Truy cập nhanh
+            </Typography>
+            <ul className={classes.footer_menu}>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Về chúng tôi</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Hệ thống cửa hàng</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Minh bạch nguyên liệu</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Phản hồi sản phẩm</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Hoạt động cộng đồng</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Blog làm đẹp</a>
+              </li>
+            </ul>
+          </Grid>
+          <Grid style={{ padding: '0 20px 10px 0' }} item lg={3} sm={4}>
+            <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
+              Hướng dẫn mua hàng
+            </Typography>
+            <ul className={classes.footer_menu}>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Chính sách mua hàng và thanh toán</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Chính sách bảo hành</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Chính sách đổi trả và hoàn tiền</a>
+              </li>
+              <li className={classes.footer_menu_item}>
+                <a href="/">Chính sách bảo mật thông tin</a>
+              </li>
+            </ul>
+          </Grid>
         </Grid>
-        <Grid style={{ padding: '0 20px 10px 0' }} item lg={3} sm={4} xs={6}>
-          <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
-            Gian hàng TPX
+        <Grid className={classes.footer_bottom} container display="flex" justifyContent="space-between" alignItems="center">
+          <Typography className={classes.footer_copyRight} style={{ fontSize: '14px', color: "#4c503d" }}>
+            © 2021 TPX. All rights reserved
           </Typography>
-          <ul className={classes.footer_menu}>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Son môi</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Chăm sóc da</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Chăm sóc tóc</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Chăm sóc cơ thể</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Sản phẩm cho bé</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Hương thơm</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Trang điểm</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Khuyến mại và combo</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Túi vải</a>
-            </li>
-          </ul>
+          <a style={{ margin: '5px 0 0' }} href="/">
+            <img src="static/images/thongbao.png" width="111" height="43" alt="thongbao" />
+          </a>
         </Grid>
-        <Grid style={{ padding: '0 20px 10px 0' }} item lg={2} sm={4} xs={6}>
-          <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
-            Truy cập nhanh
-          </Typography>
-          <ul className={classes.footer_menu}>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Về chúng tôi</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Hệ thống cửa hàng</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Minh bạch nguyên liệu</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Phản hồi sản phẩm</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Hoạt động cộng đồng</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Blog làm đẹp</a>
-            </li>
-          </ul>
-        </Grid>
-        <Grid style={{ padding: '0 20px 10px 0' }} item lg={3} sm={4}>
-          <Typography style={{ fontSize: '16px', fontWeight: 600, color: "#4c503d" }}>
-            Hướng dẫn mua hàng
-          </Typography>
-          <ul className={classes.footer_menu}>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Chính sách mua hàng và thanh toán</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Chính sách bảo hành</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Chính sách đổi trả và hoàn tiền</a>
-            </li>
-            <li className={classes.footer_menu_item}>
-              <a href="/">Chính sách bảo mật thông tin</a>
-            </li>
-          </ul>
-        </Grid>
-      </Grid>
-      <Grid className={classes.footer_bottom} container display="flex" justifyContent="space-between" alignItems="center">
-        <Typography className={classes.footer_copyRight} style={{ fontSize: '14px', color: "#4c503d" }}>
-          © 2021 TPX. All rights reserved
-        </Typography>
-        <a style={{ margin: '5px 0 0' }} href="/">
-          <img src="static/images/thongbao.png" width="111" height="43" alt="thongbao" />
-        </a>
-      </Grid>
-    </Container>
+      </Container>
+    </Box>
   );
 }
 

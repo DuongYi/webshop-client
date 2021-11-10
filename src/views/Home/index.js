@@ -28,8 +28,17 @@ import TabData from "./components/TabData";
 
 const useStyles = makeStyles((theme) => ({
   home_page: {
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
+    position: 'relative',
+    '&:before': {
+      content: "''",
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      height: '85%',
+      width: '100%',
+      background: '#f2f2f2',
+      zIndex: -1
+    }
   },
   product_container: {
     padding: '0 30px'
@@ -72,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: '-50px'
   },
   home_store_title2: {
-    color: '#079b61',
+    color: '#49856e',
     fontSize: '36px',
     fontFamily: " Yeseva One, cursive",
     padding: '40px 0 0',
@@ -107,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1
   },
   shop_Tabs: {
-    background: "#fff",
+    background: "#f2f2f2",
     borderBottomLeftRadius: '10px',
     borderBottomRightRadius: '10px',
     paddingBottom: '15px',
@@ -127,19 +136,19 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '5px',
-    backgroundColor: '#079b6138',
+    backgroundColor: '#49856e38',
     padding: '0 30px',
     fontSize: '14px',
     fontWeight: 500,
     lineHeight: 1.21,
     letterSpacing: '2.8px',
-    color: '#079b61',
+    color: '#49856e',
     height: '45px',
     border: 0,
     transition: 'all 0.3s',
     '&:hover': {
       color: '#fff',
-      backgroundColor: '#079b61'
+      backgroundColor: '#49856e'
     }
   },
   home_react: {
@@ -179,12 +188,13 @@ const useStyles = makeStyles((theme) => ({
       transition: 'all ease 0.3s'
     },
     '&:hover': {
-      color: '#079b61',
+      color: '#49856e',
       transition: 'all ease 0.3s'
     }
   },
   home_review_react: {
     boxShadow: '0 10px 15px rgb(0 0 0 / 20%)',
+    background: '#fff',
     borderRadius: '17px',
     padding: 0,
     marginTop: '48px',
@@ -209,7 +219,7 @@ const useStyles = makeStyles((theme) => ({
     '& a': {
       display: 'flex',
       margin: '15px',
-      color: '#079b61',
+      color: '#49856e',
       textDecoration: 'none',
       transition: 'all ease 0.3s',
       '& i': {
@@ -228,7 +238,7 @@ const useStyles = makeStyles((theme) => ({
       position: 'absolute',
       top: 0,
       left: 0,
-      background: '#079b61',
+      background: '#49856e',
       height: '30px'
     }
   },
@@ -386,86 +396,87 @@ function Home() {
   ];
 
   return (
-    <Page className={classes.home_page}>
-      <HomeBanner />
-      <Container maxWidth="lg" style={{ marginTop: '50px' }}>
-        <Grid
-          container
-          className={classes.home_about}
-        >
-          <Grid item xs={6} style={{ padding: '80px' }}>
-            <img style={{ width: '100%', height: '100%' }} src="static/images/test1.jpg" alt="" />
-          </Grid>
-          <Grid item xs={6} style={{ margin: '80px 0 0' }}>
-            <Typography
-              variant="h2"
-              style={{
-                margin: '0 0 5px', color: '#4c503d', fontSize: '42px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
-              }}
-            >
-              Chuyện của TPX
-            </Typography>
-            <Typography
-              variant="h6"
-              style={{ margin: '16px 0', color: '#4c503d', fontSize: '16px' }}
-            >
-              <b>
-                Câu chuyện về “MẸ” như kỷ niệm bao năm không bao giờ vơi
-                trong lòng. ấp ủ điều gì đó để “SỨC SỐNG” còn mãi với thời
-                gian, gìn giữ tinh túy từ mẹ thiên nhiên, phục hồi “SỨC
-                SỐNG” tự nhiên của con người và vạn vật.
-              </b>
-            </Typography>
-            <Typography
-              variant="h6"
-              style={{
-                margin: '16px 0', color: '#4c503d', fontSize: '16px', lineHeight: 1.5
-              }}
-            >
-              Sau khi có bé đầu lòng, MẸ chuyển lên chăm con giúp mình.
-              Tới giờ ngẫm lại, thời gian bên mẹ nhiều hơn bên chồng.
-              MẸ là người tinh tế, dù là con dâu, nhưng mẹ quan tâm tới cả
-              những điều nhỏ nhặt nhất. Tuần đầu sau sinh, căng thẳng
-              triền miên cùng với những thay đổi nội tiết tố. Cuộc sống
-              24/7 của mình không còn chút nào giành cho bản thân. Chỉ
-              có tiếng con khóc, những xáo trộn từ sinh linh mới, cùng với bỉm và sữa...
-            </Typography>
-            <Button
-              variant="contained"
-              style={{
-                background: '#de8d1e', borderRadius: 1000, padding: '10px 25px', color: '#fff'
-              }}
-            >
-              <b>Xem thêm</b>
-            </Button>
-            <Box mt={6}>
-              <Carousel
-                animation="fade" // Previous Example
-                fullHeightHover="true"
-                stopAutoPlayOnHover="false"
-                indicatorIconButtonProps={{
-                  style: {
-                    padding: '10px',
-                  }
+    <Page>
+      <Box className={classes.home_page}>
+        <HomeBanner />
+        <Container maxWidth="lg" style={{ marginTop: '50px' }}>
+          <Grid
+            container
+            className={classes.home_about}
+          >
+            <Grid item xs={6} style={{ padding: '80px' }}>
+              <img style={{ width: '100%', height: '100%' }} src="static/images/test1.jpg" alt="" />
+            </Grid>
+            <Grid item xs={6} style={{ margin: '80px 0 0' }}>
+              <Typography
+                variant="h2"
+                style={{
+                  margin: '0 0 5px', color: '#4c503d', fontSize: '42px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
                 }}
-                indicatorContainerProps={{
-                  style: {
-                    marginTop: '50px', // 5
-                    textAlign: 'center',
-                    marginBottom: '25px', // 4
-                  }
-                }}
-                className={classes.root}
               >
-                {
+                Chuyện của TPX
+              </Typography>
+              <Typography
+                variant="h6"
+                style={{ margin: '16px 0', color: '#4c503d', fontSize: '16px' }}
+              >
+                <b>
+                  Câu chuyện về “MẸ” như kỷ niệm bao năm không bao giờ vơi
+                  trong lòng. ấp ủ điều gì đó để “SỨC SỐNG” còn mãi với thời
+                  gian, gìn giữ tinh túy từ mẹ thiên nhiên, phục hồi “SỨC
+                  SỐNG” tự nhiên của con người và vạn vật.
+                </b>
+              </Typography>
+              <Typography
+                variant="h6"
+                style={{
+                  margin: '16px 0', color: '#4c503d', fontSize: '16px', lineHeight: 1.5
+                }}
+              >
+                Sau khi có bé đầu lòng, MẸ chuyển lên chăm con giúp mình.
+                Tới giờ ngẫm lại, thời gian bên mẹ nhiều hơn bên chồng.
+                MẸ là người tinh tế, dù là con dâu, nhưng mẹ quan tâm tới cả
+                những điều nhỏ nhặt nhất. Tuần đầu sau sinh, căng thẳng
+                triền miên cùng với những thay đổi nội tiết tố. Cuộc sống
+                24/7 của mình không còn chút nào giành cho bản thân. Chỉ
+                có tiếng con khóc, những xáo trộn từ sinh linh mới, cùng với bỉm và sữa...
+              </Typography>
+              <Button
+                variant="contained"
+                style={{
+                  background: '#de8d1e', borderRadius: 1000, padding: '10px 25px', color: '#fff'
+                }}
+              >
+                <b>Xem thêm</b>
+              </Button>
+              <Box mt={6}>
+                <Carousel
+                  animation="fade" // Previous Example
+                  fullHeightHover="true"
+                  stopAutoPlayOnHover="false"
+                  indicatorIconButtonProps={{
+                    style: {
+                      padding: '10px',
+                    }
+                  }}
+                  indicatorContainerProps={{
+                    style: {
+                      marginTop: '50px', // 5
+                      textAlign: 'center',
+                      marginBottom: '25px', // 4
+                    }
+                  }}
+                  className={classes.root}
+                >
+                  {
                 items.map((item) => <AboutItem key={item} item={item} />)
               }
-              </Carousel>
-            </Box>
+                </Carousel>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
 
-        {/* <Box className={classes.product_container} mb={0}>
+          {/* <Box className={classes.product_container} mb={0}>
           <Grid
             mb={2}
             className={classes.home_hot_product}
@@ -481,112 +492,112 @@ function Home() {
           <CarouselSlick items={productList} />
         </Box> */}
 
-        <Box>
+          <Box>
+            <Grid
+              container
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              className={classes.home_store}
+              style={{ padding: '60px 0 0' }}
+            >
+              <Typography
+                variant="h2"
+                className={classes.home_store_title1}
+              >
+                Gian hàng
+              </Typography>
+              <span>
+                <img src="static/images/4la.png" alt="" />
+              </span>
+              <Typography
+                variant="h2"
+                className={classes.home_store_title2}
+              >
+                TPX
+              </Typography>
+            </Grid>
+          </Box>
+        </Container>
+
+        <Box className={classes.home_shop_grid}>
+          <Container className={classes.home_shop_container} maxWidth="lg">
+            <Tabs
+              className={classes.shop_Tabs}
+              value={currentTab}
+              onChange={handleTabsChange}
+              variant="scrollable"
+              scrollButtons="auto"
+              TabIndicatorProps={{
+                style: {
+                  background: '#49856e', borderRadius: '10px', zIndex: 1
+                }
+              }}
+            >
+              {tabs.map((tab) => (
+                <Tab
+                  label={tab.label}
+                  key={tab.value}
+                  value={tab.value}
+                  className={classes.tabSelected}
+                  style={{
+                    fontWeight: 'bold',
+                    zIndex: 999,
+                  }}
+                />
+              ))}
+            </Tabs>
+            <Box mt={3}>
+              {currentTab === 'sp1' && <TabData />}
+              {currentTab === 'sp2' && <TabData /> }
+              {currentTab === 'sp3' && <TabData />}
+              {currentTab === 'sp4' && <TabData />}
+              {currentTab === 'sp5' && <TabData />}
+              {currentTab === 'sp6' && <TabData />}
+            </Box>
+          </Container>
+          <Box />
+        </Box>
+
+        <Container maxWidth="lg" className={classes.home_resources}>
           <Grid
             container
             display="flex"
-            justifyContent="center"
+            direction="column"
             alignItems="center"
-            className={classes.home_store}
-            style={{ padding: '60px 0 0' }}
+            className={classes.home_resources_header}
           >
             <Typography
               variant="h2"
-              className={classes.home_store_title1}
+              align="center"
+              className={classes.home_title}
+              style={{
+                margin: '0 0 5px',
+              }}
             >
-              Gian hàng
+              100% Minh bạch nguyên liệu
             </Typography>
-            <span>
-              <img src="static/images/4la.png" alt="" />
-            </span>
-            <Typography
-              variant="h2"
-              className={classes.home_store_title2}
+            <Typography style={{
+              margin: '14px 0', fontSize: '14px', color: "#4c503d", fontWeight: 400
+            }}
             >
-              TPX
+              Sản phẩm an LÀNH - con người chân THẬT
             </Typography>
+            <Box display="flex" alignItems="center" justifyContent="center">
+              <a href="/" className={classes.home_resources_btn} style={{ textDecoration: 'none' }}>
+                Xem thêm
+              </a>
+            </Box>
           </Grid>
-        </Box>
-      </Container>
-
-      <Box className={classes.home_shop_grid}>
-        <Container className={classes.home_shop_container} maxWidth="lg">
-          <Tabs
-            className={classes.shop_Tabs}
-            value={currentTab}
-            onChange={handleTabsChange}
-            variant="scrollable"
-            scrollButtons="auto"
-            TabIndicatorProps={{
-              style: {
-                background: '#079b61', borderRadius: '10px', zIndex: 1
-              }
-            }}
-          >
-            {tabs.map((tab) => (
-              <Tab
-                label={tab.label}
-                key={tab.value}
-                value={tab.value}
-                className={classes.tabSelected}
-                style={{
-                  fontWeight: 'bold',
-                  zIndex: 999,
-                }}
-              />
-            ))}
-          </Tabs>
-          <Box mt={3}>
-            {currentTab === 'sp1' && <TabData />}
-            {currentTab === 'sp2' && <TabData /> }
-            {currentTab === 'sp3' && <TabData />}
-            {currentTab === 'sp4' && <TabData />}
-            {currentTab === 'sp5' && <TabData />}
-            {currentTab === 'sp6' && <TabData />}
-          </Box>
+          <ResourcesSlick />
         </Container>
-        <Box />
-      </Box>
 
-      <Container maxWidth="lg" className={classes.home_resources}>
-        <Grid
-          container
-          display="flex"
-          direction="column"
-          alignItems="center"
-          className={classes.home_resources_header}
-        >
-          <Typography
-            variant="h2"
-            align="center"
-            className={classes.home_title}
-            style={{
-              margin: '0 0 5px',
-            }}
-          >
-            100% Minh bạch nguyên liệu
-          </Typography>
-          <Typography style={{
-            margin: '14px 0', fontSize: '14px', color: "#4c503d", fontWeight: 400
-          }}
-          >
-            Sản phẩm an LÀNH - con người chân THẬT
-          </Typography>
-          <Box display="flex" alignItems="center" justifyContent="center">
-            <a href="/" className={classes.home_resources_btn} style={{ textDecoration: 'none' }}>
-              Xem thêm
-            </a>
-          </Box>
-        </Grid>
-        <ResourcesSlick />
-      </Container>
+        {/* mobile Home about us */}
+        <Box className={classes.mobile_about_us}>
+          <MobileAboutUs />
+        </Box>
 
-      {/* mobile Home about us */}
-      <Box className={classes.mobile_about_us}>
-        <MobileAboutUs />
-      </Box>
-
-      {/* <Container maxWidth="lg" className={classes.home_react}>
+        {/* <Container maxWidth="lg" className={classes.home_react}>
         <Box mt={6} className={classes.box_react}>
           <Grid
             mb={2}
@@ -611,95 +622,96 @@ function Home() {
         </div>
       </Container> */}
 
-      {/* <Container maxWidth="lg" style={{ marginTop: '60px' }}>
+        {/* <Container maxWidth="lg" style={{ marginTop: '60px' }}>
         <TrackSlick />
       </Container> */}
 
-      <Container maxWidth="lg" className={classes.home_review_react}>
-        <Box className={classes.box_review_react}>
+        <Container maxWidth="lg" className={classes.home_review_react}>
+          <Box className={classes.box_review_react}>
+            <Grid
+              mb={2}
+              style={{ padding: '60px 0 0' }}
+            >
+              <Typography
+                variant="h2"
+                align="center"
+                className={classes.home_react_title}
+              >
+                Khách hàng nói gì về chúng tôi
+              </Typography>
+            </Grid>
+            <TrackSlick />
+          </Box>
+          <Box className={classes.box_left_react}>
+            <Box style={{
+              height: '100px', width: '1px', background: '#ccc', marginBottom: '30px'
+            }}
+            />
+            <Box className={classes.bLeft_react_grid} display="block">
+              <ul style={{ listStyleType: 'none' }}>
+                <li>
+                  <a href="/">
+                    <i className="fab fa-facebook-f" />
+                  </a>
+                </li>
+                <li>
+                  <a href="/">
+                    <i className="fab fa-twitter" />
+                  </a>
+                </li>
+                <li>
+                  <a href="/">
+                    <i className="fab fa-instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a href="/">
+                    <i className="fab fa-pinterest-p" />
+                  </a>
+                </li>
+                <li>
+                  <a href="/">
+                    <i className="fab fa-telegram-plane" />
+                  </a>
+                </li>
+              </ul>
+            </Box>
+            <Box style={{
+              height: '100px', width: '1px', background: '#ccc', marginTop: '30px'
+            }}
+            />
+          </Box>
+        </Container>
+
+        <Box mt={6}>
           <Grid
-            mb={2}
-            style={{ padding: '60px 0 0' }}
+            container
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+            className={classes.home_blog}
           >
             <Typography
               variant="h2"
-              align="center"
-              className={classes.home_react_title}
+              mb={2}
+              className={classes.home_title}
             >
-              Khách hàng nói gì về chúng tôi
+              Blog làm đẹp
+            </Typography>
+            <Typography
+              style={{
+                fontSize: '16px', color: "#4c503d", lineHeight: 1.5, textAlign: 'center'
+              }}
+            >
+              Là phụ nữ, nhất định phải xinh đẹp và tự tin. Hãy cùng TPX HomeLab
+              <br />
+              khám phá những bí quyết làm đẹp thú vị nhé!
             </Typography>
           </Grid>
-          <TrackSlick />
+          <BlogSlick />
         </Box>
-        <Box className={classes.box_left_react}>
-          <Box style={{
-            height: '100px', width: '1px', background: '#ccc', marginBottom: '30px'
-          }}
-          />
-          <Box className={classes.bLeft_react_grid} display="block">
-            <ul style={{ listStyleType: 'none' }}>
-              <li>
-                <a href="/">
-                  <i className="fab fa-facebook-f" />
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <i className="fab fa-twitter" />
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <i className="fab fa-instagram" />
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <i className="fab fa-pinterest-p" />
-                </a>
-              </li>
-              <li>
-                <a href="/">
-                  <i className="fab fa-telegram-plane" />
-                </a>
-              </li>
-            </ul>
-          </Box>
-          <Box style={{
-            height: '100px', width: '1px', background: '#ccc', marginTop: '30px'
-          }}
-          />
-        </Box>
-      </Container>
-
-      <Box mt={6}>
-        <Grid
-          container
-          direction="column"
-          alignItems="center"
-          justifyContent="center"
-          className={classes.home_blog}
-        >
-          <Typography
-            variant="h2"
-            mb={2}
-            className={classes.home_title}
-          >
-            Blog làm đẹp
-          </Typography>
-          <Typography
-            style={{
-              fontSize: '16px', color: "#4c503d", lineHeight: 1.5, textAlign: 'center'
-            }}
-          >
-            Là phụ nữ, nhất định phải xinh đẹp và tự tin. Hãy cùng Cỏ mềm HomeLab
-            <br />
-            khám phá những bí quyết làm đẹp thú vị nhé!
-          </Typography>
-        </Grid>
-        <BlogSlick />
+        <Footer />
       </Box>
-      <Footer />
     </Page>
   );
 }

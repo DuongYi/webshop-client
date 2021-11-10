@@ -19,13 +19,13 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid #fff',
     backgroundColor: 'hsla(0,0%,100%,.6)',
     padding: '0 50px',
-    color: '#079b61',
+    color: '#49856e',
     fontSize: '16px',
     fontWeight: 500,
     textDecoration: 'none',
     transition: 'all ease 0.3s',
     '&:hover': {
-      backgroundColor: '#079b61',
+      backgroundColor: '#49856e',
       color: '#fff',
     }
   },

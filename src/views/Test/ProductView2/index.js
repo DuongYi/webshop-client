@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '25px 0',
-    borderBottom: '1px solid #079b6138'
+    borderBottom: '1px solid #49856e38'
   },
   product_policy_item: {
     display: 'flex',
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '50px',
     width: '100%',
     height: '50px',
-    border: '1px dashed #079b61',
+    border: '1px dashed #49856e',
     borderRadius: '100px',
     '& img': {
       textIndent: '100%',
@@ -69,7 +69,7 @@ function ProductView2() {
   const classes = useStyles();
 
   return (
-    <Page>
+    <Page style={{ background: '#f2f2f2' }}>
       <Container className={classes.container_product_policy} maxWidth="lg">
         <Box className={classes.product_policy}>
           <a href="/" className={classes.product_policy_item}>

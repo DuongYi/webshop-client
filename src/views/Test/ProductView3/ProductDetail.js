@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '28px',
     '& ins': {
       textDecoration: 'none',
-      color: '#079b61'
+      color: '#49856e'
     }
   },
   product_rating: {
@@ -134,13 +134,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: 'url(static/images/flower-2.png)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundColor: '#079b61',
+    backgroundColor: '#49856e',
     marginRight: '10px',
     transition: 'all ease 0.3s',
   },
   product_quantity_change: {
     "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-      borderColor: "#079b61",
+      borderColor: "#49856e",
       borderRadius: '100px'
     },
   },
@@ -162,14 +162,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '18px',
     flex: 1,
     height: '56px',
-    border: '2px solid #079b61',
-    color: '#079b61',
+    border: '2px solid #49856e',
+    color: '#49856e',
     borderRadius: '30px',
     backgroundColor: 'transparent',
     fontWeight: 'bold',
     '&:hover': {
       color: '#fff',
-      backgroundColor: '#079b61'
+      backgroundColor: '#49856e'
     }
   },
   product_features: {
@@ -198,7 +198,7 @@ const useStyles = makeStyles((theme) => ({
   },
   product_description: {
     padding: '16px 0',
-    borderTop: '1px solid #079b6138',
+    borderTop: '1px solid #49856e38',
     fontWeight: '400',
     fontSize: '16px',
     lineHeight: '24px',
@@ -206,7 +206,7 @@ const useStyles = makeStyles((theme) => ({
   },
   product_suggested: {
     paddingTop: '25px',
-    borderTop: '1px solid #079b6138',
+    borderTop: '1px solid #49856e38',
     '& span': {
       color: '#4c503d',
       fontWeight: 600,
@@ -233,7 +233,7 @@ const useStyles = makeStyles((theme) => ({
     '& a': {
       display: 'flex',
       margin: '10px',
-      color: '#079b61',
+      color: '#49856e',
       textDecoration: 'none',
       transition: 'all ease 0.3s',
       '& i': {
@@ -283,7 +283,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     fontSize: '16px',
     lineHeight: '24px',
-    color: '#079b61',
+    color: '#49856e',
     marginBottom: '5px',
     paddingBottom: '10px',
     fontWeight: 'bold',
@@ -294,7 +294,7 @@ const useStyles = makeStyles((theme) => ({
       left: 0,
       width: '20px',
       height: '2px',
-      backgroundColor: '#079b61'
+      backgroundColor: '#49856e'
     }
   },
   pInfomation_widget_content: {
@@ -320,7 +320,7 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid rgba(115,129,54,.08)',
     boxSizing: 'border-box',
     borderRadius: '5px',
-    color: '#079b61',
+    color: '#49856e',
     fontWeight: 'normal',
     fontSize: '14px',
     lineHeight: '21px',
@@ -365,7 +365,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     fontSize: '36px',
     lineHeight: '42px',
-    color: '#079b61',
+    color: '#49856e',
     marginRight: '14px'
   },
   reviewsInfo_ratings_label: {
@@ -375,7 +375,7 @@ const useStyles = makeStyles((theme) => ({
   },
   reviews_infomations_line: {
     paddingLeft: '25px',
-    borderLeft: '1px solid #079b6138',
+    borderLeft: '1px solid #49856e38',
     position: 'relative',
   },
   reviews_infomations_gallery: {
@@ -386,7 +386,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-end'
   },
   review_button: {
-    background: "#079b61",
+    background: "#49856e",
     '&:hover': {
       background: "#636e33"
     }
@@ -817,7 +817,7 @@ function ProductDetail({ product }) {
               Thông tin sản phẩm
             </Typography>
             <p>
-              Cỏ Mềm mới tìm được một nguyên liệu tuyệt hảo với hàm lượng cao Acid linoleic
+              TPX mới tìm được một nguyên liệu tuyệt hảo với hàm lượng cao Acid linoleic
               và Acid oleic tự nhiên, mang lại khả năng dưỡng da và chống lão hóa vượt trội,
               đó là DẦU HẠT TÁO
             </p>
@@ -841,7 +841,7 @@ function ProductDetail({ product }) {
               Đặc biệt vỏ cây son đã thay thế 70% chi tiết nhựa bằng giấy bìa dễ phân hủy không hại cho môi trường.
             </p>
             <p>
-              Và như mọi sản phẩm của Cỏ Mềm, SON TÁO được sản xuất bởi đội ngũ Dược
+              Và như mọi sản phẩm của TPX, SON TÁO được sản xuất bởi đội ngũ Dược
               sĩ có chuyên môn với dây chuyền được cấp phép đảm bảo chất lượng.
             </p>
             <p>

@@ -66,7 +66,7 @@ const useStyle = makeStyles((theme) => ({
       fontWeight: 'inherit'
     },
     '&:hover': {
-      color: '#079b61'
+      color: '#49856e'
     }
   },
   pSuggested_item_prices: {
@@ -74,7 +74,7 @@ const useStyle = makeStyles((theme) => ({
     fontSize: '14px',
     lineHeight: '16px',
     '& ins': {
-      color: '#079b61',
+      color: '#49856e',
       textDecoration: 'none'
     }
   },
