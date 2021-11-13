@@ -37,6 +37,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     backgroundImage: `url(static/images/header-bg.png)`,
+    backgroundPosition: 'center',
     background: '#fff',
     display: 'flex',
     justifyContent: 'space-evenly',
@@ -55,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   auth: {
-    fontFamily: 'sans-serif',
+    fontFamily: 'utm-god',
     fontWeight: 550,
     textDecoration: 'none',
     color: '#49856e',
@@ -66,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
   navLink: {
     position: 'relative',
     color: "#151515",
-    fontFamily: "sans-serif",
+    fontFamily: "utm-god",
     padding: '0 .5rem',
     margin: '0 1rem',
     fontSize: '1.1rem',
@@ -209,13 +210,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around"
   },
   nav_hotline: {
-    fontFamily: 'sans-serif',
+    fontFamily: 'utm-god',
     color: "#49856e",
     marginBottom: 20,
     transform: 'translateY(10px)'
   },
   mNav_hotline: {
-    fontFamily: 'sans-serif',
+    fontFamily: 'utm-god',
     color: "#49856e",
     marginBottom: 20,
     transform: 'translateY(10px)',
@@ -445,7 +446,7 @@ function Navbar(props, { fixed, absolute }) {
                 alignItems="center"
                 className={classes.nav_hotline}
                 style={{
-                  fontFamily: 'sans-serif', color: "#49856e", marginBottom: 20, transform: 'translateY(10px)'
+                  fontFamily: 'utm-god', color: "#49856e", marginBottom: 20, transform: 'translateY(10px)'
                 }}
               >
                 <PhoneInTalkIcon style={{ fontSize: '25px' }} className={classes.navIcon} />

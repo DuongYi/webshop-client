@@ -259,7 +259,7 @@ const useStyles = makeStyles((theme) => ({
   },
   pInfomation_widget_heading: {
     position: 'relative',
-    fontFamily: 'Yeseva One,Helvetica,Arial,sans-serif',
+    fontFamily: 'utm-god-bold',
     fontSize: '24px',
     fontWeight: 'bold',
     lineHeight: '28px',
@@ -353,9 +353,9 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: '50px'
   },
   product_review_title: {
-    fontFamily: 'Yeseva One, sans-serif',
+    fontFamily: 'utm-god-bold',
+    fontWeight: 'bold',
     textAlign: 'center',
-    fontWeight: 400,
     fontSize: '24px',
     lineHeight: '28px',
     color: '#4c503d',
@@ -416,18 +416,18 @@ const useStyles = makeStyles((theme) => ({
     padding: '30px'
   },
   pDetail_title: {
-    fontFamily: 'Yeseva One, sans-serif',
+    fontFamily: 'utm-god-bold',
     textAlign: 'center',
-    fontWeight: 400,
+    fontWeight: 600,
     fontSize: '24px',
     lineHeight: '28px',
     color: '#fff',
     marginBottom: '45px'
   },
   product_Detail_title: {
-    fontFamily: 'Yeseva One, sans-serif',
+    fontFamily: 'utm-god-bold',
     textAlign: 'start',
-    fontWeight: 400,
+    fontWeight: 600,
     color: '#4c503d',
     marginBottom: '10px',
     fontSize: '28px',
@@ -724,7 +724,7 @@ function ProductDetail({ product }) {
               </Box>
             </Box>
             <Box className={classes.product_description}>
-              <Typography>
+              <Typography style={{ fontFamily: 'utm-god' }}>
                 Bộ combo dành cho môi giúp các nàng chăm sóc đôi môi mềm mịn căng mọng và hồng hào.
               </Typography>
             </Box>

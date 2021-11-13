@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'utm-god';
+  src: local('fonts'), url(fonts/UTMGodWordR.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'utm-god-bold';
+  src: local('fonts'), url(fonts/UTMGodWordBold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'utm-god-italic';
+  src: local('fonts'), url(fonts/UTMGodWordRItalic.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'utm-god-bold-italic';
+  src: local('fonts'), url(fonts/UTMGodWordBoldItalic.ttf) format('ttf');
+}

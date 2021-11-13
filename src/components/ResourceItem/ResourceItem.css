@@ -65,7 +65,8 @@
 
 .resource-grid .resource-title {
   text-align: center;
-  font-family: Yeseva One,cursive;
+  font-family: utm-god-bold;
+  font-weight: 900;
   font-size: 30px;
   color: #fff;
   padding-bottom: 15px;

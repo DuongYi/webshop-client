@@ -18,14 +18,15 @@ const useStyles = makeStyles(() => ({
   heading_title: {
     textAlign: 'center',
     fontSize: '28px',
-    fontFamily: 'Yeseva One,Helvetica,Arial,sans-serif',
+    fontFamily: 'utm-god-bold',
     color: '#4c503d',
     fontWeight: 'bold',
     marginBottom: '10px',
     '& span': {
       display: 'block',
       fontSize: '22px',
-      fontFamily: 'Yeseva One,Helvetica,Arial,sans-serif',
+      fontFamily: 'utm-god-bold',
+      fontWeight: 'bold',
       color: '#49856e',
     }
   },

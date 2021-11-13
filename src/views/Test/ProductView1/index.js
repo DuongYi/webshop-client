@@ -54,7 +54,8 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden'
   },
   product_policy_title: {
-    fontFamily: 'Yeseva One,Helvetica,Arial,sans-serif',
+    fontFamily: 'utm-god-bold',
+    fontWeight: 'bold',
     fontSize: '28px',
     lineHeight: '32px'
   },

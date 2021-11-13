@@ -46,13 +46,15 @@ const useStyles = makeStyles((theme) => ({
   home_title: {
     color: '#4c503d',
     fontSize: '36px',
-    fontFamily: " Yeseva One, cursive",
+    fontFamily: "utm-god-bold",
+    fontWeight: 'bold',
     padding: '40px 0 0',
   },
   home_hot_title: {
     color: '#4c503d',
     fontSize: '36px',
-    fontFamily: " Yeseva One, cursive",
+    fontFamily: "utm-god-bold",
+    fontWeight: 'bold',
     padding: '40px 0 0',
     margin: '0 0 15px'
   },
@@ -76,14 +78,16 @@ const useStyles = makeStyles((theme) => ({
   home_store_title1: {
     color: '#4c503d',
     fontSize: '36px',
-    fontFamily: " Yeseva One, cursive",
+    fontFamily: " utm-god-bold",
+    fontWeight: 'bold',
     padding: '40px 0 0',
     marginRight: '-50px'
   },
   home_store_title2: {
     color: '#49856e',
     fontSize: '36px',
-    fontFamily: " Yeseva One, cursive",
+    fontFamily: " utm-god-bold",
+    fontWeight: 'bold',
     padding: '40px 0 0',
     marginLeft: '-45px'
   },
@@ -157,7 +161,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '0 0 15px',
     color: '#fff',
     fontSize: '36px',
-    fontFamily: " Yeseva One, cursive",
+    fontFamily: " utm-god-bold",
     fontWeight: 'bold'
   },
   box_react: {
@@ -411,7 +415,7 @@ function Home() {
               <Typography
                 variant="h2"
                 style={{
-                  margin: '0 0 5px', color: '#4c503d', fontSize: '42px', fontFamily: " Yeseva One, cursive", fontWeight: 'bold'
+                  margin: '0 0 5px', color: '#4c503d', fontSize: '42px', fontFamily: " utm-god-bold", fontWeight: 'bold'
                 }}
               >
                 Chuyện của TPX
@@ -430,7 +434,7 @@ function Home() {
               <Typography
                 variant="h6"
                 style={{
-                  margin: '16px 0', color: '#4c503d', fontSize: '16px', lineHeight: 1.5
+                  margin: '16px 0', color: '#4c503d', fontSize: '16px', lineHeight: 1.5, fontFamily: "utm-god"
                 }}
               >
                 Sau khi có bé đầu lòng, MẸ chuyển lên chăm con giúp mình.
@@ -530,7 +534,7 @@ function Home() {
               scrollButtons="auto"
               TabIndicatorProps={{
                 style: {
-                  background: '#49856e', borderRadius: '10px', zIndex: 1
+                  background: '#49856e', borderRadius: '10px', zIndex: 1,
                 }
               }}
             >
@@ -543,6 +547,8 @@ function Home() {
                   style={{
                     fontWeight: 'bold',
                     zIndex: 999,
+                    fontSize: '17px',
+                    textTransform: 'none',
                   }}
                 />
               ))}
@@ -572,13 +578,13 @@ function Home() {
               align="center"
               className={classes.home_title}
               style={{
-                margin: '0 0 5px',
+                margin: '0 0 5px'
               }}
             >
               100% Minh bạch nguyên liệu
             </Typography>
             <Typography style={{
-              margin: '14px 0', fontSize: '14px', color: "#4c503d", fontWeight: 400
+              margin: '14px 0', fontSize: '15px', color: "#4c503d", fontWeight: 400, fontFamily: 'utm-god'
             }}
             >
               Sản phẩm an LÀNH - con người chân THẬT
@@ -700,7 +706,7 @@ function Home() {
             </Typography>
             <Typography
               style={{
-                fontSize: '16px', color: "#4c503d", lineHeight: 1.5, textAlign: 'center'
+                fontSize: '17.5px', color: "#4c503d", lineHeight: 1.5, textAlign: 'center', fontFamily: 'utm-god'
               }}
             >
               Là phụ nữ, nhất định phải xinh đẹp và tự tin. Hãy cùng TPX HomeLab

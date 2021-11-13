@@ -12,7 +12,7 @@ import './Footer.css';
 
 const useStyle = makeStyles((theme) => ({
   footer: {
-    marginTop: '30px',
+    paddingTop: '30px',
     '& a': {
       textDecoration: 'none',
       color: "#4c503d",
