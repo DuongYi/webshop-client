@@ -560,8 +560,7 @@ function ProductDetail({ product }) {
     thumbnailHeight: 700
   };
 
-  const listMaterial = ['Sabowax PG4s', 'JBC lipstick base', 'Saboderm CVC MB', 'Dầu hạnh nhân', 'Dầu cám gạo', 'Dầu hạt táo',
-    'Dầu Mù Ù', 'Olivem', 'Sáp Candelilla', 'Màu khoáng thiên nhiên', 'Flavor/aroma'];
+  const listMaterial = ['Nhân sâm đen', 'Linh chi', 'Hà thủ ô đỏ', 'Cỏ nhọ nhồi'];
 
   return (
     <>
@@ -686,7 +685,7 @@ function ProductDetail({ product }) {
                   {' '}
                 </span>
                 <span className={classes.pFeatures_item_description}>
-                  Cho mọi phụ nữ
+                  Cho mọi da đầu
                 </span>
               </Box>
               <Box className={classes.pFeatures_item}>
@@ -695,7 +694,7 @@ function ProductDetail({ product }) {
                   {' '}
                 </span>
                 <span className={classes.pFeatures_item_description}>
-                  Công ty cổ phần thương mại xuất nhập khẩu TPX
+                  Công ty cổ phần xuất nhập khẩu TPX
                 </span>
               </Box>
               <Box className={classes.pFeatures_item}>
@@ -710,7 +709,7 @@ function ProductDetail({ product }) {
             </Box>
             <Box className={classes.product_description}>
               <Typography style={{ fontFamily: 'utm-god' }}>
-                Dầu gội đen tóc La Vitalité chứa chiết xuất từ thảo dược như nhân sâm đen, linh chi, hà thủ ô đỏ, cỏ nhọ nồi... với công nghệ nano được sử dụng để tạo nên sản phẩm này giúp cho việc hấp thụ hắc sắc tố từ thảo dược tốt hơn, làm tóc bạc nhanh chóng trở nên đen óng tự nhiên.
+                Dầu gội ĐEN TÓC La Vitalite’ chứa chiết xuất từ thảo dược như nhân sâm đen, linh chi, hà thủ ô đỏ, cỏ nhọ nồi… với công nghệ nano được sử dụng để tạo nên sản phẩm giúp cho việc hấp thụ sắc tố  từ thảo dược tốt hơn. Làm tóc bạc nhanh chóng trở nên đen óng tự nhiên.
               </Typography>
             </Box>
             <Box className={classes.product_suggested}>
@@ -778,20 +777,19 @@ function ProductDetail({ product }) {
                 Hướng dẫn sử dụng:
               </Typography>
               <p className={classes.pInfomation_widget_content}>
-                Thoa trực tiếp lên môi. Khi môi cảm thấy khô thì thoa lại son.
+                Làm ướt tóc bằng nước ( nên dùng nước ấm), cho dầu gội vào lòng bàn tay rồi thoa đều lên tóc ướt. Tiến hành gội massage kết hợp ủ tóc trong 10 tới 15 phút. Xả sạch tóc với nước, nên kết hợp với xả La Vitalite’ để tóc mềm mượt hơn. Sấy tóc khô và cảm nhận mái tóc đen óng tự nhiên.
               </p>
               <Typography className={classes.pInfomation_widget_title}>
                 Hạn dùng:
               </Typography>
               <p className={classes.pInfomation_widget_content}>
-                12 tháng. Mở nắp 6 tháng.
+                In trên bao bì sản phẩm.
               </p>
               <Typography className={classes.pInfomation_widget_title}>
                 Bảo quản:
               </Typography>
               <p className={classes.pInfomation_widget_content}>
-                Nơi khô mát. Tránh nắng nóng và nguồn nhiệt.
-                Tránh làm rơi gãy son. Không vặn son quá cao khi sử dụng.
+                Nơi khô mát, tránh ánh nắng trực tiếp.
               </p>
             </Box>
 
@@ -818,60 +816,48 @@ function ProductDetail({ product }) {
               Thông tin sản phẩm
             </Typography>
             <p>
-              TPX mới tìm được một nguyên liệu tuyệt hảo với hàm lượng cao Acid linoleic
-              và Acid oleic tự nhiên, mang lại khả năng dưỡng da và chống lão hóa vượt trội,
-              đó là DẦU HẠT TÁO
-            </p>
-            <p>
-              Có thể nói đây là một thỏi son dưỡng đạt 3 tiêu chí: ORGANIC, VEGAN và ECO&nbsp;
-              <span className="_5mfr">🌿</span>
-            </p>
-            <p>
-              <span className="_5mfr">✅</span>
-              &nbsp;ORGANIC: dầu hạt táo hữu cơ và bơ olive là 2 thành phần chính trong công thức
-              này giúp son dưỡng có khả năng làm mềm da môi, thấm nhanh vào biểu bì
-              và nuôi dưỡng tế bào.
-              <br />
-              <span className="_5mfr">✅</span>
-              &nbsp;VEGAN: sáp ong – nguyên liệu phổ biến trong mọi loại son môi – đã được thay thế hoàn toàn bằng sáp candelilla,
-              sáp đậu nành. Các bạn yêu động vật có thể yên tâm sử dụng cây son dưỡng hiếm hoi không hề chứa sáp ong này,
-              không cần e ngại có thể gây tổn hại khi khai thác ngôi nhà của các đàn ong.
-              <br />
-              <span className="_5mfr">✅</span>
-              &nbsp;ECO: toàn bộ thành phần đều có nguồn gốc tự nhiên, không khai thác tận diệt và dễ dàng phân hủy sinh học.
-              Đặc biệt vỏ cây son đã thay thế 70% chi tiết nhựa bằng giấy bìa dễ phân hủy không hại cho môi trường.
-            </p>
-            <p>
-              Và như mọi sản phẩm của TPX, SON TÁO được sản xuất bởi đội ngũ Dược
-              sĩ có chuyên môn với dây chuyền được cấp phép đảm bảo chất lượng.
-            </p>
-            <p>
-              Bởi vậy, SON TÁO không chỉ đáng được lựa chọn nhờ đem lại đôi môi căng mịn mà còn vì cây son xinh yêu
-              này lan tỏa thông điệp sống xanh khiến bạn tự hào khi sử dụng và rất tinh tế khi mang tặng bạn bè&nbsp;
-              <span className="_5mfr">🎁</span>
-            </p>
-            <p>
-              <span className="_5mfr">🍏</span>
-              SON TÁO XANH không màu và&nbsp;
-              <span className="_5mfr">🍎</span>
-              SON TÁO ĐỎ có màu ửng đỏ tự nhiên
-              <br />
-              – Dưỡng môi dạng thỏi 4g
+              Dầu gội ĐEN TÓC La Vitalite’ chứa chiết xuất từ thảo dược như nhân sâm đen, linh chi, hà thủ ô đỏ, cỏ nhọ nồi… với công nghệ nano được sử dụng để tạo nên sản phẩm giúp cho việc hấp thụ sắc tố  từ thảo dược tốt hơn. Làm tóc bạc nhanh chóng trở nên đen óng tự nhiên.
             </p>
             <p>----------</p>
             <p><strong>Thành phần:</strong></p>
             <p>
-              <strong><em>- Son dưỡng táo xanh</em></strong>
-              : Dầu Hạnh nhân (Prunus dulcis oil), Coco-Caprylate/Caprate (Coco-Caprylate/Caprate), Sáp JBC (Synthetic wax), Dầu Hạt táo (Pyrus malus seed oil), Bơ Oliu (Sorbitan olivate), Sáp Candelilla (Euphorbia cerifera (candelilla) wax), &nbsp;Dầu Cám gạo (Oryza sativa bran oil), Polyglyceryl-4 Stearate (Polyglyceryl-4 Stearate), Dầu Mù u - Trong son táo xanh (Calophyllum inophyllum seed oil), Fragrance (Fragrance)
+              <strong><em>- Nhân sâm đen</em></strong>
+              : Nhân sâm đen chứa các thành phần: Ginsenoside Rg3, Saponin, chất chống oxy, Vitamin E, C và Kẽm. Khi kết hợp cùng Linh chi và Hà Thủ ô Đỏ , nhân sâm phát huy tác dụng điều trị tóc bạc hiệu quả bền vững, ngăn ngừa tóc lão lóa, tránh rụng, cũng như cấp các dưỡng chất phục hồi sợi tóc hư tổn.
             </p>
             <p>
-              <strong><em>- Son dưỡng táo đỏ</em></strong>
-              : Dầu Hạnh nhân (Prunus dulcis oil), Coco-Caprylate/Caprate (Coco-Caprylate/Caprate), Sáp JBC (Synthetic wax), Dầu Hạt táo (Pyrus malus seed oil), Bơ Oliu (Sorbitan olivate), Sáp Candelilla (Euphorbia cerifera (candelilla) wax), &nbsp;Dầu Cám gạo (Oryza sativa bran oil), Polyglyceryl-4 Stearate (Polyglyceryl-4 Stearate), Fragrance (Fragrance), Màu khoáng thiên nhiên (CI 15850).
+              <strong><em>- Linh chi</em></strong>
+              : Linh chi được sử dụng điều trị rụng tóc sớm gây hói đầu của y học cổ truyền nhiều năm. Y học Nhật Bản đã phát hiện trong các sợi nấm của nấm linh chi có chứa hàm lượng dược tính Polysaccharides thúc đẩy việc sản xuất interferon giảm tình trạng gãy rụng, xơ rối một cách tự nhiên. Linh chi đỏ chứa  một số chất quan trọng như Ganoderic  và các vitamin như Dexpanthenol, kẽm, vitamin B6 làm giãn nở kích thước nang tóc, kích thích nang tóc hô hấp tự nhiên, giảm tiết bã nhờn đối với da dầu. Kích thích quá trình tăng trưởng của tóc, giúp mọc tóc nhanh trở lại, làm mềm chân tóc, tăng cường sự đàn hồi cho sợi tóc, giảm thiểu tình trạng tóc bị chẻ ngọn.Trong Nấm Linh Chi có chứa một số dược chất có chức năng giữ màu tóc không bị mất màu sắc tự nhiên, giúp tóc bóng đẹp.
+            </p>
+            <p>
+              <strong><em>- Hà thủ ô đỏ</em></strong>
+              :
+              {' '}
+              <b>Hà thủ ô đỏ</b>
+              {' '}
+              có tên khác là cây Giao Đằng, Dạ Hợp, hay Địa Tinh, tên khoa học là
+              {' '}
+              <b>Polygonum multiflorum.</b>
+              {' '}
+              <b>Hà thủ ô đỏ</b>
+              {' '}
+              mọc hoang ở các tỉnh miền núi phía Bắc như: Hòa Bình, Lạng Sơn, Cao Bằng Trong củ Hà thủ ô có chứa anthraglycosid (1.7%), protid (1.1%), lipid (3.1%), tinh bột (45.2%), chất vô cơ (4.5%), lecithin, rhaponticin.
+              Trước khi chế, Hà thủ ô chứa Tanin , anthraquinon tự do
+              Hà thủ ô đỏ tốt cho thận, bộ phận liên quan mật thiết tới huyết, râu và tóc.
+              Tóc chính là phần thừa của huyết, Hà thủ ô giúp tóc bạc bị đẩy lùi và ngăn rụng tóc. Dùng Hà thủ ô, toc mọc dày, đen bóng và khỏe.
+            </p>
+            <p>
+              <strong><em>- Cỏ nhọ nhồi</em></strong>
+              : Theo Đông y, cỏ nhọ nồi có tác dụng bổ thận bổ âm, làm đen râu tóc, lương huyết chỉ huyết. Dùng cho người râu tóc bạc sớm.
+              <br />
+              Cỏ Nhọ Nồi gọi là thảo dược “thường dân” vì cỏ mọc rộng khắp các tỉnh vùng đồng bằng, trung du, miền núi… Thành phần hóa học: có
+              {' '}
+              <i>ít tinh dầu, tannin, chất đắng, caroten và chất ancaloit,</i>
+              {' '}
+              Vì thế, cỏ bổ máu, tốt cho tóc. Đặc biệt khi kết hợp với Hà thủ ô tạo nên chìa khoá ngăn ngừa tóc bạc sớm từ gốc căn nguyên trong cơ thể. Càn phải có dược sĩ có chuyên môn cao và dây chuyền máy móc hiện đại, mới có thể tách được các thành phần nano từ cỏ nhọ nồi, và đưa thảo dược này vào dầu gội giúp mai tóc trở nên óng mượt.
             </p>
             <p><strong>Lưu ý khi sử dụng:</strong></p>
             <ul>
-              <li>Son dưỡng Táo chứa thành phần 100% thiên nhiên, không có chất bảo quản, chất ổn định, vì thế sau khi mở son nên dùng liên tục cho tới hết hoặc tới hạn sử dụng</li>
-              <li>Tránh vặn son quá cao vì son của Cỏ không có chất làm cứng, nên nếu vặn quá cao có thể làm gãy son</li>
+              <li>Tránh tiếp xúc trực tiếp  sản phẩm với mắt, nếu dính sản phẩm vào mắt hãy rửa lại bằng nước sạch.</li>
             </ul>
           </Grid>
         </Grid>
@@ -973,9 +959,9 @@ function ProductDetail({ product }) {
                 </Box>
               </Grid>
 
-              <Grid item lg={4} style={{ padding: '0 0 15px' }} className={classes.reviews_infomations_gallery}>
+              {/* <Grid item lg={4} style={{ padding: '0 0 15px' }} className={classes.reviews_infomations_gallery}>
                 image1 image2 image3 image4 image5
-              </Grid>
+              </Grid> */}
               <Grid item lg={2} style={{ padding: '0 0 15px' }}>
                 <Box className={classes.reviews_infomations_action}>
                   <Button

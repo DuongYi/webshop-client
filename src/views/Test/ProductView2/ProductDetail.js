@@ -561,8 +561,7 @@ function ProductDetail({ product }) {
     thumbnailHeight: 700
   };
 
-  const listMaterial = ['Sabowax PG4s', 'JBC lipstick base', 'Saboderm CVC MB', 'Dầu hạnh nhân', 'Dầu cám gạo', 'Dầu hạt táo',
-    'Dầu Mù Ù', 'Olivem', 'Sáp Candelilla', 'Màu khoáng thiên nhiên', 'Flavor/aroma'];
+  const listMaterial = ['Dầu dừa', 'Dầu Jojoba', 'Dầu vỏ cam quýt'];
 
   return (
     <>
@@ -674,7 +673,7 @@ function ProductDetail({ product }) {
             <Box className={classes.product_features}>
               <Box className={classes.pFeatures_item}>
                 <span className={classes.pFeatures_item_label}>
-                  Thể tich:
+                  Thể tích:
                   {' '}
                 </span>
                 <span className={classes.pFeatures_item_description}>
@@ -687,7 +686,7 @@ function ProductDetail({ product }) {
                   {' '}
                 </span>
                 <span className={classes.pFeatures_item_description}>
-                  Cho mọi phụ nữ
+                  Cho mọi da đầu
                 </span>
               </Box>
               <Box className={classes.pFeatures_item}>
@@ -696,7 +695,7 @@ function ProductDetail({ product }) {
                   {' '}
                 </span>
                 <span className={classes.pFeatures_item_description}>
-                  Công ty cổ phần thương mại xuất nhập khẩu TPX
+                  Công ty cổ phần xuất nhập khẩu TPX
                 </span>
               </Box>
               <Box className={classes.pFeatures_item}>
@@ -711,7 +710,7 @@ function ProductDetail({ product }) {
             </Box>
             <Box className={classes.product_description}>
               <Typography style={{ fontFamily: 'utm-god' }}>
-                Dầu xả Vitalité với chiết xuất từ các thành phần tự nhiên cấp ẩm cho mái tóc hư tổn, giúp cho tóc bóng mượt, mềm mại, chắc khỏe và đồng thời làm tăng độ đàn hồi cho tóc, mang lại sức sồng cho mái tóc.
+                Dầu xả La Vitalite’  với chiết xuất từ các thành phần tự nhiên cấp ẩm cho mái tóc hư tổn, giúp cho tóc bóng mượt, mềm mại, chắc khỏe và đồng thời làm tăng độ đàn hồi cho tóc, mang lại sức sống cho mái tóc.
               </Typography>
             </Box>
             <Box className={classes.product_suggested}>
@@ -779,20 +778,19 @@ function ProductDetail({ product }) {
                 Hướng dẫn sử dụng:
               </Typography>
               <p className={classes.pInfomation_widget_content}>
-                Thoa trực tiếp lên môi. Khi môi cảm thấy khô thì thoa lại son.
+                Lấy một lượng vừa đủ, thoa đều lên phần thân và ngọn tóc ướt. Mát xa và giữ từ 2-3 phút, xả sạch với nước.
               </p>
               <Typography className={classes.pInfomation_widget_title}>
                 Hạn dùng:
               </Typography>
               <p className={classes.pInfomation_widget_content}>
-                12 tháng. Mở nắp 6 tháng.
+                In trên bao bì sản phẩm.
               </p>
               <Typography className={classes.pInfomation_widget_title}>
                 Bảo quản:
               </Typography>
               <p className={classes.pInfomation_widget_content}>
-                Nơi khô mát. Tránh nắng nóng và nguồn nhiệt.
-                Tránh làm rơi gãy son. Không vặn son quá cao khi sử dụng.
+                Nơi khô mát, tránh ánh nắng trực tiếp.
               </p>
             </Box>
 
@@ -819,60 +817,28 @@ function ProductDetail({ product }) {
               Thông tin sản phẩm
             </Typography>
             <p>
-              TPX mới tìm được một nguyên liệu tuyệt hảo với hàm lượng cao Acid linoleic
-              và Acid oleic tự nhiên, mang lại khả năng dưỡng da và chống lão hóa vượt trội,
-              đó là DẦU HẠT TÁO
-            </p>
-            <p>
-              Có thể nói đây là một thỏi son dưỡng đạt 3 tiêu chí: ORGANIC, VEGAN và ECO&nbsp;
-              <span className="_5mfr">🌿</span>
-            </p>
-            <p>
-              <span className="_5mfr">✅</span>
-              &nbsp;ORGANIC: dầu hạt táo hữu cơ và bơ olive là 2 thành phần chính trong công thức
-              này giúp son dưỡng có khả năng làm mềm da môi, thấm nhanh vào biểu bì
-              và nuôi dưỡng tế bào.
-              <br />
-              <span className="_5mfr">✅</span>
-              &nbsp;VEGAN: sáp ong – nguyên liệu phổ biến trong mọi loại son môi – đã được thay thế hoàn toàn bằng sáp candelilla,
-              sáp đậu nành. Các bạn yêu động vật có thể yên tâm sử dụng cây son dưỡng hiếm hoi không hề chứa sáp ong này,
-              không cần e ngại có thể gây tổn hại khi khai thác ngôi nhà của các đàn ong.
-              <br />
-              <span className="_5mfr">✅</span>
-              &nbsp;ECO: toàn bộ thành phần đều có nguồn gốc tự nhiên, không khai thác tận diệt và dễ dàng phân hủy sinh học.
-              Đặc biệt vỏ cây son đã thay thế 70% chi tiết nhựa bằng giấy bìa dễ phân hủy không hại cho môi trường.
-            </p>
-            <p>
-              Và như mọi sản phẩm của TPX, SON TÁO được sản xuất bởi đội ngũ Dược
-              sĩ có chuyên môn với dây chuyền được cấp phép đảm bảo chất lượng.
-            </p>
-            <p>
-              Bởi vậy, SON TÁO không chỉ đáng được lựa chọn nhờ đem lại đôi môi căng mịn mà còn vì cây son xinh yêu
-              này lan tỏa thông điệp sống xanh khiến bạn tự hào khi sử dụng và rất tinh tế khi mang tặng bạn bè&nbsp;
-              <span className="_5mfr">🎁</span>
-            </p>
-            <p>
-              <span className="_5mfr">🍏</span>
-              SON TÁO XANH không màu và&nbsp;
-              <span className="_5mfr">🍎</span>
-              SON TÁO ĐỎ có màu ửng đỏ tự nhiên
-              <br />
-              – Dưỡng môi dạng thỏi 4g
+              Dầu xả La Vitalite’  với chiết xuất từ các thành phần tự nhiên cấp ẩm cho mái tóc hư tổn, giúp cho tóc bóng mượt, mềm mại, chắc khỏe và đồng thời làm tăng độ đàn hồi cho tóc, mang lại sức sống cho mái tóc.
             </p>
             <p>----------</p>
             <p><strong>Thành phần:</strong></p>
             <p>
-              <strong><em>- Son dưỡng táo xanh</em></strong>
-              : Dầu Hạnh nhân (Prunus dulcis oil), Coco-Caprylate/Caprate (Coco-Caprylate/Caprate), Sáp JBC (Synthetic wax), Dầu Hạt táo (Pyrus malus seed oil), Bơ Oliu (Sorbitan olivate), Sáp Candelilla (Euphorbia cerifera (candelilla) wax), &nbsp;Dầu Cám gạo (Oryza sativa bran oil), Polyglyceryl-4 Stearate (Polyglyceryl-4 Stearate), Dầu Mù u - Trong son táo xanh (Calophyllum inophyllum seed oil), Fragrance (Fragrance)
+              <strong><em>- Dầu dừa</em></strong>
+              : Dầu dừa chứa nhiều axit béo và các chất dẫn xuất như: chlorid, betain… vì thế khi dưỡng dầu dừa, các khoáng chất, vitamin E, K thấm sâu vào chân tóc làm mái tóc trở nên mượt mà. Trong dầu dừa có hơn 50% Acid Lauric, 10% Caprylic, là thành phần kháng sinh tự nhiên giúp diệt khuẩn cao và cấp ẩm cho tóc. Vì thế dầu dừa còn được dùng để trị gàu tự nhiên.  Các axit béo này còn kích thích tóc mọc dài hơn, loại bỏ hoàn toàn biểu hiện ngứa trên da đầu. Với trẻ em, dầu dừa với hàm lượng chất béo no sẽ ngăn chặn chấy cư trú nơi da đầu và vòng đời của trứng chấy trên sợi tóc.
             </p>
             <p>
-              <strong><em>- Son dưỡng táo đỏ</em></strong>
-              : Dầu Hạnh nhân (Prunus dulcis oil), Coco-Caprylate/Caprate (Coco-Caprylate/Caprate), Sáp JBC (Synthetic wax), Dầu Hạt táo (Pyrus malus seed oil), Bơ Oliu (Sorbitan olivate), Sáp Candelilla (Euphorbia cerifera (candelilla) wax), &nbsp;Dầu Cám gạo (Oryza sativa bran oil), Polyglyceryl-4 Stearate (Polyglyceryl-4 Stearate), Fragrance (Fragrance), Màu khoáng thiên nhiên (CI 15850).
+              <strong><em>- Dầu Jojoba</em></strong>
+              : Dầu Jojoba có tên khoa học là
+              {' '}
+              <b>Simmondsia Chinensis</b>
+              . Loại cây này chủ yếu được trồng nhiều ở Hoa Kỳ. Dầu jojoba có kết cấu tượng tự như bã nhờn tự nhiên được tiết ra trên da đầu của chúng ta vì thế có công dụng nuôi dưỡng tóc, nang tóc và tối đa hóa tốc độ mọc tóc. Jojoba giữ ẩm và làm sạch da đầu với cơ chế hòa tan bã nhờn, chống tắc nghẽn, bụi bẩn. Dầu jojoba còn mang đặc tính kháng khuẩn, giúp giữ da đầu, da mặt không bị nhiễm khuẩn tốt cho những người bị mụn quanh trán, cằm và gáy. Dầu jojoba kích thích nang tóc ngủ đông, khuyến khích mọc lại tóc. Điều này làm dày tóc của bạn, giúp cho mái tóc thêm bồng bềnh, giữ kiểu.
+            </p>
+            <p>
+              <strong><em>- Dầu vỏ cam quýt</em></strong>
+              : Tinh dầu cam được chiết xuất từ vỏ của quả cam , tên tiếng anh là Citrus sinensis. Tinh dầu cam được sản xuất bằng phương pháp ép lạnh, chiết xuất từ cả lá và hoa của cây cam . Tinh dầu cam cho tác dụng khử nấm, giảm sưng chống viêm. Tình dầu cam có tính sát trùng nên được sử dụng như  một chất chống viêm hiệu quả. Giúp lưu thông máu trên da đầu.
             </p>
             <p><strong>Lưu ý khi sử dụng:</strong></p>
             <ul>
-              <li>Son dưỡng Táo chứa thành phần 100% thiên nhiên, không có chất bảo quản, chất ổn định, vì thế sau khi mở son nên dùng liên tục cho tới hết hoặc tới hạn sử dụng</li>
-              <li>Tránh vặn son quá cao vì son của Cỏ không có chất làm cứng, nên nếu vặn quá cao có thể làm gãy son</li>
+              <li>Tránh tiếp xúc trực tiếp  sản phẩm với mắt, nếu dính sản phẩm vào mắt hãy rửa lại bằng nước sạch.</li>
             </ul>
           </Grid>
         </Grid>
@@ -974,9 +940,9 @@ function ProductDetail({ product }) {
                 </Box>
               </Grid>
 
-              <Grid item lg={4} style={{ padding: '0 0 15px' }} className={classes.reviews_infomations_gallery}>
+              {/* <Grid item lg={4} style={{ padding: '0 0 15px' }} className={classes.reviews_infomations_gallery}>
                 image1 image2 image3 image4 image5
-              </Grid>
+              </Grid> */}
               <Grid item lg={2} style={{ padding: '0 0 15px' }}>
                 <Box className={classes.reviews_infomations_action}>
                   <Button

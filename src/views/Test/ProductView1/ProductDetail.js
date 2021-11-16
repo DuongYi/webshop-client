@@ -560,8 +560,7 @@ function ProductDetail({ product }) {
     thumbnailHeight: 700
   };
 
-  const listMaterial = ['Sabowax PG4s', 'JBC lipstick base', 'Saboderm CVC MB', 'Dầu hạnh nhân', 'Dầu cám gạo', 'Dầu hạt táo',
-    'Dầu Mù Ù', 'Olivem', 'Sáp Candelilla', 'Màu khoáng thiên nhiên', 'Flavor/aroma'];
+  const listMaterial = ['Tinh dầu hương nhu', 'Tinh dầu bưởi', 'Tinh dầu Olive'];
 
   return (
     <>
@@ -673,7 +672,7 @@ function ProductDetail({ product }) {
             <Box className={classes.product_features}>
               <Box className={classes.pFeatures_item}>
                 <span className={classes.pFeatures_item_label}>
-                  Thể tich:
+                  Thể tích:
                   {' '}
                 </span>
                 <span className={classes.pFeatures_item_description}>
@@ -686,7 +685,7 @@ function ProductDetail({ product }) {
                   {' '}
                 </span>
                 <span className={classes.pFeatures_item_description}>
-                  Cho mọi phụ nữ
+                  Cho mọi da đầu
                 </span>
               </Box>
               <Box className={classes.pFeatures_item}>
@@ -695,7 +694,7 @@ function ProductDetail({ product }) {
                   {' '}
                 </span>
                 <span className={classes.pFeatures_item_description}>
-                  Công ty cổ phần thương mại xuất nhập khẩu TPX
+                  Công ty cổ phần xuất nhập khẩu TPX
                 </span>
               </Box>
               <Box className={classes.pFeatures_item}>
@@ -704,13 +703,13 @@ function ProductDetail({ product }) {
                   {' '}
                 </span>
                 <span className={classes.pFeatures_item_description}>
-                  Sản phẩm lỗi do sản xuất/ vận chuyển
+                  Sản phẩm lỗi do sản xuất / vận chuyển
                 </span>
               </Box>
             </Box>
             <Box className={classes.product_description}>
               <Typography style={{ fontFamily: 'utm-god' }}>
-                Dầu gội La Vitalité chứa tinh dầu vỏ bưởi và tinh dầu olive giúp kích thích mọc tóc, nuôi dưỡng mái tóc suôn mượt, tăng sự đàn hồi và giảm gãy rụng. Tinh dầu hương nhu giúp làm sạch da đầu hiệu quả và ngăn ngừa các bệnh liên quan đến da dầu như nấm, gàu.
+                Dầu gội La Vitalite’ chứa tinh dầu vỏ bưởi và tinh dầu Olive giúp kích thích mọc tóc, nuôi dưỡng mái tóc suôn mượt, tăng sự đàn hồi và giảm gãy rụng. Tinh dầu hương nhu giúp làm sạch da đầu hiệu quả và ngăn ngừa các bệnh liên quan tới da dầu như nấm, gàu.
               </Typography>
             </Box>
             <Box className={classes.product_suggested}>
@@ -778,20 +777,19 @@ function ProductDetail({ product }) {
                 Hướng dẫn sử dụng:
               </Typography>
               <p className={classes.pInfomation_widget_content}>
-                Thoa trực tiếp lên môi. Khi môi cảm thấy khô thì thoa lại son.
+                Thoa đều lên tóc ướt, xoa bóp nhẹ nhàng, sau đó gội sạch với nước. Kết hợp cùng kem xả La Vitalite’ để tóc luôn óng mượt, chắc khỏe.
               </p>
               <Typography className={classes.pInfomation_widget_title}>
                 Hạn dùng:
               </Typography>
               <p className={classes.pInfomation_widget_content}>
-                12 tháng. Mở nắp 6 tháng.
+                In trên bao bì sản phẩm
               </p>
               <Typography className={classes.pInfomation_widget_title}>
                 Bảo quản:
               </Typography>
               <p className={classes.pInfomation_widget_content}>
-                Nơi khô mát. Tránh nắng nóng và nguồn nhiệt.
-                Tránh làm rơi gãy son. Không vặn son quá cao khi sử dụng.
+                Nơi khô mát, tránh ánh nắng trực tiếp
               </p>
             </Box>
 
@@ -818,60 +816,29 @@ function ProductDetail({ product }) {
               Thông tin sản phẩm
             </Typography>
             <p>
-              TPX mới tìm được một nguyên liệu tuyệt hảo với hàm lượng cao Acid linoleic
-              và Acid oleic tự nhiên, mang lại khả năng dưỡng da và chống lão hóa vượt trội,
-              đó là DẦU HẠT TÁO
-            </p>
-            <p>
-              Có thể nói đây là một thỏi son dưỡng đạt 3 tiêu chí: ORGANIC, VEGAN và ECO&nbsp;
-              <span className="_5mfr">🌿</span>
-            </p>
-            <p>
-              <span className="_5mfr">✅</span>
-              &nbsp;ORGANIC: dầu hạt táo hữu cơ và bơ olive là 2 thành phần chính trong công thức
-              này giúp son dưỡng có khả năng làm mềm da môi, thấm nhanh vào biểu bì
-              và nuôi dưỡng tế bào.
-              <br />
-              <span className="_5mfr">✅</span>
-              &nbsp;VEGAN: sáp ong – nguyên liệu phổ biến trong mọi loại son môi – đã được thay thế hoàn toàn bằng sáp candelilla,
-              sáp đậu nành. Các bạn yêu động vật có thể yên tâm sử dụng cây son dưỡng hiếm hoi không hề chứa sáp ong này,
-              không cần e ngại có thể gây tổn hại khi khai thác ngôi nhà của các đàn ong.
-              <br />
-              <span className="_5mfr">✅</span>
-              &nbsp;ECO: toàn bộ thành phần đều có nguồn gốc tự nhiên, không khai thác tận diệt và dễ dàng phân hủy sinh học.
-              Đặc biệt vỏ cây son đã thay thế 70% chi tiết nhựa bằng giấy bìa dễ phân hủy không hại cho môi trường.
-            </p>
-            <p>
-              Và như mọi sản phẩm của TPX, SON TÁO được sản xuất bởi đội ngũ Dược
-              sĩ có chuyên môn với dây chuyền được cấp phép đảm bảo chất lượng.
-            </p>
-            <p>
-              Bởi vậy, SON TÁO không chỉ đáng được lựa chọn nhờ đem lại đôi môi căng mịn mà còn vì cây son xinh yêu
-              này lan tỏa thông điệp sống xanh khiến bạn tự hào khi sử dụng và rất tinh tế khi mang tặng bạn bè&nbsp;
-              <span className="_5mfr">🎁</span>
-            </p>
-            <p>
-              <span className="_5mfr">🍏</span>
-              SON TÁO XANH không màu và&nbsp;
-              <span className="_5mfr">🍎</span>
-              SON TÁO ĐỎ có màu ửng đỏ tự nhiên
-              <br />
-              – Dưỡng môi dạng thỏi 4g
+              Dầu gội La Vitalite’ chứa tinh dầu vỏ bưởi và tinh dầu Olive giúp kích thích mọc tóc, nuôi dưỡng mái tóc suôn mượt, tăng sự đàn hồi và giảm gãy rụng. Tinh dầu hương nhu giúp làm sạch da đầu hiệu quả và ngăn ngừa các bệnh liên quan tới da dầu như nấm, gàu.
             </p>
             <p>----------</p>
             <p><strong>Thành phần:</strong></p>
             <p>
-              <strong><em>- Son dưỡng táo xanh</em></strong>
-              : Dầu Hạnh nhân (Prunus dulcis oil), Coco-Caprylate/Caprate (Coco-Caprylate/Caprate), Sáp JBC (Synthetic wax), Dầu Hạt táo (Pyrus malus seed oil), Bơ Oliu (Sorbitan olivate), Sáp Candelilla (Euphorbia cerifera (candelilla) wax), &nbsp;Dầu Cám gạo (Oryza sativa bran oil), Polyglyceryl-4 Stearate (Polyglyceryl-4 Stearate), Dầu Mù u - Trong son táo xanh (Calophyllum inophyllum seed oil), Fragrance (Fragrance)
+              <strong><em>- Tinh dầu hương nhu</em></strong>
+              : Thành phần chủ yếu là Eugenol ( &gt; 60%) được chiết xuất từ hoa, thân, lá và rễ cây Hương Nhu. Tùy vào địa lý, khí hậu, thành phần chiết xuất ra có thể lẫn Camphen, Limonen, anpha hay Beta pinea. Học các tinh chất này kích thích mọc tóc, chống rụng tóc, diệt khuẩn và chống nấm. Hương nhu phát huy hiệu quả tuyệt vời nhất  khi  kết hợp với tinh dầu bưởi. Khi sử dụng xả có tinh dầu dừa mái tóc ngày càng trở lên suôn, mềm và chắc khỏe.
             </p>
             <p>
-              <strong><em>- Son dưỡng táo đỏ</em></strong>
-              : Dầu Hạnh nhân (Prunus dulcis oil), Coco-Caprylate/Caprate (Coco-Caprylate/Caprate), Sáp JBC (Synthetic wax), Dầu Hạt táo (Pyrus malus seed oil), Bơ Oliu (Sorbitan olivate), Sáp Candelilla (Euphorbia cerifera (candelilla) wax), &nbsp;Dầu Cám gạo (Oryza sativa bran oil), Polyglyceryl-4 Stearate (Polyglyceryl-4 Stearate), Fragrance (Fragrance), Màu khoáng thiên nhiên (CI 15850).
+              <strong><em>- Tinh dầu bưởi</em></strong>
+              : Vỏ bưởi có những chấm nhỏ đó là hàng triệu túi tinh dầu nguyên chất.  Túi tinh dầu này có chứa A-PINEN, Linalol, d-limonen, geraniol, alcol, citral, pectin, acid citric,… Đây là những dưỡng chất kích thích mọc tóc tuyệt vời đồng thời ngăn ngừa tóc gẫy rụng hiệu quả.
+              {' '}
+              <b>Tinh dầu bưởi kích thích sản sinh collagen, duy trì độ đàn hồi cho da, giúp da đầu chắc khỏe, tóc ít bị gãy rụng hơn.</b>
+              {' '}
+              Ngoài ra, tinh dầu cũng hỗ trợ làm sạch da đầu, ngăn ngừa nấm, vi khuẩn. Tinh dầu bưởi chứa hàm lượng lớn các chất có khả năng khử mùi, kháng khuẩn, ngăn chặn vi khuẩn gây mùi sản sinh dầu nhờn.Thành phần vitamin C trong tinh dầu bươi kích thích thêm việc sản sinh collagen  nhanh hơn, vì thế tóc giảm hẳn gãy rụng.
+            </p>
+            <p>
+              <strong><em>- Tinh dầu Olive</em></strong>
+              : Tinh dầu Olive là tinh chất hàng đầu trong danh sách dưỡng tóc và phục hồi hư tổn. Việt thiếu hụt dưỡng chất nuôi tóc  từ cơ thể , cùng với hóa chất tạo kiểu như sấy, ép, nhuộm… Tuổi tác và lão hóa dẫn tới tóc khô, gãy rụng và chẻ ngọn. Oliu với thành phần chính vitamin E và K cùng các axit amin chăm sóc tóc và da đầu hiệu quả. Cấp ẩm cho da đầu và là thần dược hô biến mái tóc khô rối, chẻ ngọn trở nên mềm mượt.
             </p>
             <p><strong>Lưu ý khi sử dụng:</strong></p>
             <ul>
-              <li>Son dưỡng Táo chứa thành phần 100% thiên nhiên, không có chất bảo quản, chất ổn định, vì thế sau khi mở son nên dùng liên tục cho tới hết hoặc tới hạn sử dụng</li>
-              <li>Tránh vặn son quá cao vì son của Cỏ không có chất làm cứng, nên nếu vặn quá cao có thể làm gãy son</li>
+              <li>Tránh tiếp xúc trực tiếp  sản phẩm với mắt, nếu dính sản phẩm vào mắt hãy rửa lại bằng nước sạch.</li>
             </ul>
           </Grid>
         </Grid>
@@ -973,9 +940,9 @@ function ProductDetail({ product }) {
                 </Box>
               </Grid>
 
-              <Grid item lg={4} style={{ padding: '0 0 15px' }} className={classes.reviews_infomations_gallery}>
+              {/* <Grid item lg={4} style={{ padding: '0 0 15px' }} className={classes.reviews_infomations_gallery}>
                 image1 image2 image3 image4 image5
-              </Grid>
+              </Grid> */}
               <Grid item lg={2} style={{ padding: '0 0 15px' }}>
                 <Box className={classes.reviews_infomations_action}>
                   <Button
