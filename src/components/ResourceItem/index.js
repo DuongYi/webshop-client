@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function ResourceItem({ resource }) {
   return (
     <div className="resource-item">
-      <a className={resource.class} href="/">
+      <a className={resource.class}>
         <div className="resource-thumbnail">
           <img className={resource.imgbottom} src={resource.image} alt={resource.title} />
         </div>

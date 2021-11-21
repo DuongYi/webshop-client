@@ -6,9 +6,9 @@ import './BlogItem.css';
 
 function BlogItem({ blog }) {
   return (
-    <div className="blog-grid">
+    <div className="blog-grid" id="#blog">
       <div className="blog-thumbnail">
-        <a href="">
+        <a rel="tag">
           <img src={blog.image} alt={blog.title} />
         </a>
       </div>

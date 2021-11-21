@@ -1,9 +1,11 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useLayoutEffect, useRef, useState } from 'react';
 
-import { PropTypes } from "prop-types";
+import { Box } from '@material-ui/core';
 import Slider from "react-slick";
 
 import ResourceItem from './ResourceItem';
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -28,22 +30,15 @@ function ResourcesSlick() {
       title: "Tinh dầu vỏ bưởi",
       description: "Tinh dầu bưởi là một trong những loại tinh dầu thiên nhiên được chiết xuất từ vỏ bưởi (vỏ xanh có những giọt tinh dầu nhỏ li ti) có chứa pectin, naringin,.. có tính diệt nấm sát khuẩn rất cao..."
     },
-    {
-      class: 'resource-grid resources-grid--brown resource-grid--bottom',
-      image: "static/images/res4.png",
-      title: "Dầu dừa",
-      description: "Dầu dừa được chiết xuất từ phần cùi trắng của quả dừa, có thể được tìm thấy trong nhiều loại mỹ phẩm và sản phẩm chăm sóc cá nhân.",
-      imgbottom: 'img-bottom'
-    }
   ];
 
   const settings = {
-    infinite: true,
     speed: 500,
     arrows: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     centerMode: true,
+    infinite: false,
     responsive: [
       {
         breakpoint: 1280,
@@ -65,17 +60,35 @@ function ResourcesSlick() {
       }
     ]
   };
+
+  let widthRes = useRef();
+
+  useLayoutEffect(() => {
+    if (resources.length >= 3) {
+      widthRes = '1280';
+    }
+    if (resources.length === 2) {
+      widthRes = '960';
+    }
+    if (resources.length === 1) {
+      widthRes = '600';
+    }
+  }, []);
+
   return (
-    <Slider {...settings} style={{ position: 'relative', display: 'block' }}>
-      {resources.map((item) => (
-        <ResourceItem key={item} resource={item} />
-      ))}
-    </Slider>
+    <Box
+      style={{
+        width: `${widthRes}px`,
+        display: "block"
+      }}
+    >
+      <Slider {...settings} style={{ position: 'relative', display: 'block' }}>
+        {resources.map((item) => (
+          <ResourceItem key={item} resource={item} />
+        ))}
+      </Slider>
+    </Box>
   );
 }
-
-ResourcesSlick.propTypes = {
-  items: PropTypes.array
-};
 
 export default ResourcesSlick;

@@ -88,7 +88,7 @@ function TabData() {
         ))}
       </Grid>
       <Box mt={3} display="flex" justifyContent="center">
-        <a href="/" className={classes.allShop_button}>
+        <a className={classes.allShop_button}>
           Xem thêm
         </a>
       </Box>
