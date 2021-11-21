@@ -342,9 +342,9 @@ function Navbar(props, { fixed, absolute }) {
             </div>
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <Box ml={2} className={classes.header_auth}>
-                <a className={classes.auth} href="/register">Đăng kí</a>
+                <a className={classes.auth}>Đăng kí</a>
                 <span className={classes.auth}>/</span>
-                <a className={classes.auth} href="/login">Đăng nhập</a>
+                <a className={classes.auth}>Đăng nhập</a>
               </Box>
               <Box ml={2} className={classes.related_watched}>
                 <Button

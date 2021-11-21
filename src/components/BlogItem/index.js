@@ -8,7 +8,7 @@ function BlogItem({ blog }) {
   return (
     <div className="blog-grid">
       <div className="blog-thumbnail">
-        <a href="">
+        <a>
           <img src={blog.image} alt={blog.title} />
         </a>
       </div>

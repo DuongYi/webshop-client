@@ -590,7 +590,7 @@ function Home() {
               Sản phẩm an LÀNH - con người chân THẬT
             </Typography>
             <Box display="flex" alignItems="center" justifyContent="center">
-              <a href="/" className={classes.home_resources_btn} style={{ textDecoration: 'none' }}>
+              <a className={classes.home_resources_btn} style={{ textDecoration: 'none' }}>
                 Xem thêm
               </a>
             </Box>
